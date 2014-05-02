@@ -1,0 +1,125 @@
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script>
+
+$(function(){
+
+	$(".add-to-do").click(function(){
+		$(".to-do").prepend("<li><span>A new item</span><input type=\"text\" value=\"A new item\" /></li>");
+		$(".to-do li:first-child span").click();
+	});
+
+	$(document.body).on('blur', '.to-do input', function() {
+		var value = $(this).val();
+		var item = $(this).parent("li").find("span");
+			$(item).show();
+			$(this).hide();
+			$(item).html(value);
+	});
+
+	$(document.body).on('click', '.to-do span', function() {
+		$(this).hide();
+		$(this).parent("li").find("input")
+				.show()
+				.focus();
+	});
+
+	$(".to-do-wrap")
+		.draggable()
+		.resizable();
+
+});
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+    	$(".to-do input").blur();
+    }
+});
+
+</script>
+<style>
+body{
+	background:lightblue;
+	font-family: "Myriad Pro";
+}
+.wrapper{
+	width:700px;
+	margin:150px auto;
+}
+.to-do-wrap{
+	width:500px;
+	margin:auto;
+	background:#fff;
+	border-radius:5px;
+	overflow: hidden;
+	border:#666 1px solid;
+	box-shadow:rgba(0,0,0,0.3) 0px 20px 40px;
+}
+.to-do-title{
+	padding:10px 0;
+	background:-webkit-linear-gradient(top, #4393e4, #2665a6);
+	color:#fff;
+	text-shadow:#000 0px -1px 0px;
+	font-size: 2em;
+	text-align: center;
+}
+	.add-to-do{
+		cursor: pointer;
+		text-align: right;
+		float:right;
+		margin:0 20px 0 -20px;
+	}
+.to-do{
+	display: block;
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+.to-do li span{
+	display: block;
+	width:100%;
+	padding: 0.7em 0.5em 0 0.5em;
+	height:50px;
+	font-size: 20px;
+	box-sizing:border-box;
+	background-image:-webkit-linear-gradient(top, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.05));
+	box-shadow:#fff 0px 2px 0px -1px, #DDD 0px -2px 0px -1px;
+}
+	.to-do li span:hover{
+		box-shadow: #87bbf1 0px 0px 10px, #fff 0px 2px 0px -1px, #DDD 0px -2px 0px -1px;
+	}
+
+.to-do li input{
+	display: none;
+	width:100%;
+	padding: 0.2em 0.5em 0 0.5em;
+	font-family: "Myriad Pro";
+	height:50px;
+	margin:0;
+	border:0;
+	outline: none;
+	font-size: 20px;
+	background-color:transparent;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="to-do-wrap ">
+		<div class="to-do-title">List Name <span class="add-to-do">+</span></div>
+		<ul class="to-do">
+			<li><span>To do item 1</span><input type="text" value="To do item 1" /></li>
+			<li><span>To do item 2</span><input type="text" value="To do item 2"/></li>
+			<li><span>To do item 3</span><input type="text" value="To do item 3"/></li>
+			<li><span>To do item 4</span><input type="text" value="To do item 4"/></li>
+			<li><span>To do item 5</span><input type="text" value="To do item 5"/></li>
+		</ul>
+	</div>
+</div>
+
+</body>
+
+</html>

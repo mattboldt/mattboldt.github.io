@@ -1,0 +1,177 @@
+<!--
+
+Copyright (c) 2013 Matt Boldt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>iPhone Style Pure CSS3 SMS Talk Bubbles</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.2.js"></script>
+
+<script>
+	$(document).ready(function(){
+		
+		$(".begin-sms").click(function(){
+			$(this).css("display", "none");
+			$(".pre-bubbles").animate({opacity:0},300);
+			setTimeout(function(){$("pre-bubbles").css("display", "none")}, 300);
+		
+		var audio1 = document.getElementById("sound1");
+		var audio2 = document.getElementById("sound2");
+
+		
+		setTimeout(function(){
+			$("#one").animate({opacity: 1, marginTop: "5px"}, 200);
+				audio1.play();
+		}, 0);
+			setTimeout(function(){
+			$("#two").animate({opacity: 1, marginTop: "5px"}, 200);
+			audio2.play();
+				
+		}, 1100);
+			setTimeout(function(){
+			$("#three").animate({opacity: 1, marginTop: "5px"}, 200);
+				audio1.play();
+		}, 2400);
+			setTimeout(function(){
+			$("#four").animate({opacity: 1, marginTop: "5px"}, 200);
+			audio2.play();
+				
+		}, 3700);
+			setTimeout(function(){
+			$("#five").animate({opacity: 1, marginTop: "5px"}, 200);
+				audio1.play();
+		}, 5000);
+		
+		setTimeout(function(){
+			
+			$(".load-sms-wrapper").animate({opacity: 0}, 1000);
+			setTimeout(function(){$(".load-sms-wrapper").css("display", "none")}, 1000);
+			setTimeout(function(){
+							$("#final-bubble").css("display", "block");
+						$("#final-bubble").animate({opacity: 1, marginTop: "0px"}, 800);
+					
+			audio1.play();
+			}, 1000);
+		}, 6800);
+		
+		setTimeout(function(){
+			$(".final-bubble-wrap").animate({opacity: 0}, 200);
+				setTimeout(function(){$(".final-bubble-wrap").css("display", "none")}, 200);
+		}, 12000);
+		
+		});
+	});
+
+</script>
+
+<style>
+.final-bubble-wrap{
+	display:block;
+	max-width:800px;
+	margin: auto;
+}
+#final-bubble{
+	font-size:150px;
+	max-width:800px;
+	display:none;
+	opacity:0;
+}
+</style>
+
+</head>
+
+<body>
+<audio preload="auto" id="sound1" ><source src="ReceivedMessage.mp3" /><source src="ReceivedMessage.ogg" /></audio>
+<audio preload="auto" id="sound2" ><source src="SentMessage.mp3" /><source src="SentMessage.ogg" /></audio>
+
+<div class="header">
+    <div class="wrapper">
+    <h1>Pure CSS SMS Bubbles</h1>
+    </div>
+</div>
+
+	<div class="wrapper">
+                            <div class="final-bubble-wrap">
+                                <div id="final-bubble" class="sms_bubble">Cool, right?</div>
+                                </div>
+    <div style="clear:both"></div>
+	
+    
+    
+<div class="load-sms-wrapper">
+
+		
+	
+                <span class="sms_bubble" style="opacity:1; font-size:14px; float:none; clear:none; margin: 50px auto; width:100px;">
+                CSS3 SMS Bubbles
+            </span>
+            
+
+    	<div style="clear:both;"></div>
+<div class="begin-sms">Begin SMS</div>
+   
+		
+
+    <div id="one" class="sms_bubble">
+        Hey bro, what's up? Long time no see.
+    </div>
+    
+    <div id="two" class="sms_bubble blue-right">
+    Not much, man. Just writting some CSS3 SMS talk bubbles. You know, usual stuff. Wanna hang?
+    </div>
+    
+    <div id="three" class="sms_bubble">
+        Yeah!
+    </div>
+    
+    <div id="four" class="sms_bubble blue-right">
+    Where at?
+    </div>
+    
+    <div id="five" class="sms_bubble">
+    Let's go up to that one coffee shop off 1st street.
+    </div>
+
+</div>
+
+
+
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11539016-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
