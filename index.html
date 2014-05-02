@@ -1,0 +1,82 @@
+---
+layout: default
+title: Your New Jekyll Site
+---
+
+<div class="header">
+    <div class="wrap">
+        <div class="head-text">
+            <h1 class="tagline">I'm
+                <span id="typed"></span>
+                <span id="typed-cursor">|</span>
+            </h1>
+            <h4 class="sub-tagline">web developer / designer / geek</h4>
+        </div>
+
+        {% include nav.html %}
+
+    </div>
+</div>
+<div class="badge">
+    <a href="/">
+        <img src="/assets/img/avatar.jpg" width="100%" height="100%" />
+    </a>
+</div>
+
+<div class="inner-wrap">
+    <h1 class="page-title">Latest Demos</h1>
+    <ul class="latest">
+        <li>
+            <a href="/demos/social-buttons/">CSS &amp; SVG Social Buttons</a>
+            <p>Beautiful social buttons in pure CSS &amp; SVG.</p>
+        </li>
+        <li>
+            <a href="/demos/css-apple-nav/">Apple.com's Nav History</a>
+            <p>The history of Apple.com's nav bar in CSS.</p>
+        </li>
+        <li>
+            <a href="/demos/typed-js/">Typed.js</a>
+            <p>A jQuery plugin that animates typing.</p>
+        </li>
+    </ul>
+
+    <h1 class="page-title">Latest Posts</h1>
+
+    <div class="entry">
+        <article>
+            {% for post in site.posts %}
+            	<h1 class="h2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+            	<span class="entry-info">{{ post.date | date_to_string }}</span>
+            {% endfor %}
+        </article>
+    </div>
+
+
+    <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
+    </div>
+    <div class="share-button">
+        <div class="g-plusone" data-size="tall" data-annotation="none"></div>
+    </div>
+
+    <a href="/posts/">View More Entries</a>
+</div>
+
+
+
+
+
+<div class="about">
+    <div class="wrap body-wrap dark-bg">
+        <h1 class="h1 txt-ctr dark-bg">Who Am I</h1>
+        <div class="block">
+            <div class="media foot-avatar">
+                <img src="/assets/img/avatar2.jpg" width="100%" height="100%" />
+            </div>
+            <div class="media-desc">
+                <h3 class="h3">I'm Matt Boldt</h3>
+                <p>A 19-year-old web developer &amp; designer from Texas. I enjoy building things from scratch, writing pretty code, black coffee, and the oxford comma. Learn more <a href="/me/">about me</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>

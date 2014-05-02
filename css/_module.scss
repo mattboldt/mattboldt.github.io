@@ -1,0 +1,241 @@
+// ------------------------------------------------ //
+// ----------------- PAGE MODULE ------------------ //
+// ------------------------------------------------ //
+// ----- Sits fixed on the left side, and shifts--- //
+// ----- for smaller resolutions ------------------ //
+// ------------------------------------------------ //
+
+.module{
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	margin:0;
+	padding:0;
+	width:400px;
+	height:100%;
+	color:#fff;
+	text-shadow:none;
+	background:#222933;
+	background-image:url(/assets/img/header-bg.jpg);
+	background-position: top center;
+	background-size:auto 100%;
+	overflow: hidden;
+	z-index:9999999;
+}
+.module-head{
+	margin:0 auto;
+	padding:20% 0 0;
+	width:100%;
+	
+	background-position: top center;
+	background-repeat: no-repeat;
+	// background-color: #222933;
+	background-size:auto 100%;
+	text-align: center;
+	.badge{
+		width:150px;
+		height:150px;
+		margin:0 auto 50px;
+		border-color:#222933;
+		box-shadow:#000 0px 2px 10px;
+	}
+	a{
+		color:#fff;
+		&:hover{
+			color:#333;
+		}
+	}
+}
+
+.module-body{
+	position: absolute;
+	padding:20px 30px 0 10px;
+	top:0;
+	bottom:0;
+	left:415px;
+	right:0;
+	overflow: auto;
+	text-align: center;
+}
+
+
+.module-inner-wrap{
+	margin:auto;
+	max-width:700px;
+	text-align: left;
+}
+.module-body-list{
+	display: block;
+	li{
+		padding:0 0 1em 0;
+		border-bottom:#EEE 2px solid;
+	}
+}
+
+
+aside{
+	display: inline-block;
+	vertical-align: top;
+}
+.sidebar{
+	margin:20px 0;
+	padding:0 50px;
+	text-align: left;
+}
+.top-list{
+	display: inline-block;
+	margin:0 20px 0 0;
+	
+	.label{
+		margin:0 10px 0 0;
+		font-weight: 500;
+	}
+	li{
+		display: inline-block;
+		margin:0 0 25px 0;
+		
+		a{
+			font-size: 0.8em;
+			margin:0 0.5em 0 0;
+			padding:0.5em 1em 0.5em 0;
+			border-right:#EEE 2px solid;
+		}
+	}
+}
+
+
+.ex-dm-title{
+	text-align: center;
+	font-size: 2.5em;
+}
+.ex-dm-link{
+	display: inline-block;
+	text-align: center;
+	a{
+		padding:10px 20px;
+		color:#fff;
+		text-shadow:none;
+		background:#333;
+		border-radius:20px;
+		&:hover{
+			color:#333;
+			background:#fff;
+		}
+	}
+}
+
+
+// ---------- Target Toggle buttons ------------ //
+.target-toggle{
+	position: absolute;
+	display: block;
+	padding:5px;
+	left:10px;
+	bottom:20px;
+	width:40px;
+	height:35px;
+	font-size: 0.8em;
+	opacity:0.4;
+	background:#000;
+	border-radius:5px;
+	text-align: left;
+	overflow: hidden;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-ms-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+
+	&:hover{
+		width:220px;
+		opacity:0.6;
+		box-shadow:rgba(0,0,0,0.6) 0px 0px 4px;
+		span{
+			opacity:1;
+		}
+	}
+
+
+	span{
+		position: absolute;
+		margin:-3px 10px;
+		padding:0;
+		display: inline-block;
+		opacity:0;
+		font-size: 0.85em;
+		line-height: 3em;
+		-webkit-transition:all 0.2s ease-in-out;
+		-moz-transition:all 0.2s ease-in-out;
+		-ms-transition:all 0.2s ease-in-out;
+		-o-transition:all 0.2s ease-in-out;
+		transition:all 0.2s ease-in-out;
+	}
+	input{
+		display: inline-block;
+		padding:5px;
+		width:30px;
+		color:#999;
+		background:none;
+		border:none;
+		text-align: left;
+		cursor: pointer;
+	}
+}
+
+// .module-footnote{
+// 	position: absolute;
+// 	bottom:10px;
+// 	padding:20px;
+// 	font-size: 0.8em;
+// }
+
+@media screen and (max-width:1200px){
+	.module{
+		width:300px;
+
+		.main-nav{
+			font-size: 0.8em;
+			a{
+				width:80px;
+			}
+		}
+		.sub-nav{
+			font-size: 0.6em;
+			a{
+				width:60px;
+			}
+		}
+	}
+	.module-body{
+		left:315px;
+	}
+}
+
+
+@media screen and (max-width:800px){
+	.module{
+		position: relative;
+		width:100%;
+		height:auto;
+		max-width:none;
+		background-size:auto auto;
+	}
+	.module-head{
+		padding:20px 0;
+		min-height: auto;
+		.badge{
+			width:100px;
+			height:100px;
+			margin:10px auto 20px;
+		}
+	}
+
+	.module-body{
+		position: relative;
+		left:0;
+		padding:0 10px;
+		overflow: hidden;
+	}
+}

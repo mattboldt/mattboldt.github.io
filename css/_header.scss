@@ -1,0 +1,146 @@
+// --------------------------------------------- //
+// ----------------- PAGE HEADER --------------- //
+// --------------------------------------------- //
+
+.header{
+	width:100%;
+	background-image:url(/assets/img/header-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: #222933;
+	text-align: center;
+	padding-bottom:20px;
+	background-size:100%;
+	@media screen and (max-width:1500px){
+		background-size:auto;
+	}
+}
+
+// Header text and type
+.head-text{
+	padding:80px 0 0 0;
+	min-height:215px;
+	color:#fff;
+	font-size: 2em;
+	text-shadow:#000 0px 2px 4px;
+	text-align: center;
+	// @include find(red);
+}
+	.tagline{
+		margin:20px 0 0;
+		font-size: 2em;
+		font-weight: 600;
+		-webkit-transition:all 0.7s ease-in-out;
+		-moz-transition:all 0.7s ease-in-out;
+		-o-transition:all 0.7s ease-in-out;
+		-ms-transition:all 0.7s ease-in-out;
+		transition:all 0.7s ease-in-out;
+	}
+	.sub-tagline{
+		margin:0;
+		font-size: 1em;
+		opacity:0;
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		-webkit-transition:all 0.7s ease-in-out;
+		-moz-transition:all 0.7s ease-in-out;
+		-o-transition:all 0.7s ease-in-out;
+		-ms-transition:all 0.7s ease-in-out;
+		transition:all 0.7s ease-in-out;
+	}
+	.lift-text{
+		.tagline{
+			margin:0;
+		}
+		.sub-tagline{
+			opacity:1;
+		}
+	}
+
+// Badge w/ avatar
+.badge{
+	display: block;
+	position: relative;
+	width:100px;
+	height:100px;
+	margin:-40px auto 20px;
+	padding:0;
+	border-radius: 100%;
+	border:#3a4450 4px solid;
+	box-shadow:rgba(0,0,0,0.3) 0px 0px 4px;
+	overflow: hidden;
+	z-index:9999;
+	img{
+		display: block;
+		margin:auto;
+		border:0;
+		border-radius:100%;
+		overflow: hidden;
+	}
+}
+.module-badge{
+	margin:auto;
+}
+
+
+// Blinking cursor animation
+// Using an ID? whaaaaat?
+#typed-cursor{
+	font-weight: 100;
+	padding:0 2px;
+	-webkit-animation: blink 1s infinite;
+	-moz-animation: blink 1s infinite;
+	-ms-animation: blink 1s infinite;
+	-o-animation: blink 1s infinite;
+	animation: blink 1s infinite;
+}
+
+@media screen and (max-width:800px){
+	.head-text{
+		padding:50px 0 0;
+		min-height: 180px;
+		font-size: 1.75em;
+	}
+}
+@media screen and (max-width:600px){
+	.head-text{
+		padding:30px 0 0;
+		min-height: 150px;
+		font-size: 1.5em;
+	}
+}
+@media screen and (max-width: 550px){
+	.head-text{
+		padding:20px 0 0;
+		font-size: 1em;
+		min-height: 110px;
+		margin:0 -100px;
+	}
+}
+
+// Blinking animation
+@-webkit-keyframes blink{
+	0% {opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes blink{
+	0% {opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-ms-keyframes blink{
+	0% {opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-o-keyframes blink{
+	0% {opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes blink{
+	0% {opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
