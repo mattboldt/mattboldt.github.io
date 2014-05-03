@@ -1,11 +1,22 @@
 ---
-layout: default
+layout: static
 title: Matt Boldt | Demos
 ---
-
+{% include header.html %}
 <style>._nav-demos a{color:#333;background:#fff;}</style>
 
-<?php include($module); ?>
+<div class="module">
+    <div class="module-head">
+        <div class="badge"><a href="/"><img src="/assets/img/avatar.jpg" width="100%" height="100%" style="max-width:500px"/></a></div>
+		{% include nav.html %}
+
+	    <div class="target-toggle">
+		    <input type="button" class="_BLANK" value="Off"/>
+	    	<input type="hidden" id="_BLANK-status" />
+	    	<span class="target-text">Links open in the same window</span>
+	    </div>
+	</div>
+</div>
 
 <div class="module-body">
 
@@ -49,7 +60,7 @@ title: Matt Boldt | Demos
 		<div class="demo-block">
 		    <div class="demo-frame-wrap">
 				<div class="demo-cover"></div>
-				<iframe class="demo-frame" src="/css3-iphone5/index.htm" frameborder="0" scrolling="no"></iframe>
+				<iframe class="demo-frame" src="/css3-iphone5/" frameborder="0" scrolling="no"></iframe>
 			</div>
 			<div class="demo-title">
 				<a href="/css3-iphone5/">CSS3 iPhone 5</a>
@@ -60,7 +71,7 @@ title: Matt Boldt | Demos
 		<div class="demo-block">
 		    <div class="demo-frame-wrap">
 				<div class="demo-cover"></div>
-				<iframe class="demo-frame" src="/css3-macbook-air/index.htm" frameborder="0" scrolling="no"></iframe>
+				<iframe class="demo-frame" src="/css3-macbook-air/" frameborder="0" scrolling="no"></iframe>
 			</div>
 			<div class="demo-title">
 				<a href="/css3-macbook-air/">CSS3 MacBook Air</a>
@@ -71,7 +82,7 @@ title: Matt Boldt | Demos
 		<div class="demo-block">
 		    <div class="demo-frame-wrap">
 				<div class="demo-cover"></div>
-				<iframe class="demo-frame" src="/demos/calculator/index.htm" frameborder="0" scrolling="no"></iframe>
+				<iframe class="demo-frame" src="/demos/calculator/" frameborder="0" scrolling="no"></iframe>
 			</div>
 			<div class="demo-title">
 				<a href="/demos/calculator/">CSS3 Calculator</a>
@@ -82,18 +93,7 @@ title: Matt Boldt | Demos
 		<div class="demo-block">
 		    <div class="demo-frame-wrap">
 				<div class="demo-cover"></div>
-				<iframe class="demo-frame" src="http://www.coldcoffeephp.com" frameborder="0" scrolling="no"></iframe>
-			</div>
-			<div class="demo-title">
-				<a href="http://www.coldcoffeephp.com">ColdCoffee</a>
-		    	<p>A simple front-end website boilerplate and template system.</p>
-			</div>
-		</div>
-
-		<div class="demo-block">
-		    <div class="demo-frame-wrap">
-				<div class="demo-cover"></div>
-				<iframe class="demo-frame" src="/demos/css3-sms/index.htm" frameborder="0" scrolling="no"></iframe>
+				<iframe class="demo-frame" src="/demos/css3-sms/" frameborder="0" scrolling="no"></iframe>
 			</div>
 			<div class="demo-title">
 				<a href="/demos/css3-sms/">CSS3 SMS Bubbles</a>
@@ -102,5 +102,5 @@ title: Matt Boldt | Demos
 	</div>
 
 
-
+	{% include footer.html %}
 </div>
