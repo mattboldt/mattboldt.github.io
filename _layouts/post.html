@@ -21,17 +21,21 @@
 	        <h1 class="h1 page-title">
 				{{ page.title }}
 	        </h1>
-	        		<div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a></div>
-					<div class="share-button"><div class="g-plusone" data-size="tall" data-annotation="none"></div></div>
+    		<div class="share-button">
+    			<a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
+    		</div>
+			<div class="share-button">
+				<div class="g-plusone" data-size="tall" data-annotation="none"></div>
+			</div>
 
-		       		<p class="entry-info">
-			        	{{ page.date | date_to_string }}
-			        </p>
+       		<p class="entry-info">
+	        	{{ page.date | date_to_string }}
+	        </p>
 
 
-					<div class="post">
-					{{ content }}
-					</div>
+			<div class="post">
+			{{ content }}
+			</div>
         </article>
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
@@ -39,7 +43,7 @@
 
 
 
-<div id="disqus_thread"></div>
+		<div id="disqus_thread"></div>
 <script type="text/javascript">
 var disqus_shortname = 'mattboldt';
 (function() {
