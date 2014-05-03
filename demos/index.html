@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<?php
-set_include_path( implode( PATH_SEPARATOR, array(
-"../",
-get_include_path()
-) ) );
-include_once("assets/php/master.php");
-?>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Demos | Matt Boldt</title>
-<?php include_once($styles);?>
-<link href="/demos/css/main.css" rel="stylesheet" />
-<?php include_once($scripts);?>
-<?php include($GA_tracking);?>
-<style>._nav-demos a{color:#333;background:#fff;}</style>
-</head>
+---
+layout: default
+title: Matt Boldt | Demos
+---
 
-<body>
+<style>._nav-demos a{color:#333;background:#fff;}</style>
 
 <?php include($module); ?>
 
@@ -116,15 +102,5 @@ include_once("assets/php/master.php");
 	</div>
 
 
-	<?php include_once($footer); ?>
+
 </div>
-
-    	
-
-
-
-
-
-        
-</body>
-</html>
