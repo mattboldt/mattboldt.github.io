@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 permalink: /:title
 year: 2014
+description: Matt Boldt
