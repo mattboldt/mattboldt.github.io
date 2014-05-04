@@ -9,7 +9,34 @@
   {% else %}
     <title>{{ site.description }}</title>
   {% endif %}
-  <link rel="stylesheet" href="{{ site.url }}/css/main.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+  <!-- G+ author & publisher -->
+  <link rel="author" href="http://plus.google.com/100085691725629323730/"/>
+  <link rel="publisher" href="http://plus.google.com/100085691725629323730/"/>
+  <!-- G+ content -->
+  <meta itemprop="name" content="Web Development &amp; Design Blog by Matt Boldt">
+  <meta itemprop="image" content="http://www.mattboldt.com/assets/img/avatar.jpg">
+  <meta itemprop="description" content="CSS, HTML, JavaScript, and PHP tutorials, demos, and articles.">
+  <!-- G+ Open Graph -->
+  <meta property="og:title" content="Web Development &amp; Design Blog by Matt Boldt" />
+  <meta property="og:image" content="http://www.mattboldt.com/assets/img/avatar.jpg" />
+  <meta property="og:description" content="CSS, HTML, JavaScript, and PHP tutorials, demos, and articles." />
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@atmattb">
+  <meta name="twitter:creator" content="@atmattb">
+  <meta name="twitter:title" content="Web Development &amp; Design Blog by Matt Boldt">
+  <meta name="twitter:description" content="CSS, HTML, JavaScript, and PHP tutorials, demos, and articles.">
+  <meta name="twitter:image" content="http://www.mattboldt.com/assets/img/avatar.jpg">
+  <meta name="twitter:domain" content="mattboldt.com">
+
+  <!-- External assets DSN -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//platform.twitter.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//p.twitter.com">
+  <link rel="dns-prefetch" href="//cdn.api.twitter.com">
+  <link rel="stylesheet" href="/css/main.css" />
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,12 +54,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-</script>
-<script src="/assets/js/typed.js" type="text/javascript"></script>
-<script>
-$(function(){
-  new Typed("#typed", null, "true");
-});
 </script>
 
 </head>

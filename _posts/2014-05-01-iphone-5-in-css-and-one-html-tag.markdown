@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "iPhone 5 in CSS and One HTML Tag"
+title:  iPhone 5 in CSS and One HTML Tag
+desc: <p>A while back, I published a CSS3 experiment of mine on my website, as well as on Codepen. It was an iPhone 5, rendered entirely in CSS, and using only one HTML element.</p>
 date:   2014-05-01 23:19:56
 categories: jekyll update
 ---

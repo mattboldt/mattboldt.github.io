@@ -42,15 +42,15 @@ title: Your New Jekyll Site
 
     <h1 class="page-title">Latest Posts</h1>
 
+    {% for post in site.posts %}
     <div class="entry">
         <article>
-            {% for post in site.posts %}
-            	<h1 class="h2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-
-            	<span class="entry-info">{{ post.date | date_to_string }}</span>
-            {% endfor %}
+        	<h1 class="h2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <span class="entry-info">{{ post.date | date_to_string }}</span>
+            <p>{{ post.desc }}</p>
         </article>
     </div>
+    {% endfor %}
 
 
     <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
@@ -80,3 +80,9 @@ title: Your New Jekyll Site
         </div>
     </div>
 </div>
+
+
+<script src="/assets/js/typed.js" type="text/javascript"></script>
+<script>
+  new Typed("#typed", null, "true");
+</script>
