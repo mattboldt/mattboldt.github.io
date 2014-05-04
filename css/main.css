@@ -590,7 +590,8 @@ h6, .h6 {
   text-align: left; }
 
 .module-body-list {
-  display: block; }
+  display: block;
+  margin: 0 auto 1em; }
   .module-body-list li {
     padding: 0 0 1em 0;
     border-bottom: #EEE 2px solid; }
