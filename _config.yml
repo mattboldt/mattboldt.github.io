@@ -2,6 +2,5 @@ name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
 permalink: /:title
-permalink: /404.html
 year: 2014
 description: Matt Boldt
