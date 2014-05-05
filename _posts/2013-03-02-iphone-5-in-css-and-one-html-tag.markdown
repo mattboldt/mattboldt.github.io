@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  iPhone 5 in CSS and One HTML Tag
-desc: <p>A while back, I published a CSS3 experiment of mine on my website, as well as on Codepen. It was an iPhone 5, rendered entirely in CSS, and using only one HTML element.</p>
+desc: A while back, I published a CSS3 experiment of mine on my website, as well as on Codepen. It was an iPhone 5, rendered entirely in CSS, and using only one HTML element.
 date:   2013-03-02 19:30:00
 categories: html, css
 ---
