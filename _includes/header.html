@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles." />
-    <title>{{ page.title }} | {{ site.description }}</title>
+    <meta name="description" content="{{ page.desc }}" />
+    <title>{{ page.title }}</title>
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
   <!-- G+ author & publisher -->
   <link rel="author" href="http://plus.google.com/100085691725629323730/"/>
   <link rel="publisher" href="http://plus.google.com/100085691725629323730/"/>
   <!-- G+ content -->
-  <meta itemprop="name" content="Web Development &amp; Design Blog by Matt Boldt">
+  <meta itemprop="name" content="{{ page.title }}">
   <meta itemprop="image" content="http://www.mattboldt.com/assets/img/avatar.jpg">
-  <meta itemprop="description" content="CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.">
+  <meta itemprop="description" content="{{ page.desc }}">
   <!-- G+ Open Graph -->
-  <meta property="og:title" content="Web Development &amp; Design Blog by Matt Boldt" />
+  <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:image" content="http://www.mattboldt.com/assets/img/avatar.jpg" />
-  <meta property="og:description" content="CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles." />
+  <meta property="og:description" content="{{ page.desc }}" />
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@atmattb">
   <meta name="twitter:creator" content="@atmattb">
-  <meta name="twitter:title" content="Web Development &amp; Design Blog by Matt Boldt">
-  <meta name="twitter:description" content="CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.desc }}">
   <meta name="twitter:image" content="http://www.mattboldt.com/assets/img/avatar.jpg">
   <meta name="twitter:domain" content="mattboldt.com">
 
@@ -54,4 +54,3 @@
 
 </head>
 <body>
-
