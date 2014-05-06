@@ -1016,6 +1016,9 @@ aside {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-color: #222933; }
+  @media (min-width: 1400px) {
+    .about {
+      background-size: 100%; } }
 
 .copyright {
   font-size: 0.85em;
