@@ -1,0 +1,29 @@
+.progress{
+  display: block;
+  margin:0 0 1em;
+  width:100%;
+  height:20px;
+  background:#f0f0f0;
+  .progress-bar{
+    display: inline-block;
+    height:100%;
+    background:#08c;
+    line-height:20px;
+    @include transition(width .6s ease);
+  }
+  .progress-bar-success{
+    background:#50AB50;
+  }
+
+  .progress-bar-info{
+    background: #44B7D9;
+  }
+
+  .progress-bar-warning{
+    background: #EEA237;
+  }
+
+  .progress-bar-danger{
+    background: #D34642;
+  }
+}

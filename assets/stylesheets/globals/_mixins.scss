@@ -1,0 +1,94 @@
+@mixin box-sizing($sizing){
+  box-sizing:$sizing;
+}
+
+@mixin border-radius($r){
+  border-radius:$r;
+}
+
+@mixin border-radius-single($top, $bottom){
+  border-top-left-radius: $top;
+  border-top-right-radius: $top;
+  border-bottom-left-radius: $bottom;
+  border-bottom-right-radius: $bottom;
+}
+
+@mixin box-shadow($color, $top, $left, $blur, $inset:""){
+  -webkit-box-shadow:$color $top $left $blur #{$inset};
+  -moz-box-shadow:$color $top $left $blur #{$inset};
+  box-shadow:$color $top $left $blur #{$inset};
+}
+
+@mixin absolute-center($vertical:false){
+  position: absolute;
+  top: 50%;
+  @if $vertical {
+    @include transform(translate(0, -50%));
+  }
+  @else{
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+// Wraps interior content in a media query
+@mixin breakpoint($querystring) {
+  @media #{$querystring} {
+    @content;
+  }
+}
+
+// Renders fully prefixed transistion
+@mixin transition ($property: 0.15s) {
+  @include prefixer(transition, $property, webkit moz ms);
+}
+
+// Renders fully prefixed transform
+@mixin transform($property: none) {
+  @include prefixer(transform, $property, webkit moz ms);
+}
+
+// Renders fully prefixed box-sizing
+@mixin box-sizing ($box: border-box) {
+  @include prefixer(box-sizing, $box, webkit moz);
+}
+
+// Utility for prefixing mixins
+@mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// Clearfix include
+@mixin clear($extend: true) {
+  @if $extend {
+    @extend %clear;
+  }
+  @else {
+    #{'&'}:after {
+    content:"";
+    display:table;
+    clear:both;
+    }
+  }
+}
+
+// Inline List
+@mixin inline-list($float: true) {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    > li {
+        @if $float == true {
+        display:block;
+        float:left;
+      }
+      @else {
+        display: inline-block;
+      }
+    }
+}
+

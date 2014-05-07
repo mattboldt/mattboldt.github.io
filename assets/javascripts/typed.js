@@ -116,7 +116,7 @@
 						// the stopNum actually represents the amount of chars to
 						// keep in the current string. In my case it's 5.
 						if (self.shorten && self.arrayPos == 0){
-							self.stopNum = 5;
+							self.stopNum = 8;
 						}
 						// every other time, delete the whole typed string
 						else{

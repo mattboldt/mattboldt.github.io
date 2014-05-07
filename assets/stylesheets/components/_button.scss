@@ -1,0 +1,47 @@
+.btn{
+  display: inline-block;
+  margin:.25rem 0;
+  padding:.5rem 1rem;
+  line-height: $line-height;
+  border:#EEE .1rem solid;
+  background:none;
+  -webkit-appearance:none;
+  outline:none;
+  &:hover{
+
+  }
+  &:active{
+
+  }
+}
+  .btn-lg{
+    font-size: 1.35em;
+  }
+  .btn-sm{
+    font-size: .9em;
+  }
+  .btn-xs{
+    padding:.25em .5em;
+    font-size: .9em;
+  }
+
+  .btn-primary{
+
+  }
+  .btn-link{
+    border:0;
+    &:hover{
+      border:0;
+    }
+  }
+
+.caret{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}

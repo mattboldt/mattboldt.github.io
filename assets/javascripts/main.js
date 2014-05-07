@@ -37,7 +37,7 @@ $(function(){
 			});
 			localStorage.removeItem("mb-link-target");
 		}
-		
+
 	}
 
 	if( localStorage.getItem("mb-link-target") == "blank" ){

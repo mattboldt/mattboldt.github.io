@@ -1,0 +1,8 @@
+.list-group{
+  list-style: none;
+  li, a{
+    display: list-item;
+    padding:1em;
+    border-bottom:#CCC 1px solid;
+  }
+}

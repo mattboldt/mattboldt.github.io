@@ -1,0 +1,47 @@
+
+.alert{
+  position: relative;
+  margin: 1em auto;
+  padding:1em;
+  padding-right:2em;
+  @include transition(all .2s ease-in-out);
+  .alert--close{
+    display: block;
+    right:1.5em;
+    @include absolute-center(true);
+    float: right;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    &:after{
+      content:"×";
+      height:1.15em;
+      line-height: 100%;
+      font-size: 1.25em;
+      font-weight: bold;
+      @include absolute-center();
+    }
+    &:hover{
+      color: rgba(0,0,0,0.8);
+      border-color: rgba(0,0,0,0.8);
+    }
+  }
+}
+  .alert--hide{
+    opacity:0;
+    margin:-2em auto;
+    @include transform(scale(.99));
+  }
+
+
+.alert-message{
+  background-color:#C6E4F3;
+}
+.alert-success{
+  background-color:#CFE9C5;
+}
+.alert-alert{
+  background-color:#FAF4D3;
+}
+.alert-error{
+  background-color:#ECCECE;
+}

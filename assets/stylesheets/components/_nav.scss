@@ -1,0 +1,74 @@
+
+// Wrapping navbar
+.navbar{
+  display: table;
+  margin-bottom:20px;
+  min-height: 50px;
+  width:100%;
+  background:#fff;
+  border-bottom:#CCC 1px solid;
+  a{
+    outline: none;
+    font-weight: 500;
+  }
+}
+
+.navbar-header{
+  display: table-cell;
+  vertical-align: middle;
+  font-size:1.25em;
+  a{
+    display: block;
+    padding:.5em 1em;
+    height:100%;
+  }
+}
+  .navbar-toggle{
+    display: none;
+    float:right;
+  }
+
+.navbar-fixed-top{
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1020;
+}
+
+
+// Nav UL
+.nav{
+  display: table-cell;
+  vertical-align: middle;
+  > li{
+    position: relative;
+    display: table-cell;
+    vertical-align: inherit;
+  }
+  li > a{
+    display: block;
+    padding: 1em;
+    &:hover{
+    }
+  }
+}
+
+@import "nav-dropdown";
+
+
+@media screen and (max-width:400px){
+  .navbar{
+    display: block;
+  }
+  .navbar-header{
+    display: block;
+    width:100%;
+  }
+  .nav{
+    display: none;
+  }
+  .navbar-toggle{
+    display: block;
+  }
+}
