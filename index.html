@@ -4,24 +4,36 @@ title: Web Development & Design by Matt Boldt
 desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
 ---
 
-<div class="header">
-    <div class="wrap">
-        <div class="head-text">
-            <h1 class="tagline">I'm <span id="typed"></span><span id="typed-cursor">|</span></h1>
-            <h4 class="sub-tagline">web developer / designer / geek</h4>
-        </div>
+<div class="header grid grid-align-middle">
+    <div class="col">
+        <div class="wrap">
+            <div class="head-text">
+                <h1 class="tagline">I'm <span id="typed"></span><span id="typed-cursor">|</span></h1>
+                <h4 class="sub-tagline">web developer / designer / geek</h4>
+            </div>
 
-        {% include nav.html %}
+            {% include nav.html %}
+            <div class="badge">
+                <a href="/">
+                    <img src="/assets/images/avatar.jpg" width="100px" height="100px" />
+                </a>
+            </div>
+        </div>
 
     </div>
 </div>
-<div class="badge">
-    <a href="/">
-        <img src="/assets/images/avatar.jpg" width="100px" height="100px" />
-    </a>
-</div>
 
 <div class="wrap">
+
+    {% for post in site.posts %}
+    <div class="entry">
+        <article>
+        	<h1 class="h2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <small class="entry-info">{{ post.date | date_to_string }}</small>
+        </article>
+    </div>
+    {% endfor %}
+
     <h1 class="page-title">Latest Demos</h1>
     <ul class="latest">
         <li>
@@ -39,18 +51,6 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
     </ul>
 
     <h1 class="page-title">Latest Posts</h1>
-
-    {% for post in site.posts %}
-    <div class="entry">
-        <article>
-        	<h1 class="h2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-            <span class="entry-info">{{ post.date | date_to_string }}</span>
-            <p>{{ post.desc }}</p>
-            <p><a href="{{ post.url }}">Read More</a><p>
-        </article>
-    </div>
-    {% endfor %}
-
 
     <div class="share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
     </div>
@@ -70,7 +70,7 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
         <h1 class="h1 txt-ctr dark-bg">Who Am I</h1>
         <div class="block">
             <div class="media foot-avatar">
-                <img src="/assets/img/avatar2.jpg" width="100%" height="100%" />
+                <img src="/assets/images/avatar2.jpg" width="100%" height="100%" style="max-width:200px" />
             </div>
             <div class="media-desc">
                 <h3 class="h3">I'm Matt Boldt</h3>
@@ -82,5 +82,5 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
 
 
 <script>
-  new Typed("#typed", null, "true");
+  // new Typed("#typed", null, "true");
 </script>

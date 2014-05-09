@@ -351,10 +351,12 @@ td, th {
   box-sizing: border-box; }
 
 html {
+  height: 100%;
   font-size: 18px;
   line-height: 1.5em; }
 
 body {
+  height: 100%;
   padding: 70px 0 30px;
   font-family: "Ubuntu", sans-serif;
   background: #fff;
@@ -1037,6 +1039,12 @@ blockquote {
     font-size: 3em; }
   .jumbotron p {
     margin: 0 auto 1em; }
+
+.header {
+  height: 100%; }
+
+.post-wrap {
+  max-width: 750px; }
 
 @media (max-width: 767px) {
   .wrap {
