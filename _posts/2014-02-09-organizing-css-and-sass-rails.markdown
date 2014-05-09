@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organizing CSS & Sass in Rails
-desc: Rails comes equipped with Sass by default. When you build a new app, an <span class="inline-code">application.css</span> stylesheet is created for you. This isn't just a normal stylesheet -- rather, it stands as a master stylesheet in the Rails Asset Pipeline. If you don't know how the Asset Pipeline works, I suggest you <a href="http://guides.rubyonrails.org/asset_pipeline.html">read a little bit about it</a>. In this file, you'll find the following code.
+desc: Rails comes equipped with Sass by default. When you build a new app, an application.css stylesheet is created for you. This isn't just a normal stylesheet -- rather, it stands as a master stylesheet in the Rails Asset Pipeline.
 date: 2014-02-09 13:00:00
 categories: sass, css, rails
 ---
