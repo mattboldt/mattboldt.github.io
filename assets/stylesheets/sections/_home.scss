@@ -1,4 +1,118 @@
+html{
+  height: 100%;
+}
+
+body{
+  height:100%;
+  background: #f8f8f8;
+}
 
 .header{
+  background-image: url(/assets/images/header-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  text-shadow: rgba(0,0,0,0.3) 0px 1px 2px;
+}
+
+.head-text {
+  padding: 80px 0 0 0;
+  min-height: 210px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.tagline {
+  @include transition(all 0.7s ease-in-out);
+  margin: 20px 0 0;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.sub-tagline {
+  @include transition(all 0.7s ease-in-out);
+  margin: 0;
+  font-weight: 300;
+  font-size: 1em;
+  opacity: 0;
+}
+
+.lift-text .tagline {
+  margin: 0;
+}
+.lift-text .sub-tagline {
+  opacity: 1;
+}
+
+#typed-cursor{
+    font-weight: 100;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/*
+ * Nav overrides
+ */
+
+.home-nav{
+  // width:100%;
+  margin:auto;
+  text-align: center;
+  a{
+    color: #fff;
+  }
+}
+
+/*
+ * Grid overrides
+ */
+.home-grid{
   height: 100%;
+  @include box-shadow(rgba(0,0,0,0.1) 0px 0px 2px);
+  & > .col{
+    vertical-align: middle;
+  }
+  .grid .col{
+    padding:0 1em;
+  }
+}
+
+.home-grid-separator{
+  padding: 2em;
+  background: #fff;
+  text-align: center;
+}
+
+
+.section__typedjs{
+  color:#fff;
+  background-image: -webkit-linear-gradient(top, #333, #303030);
+  text-shadow:rgba(0,0,0,1) 0px 1px 1px;
+  a{
+    color:#fff;
+  }
+}
+
+.section__devkit{
+  background-image: -webkit-linear-gradient(top, #f6f6f8, #e5e5e7);
 }

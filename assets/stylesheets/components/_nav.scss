@@ -39,7 +39,7 @@
 
 // Nav UL
 .nav{
-  display: table-cell;
+  display: table;
   vertical-align: middle;
   > li{
     position: relative;
@@ -53,6 +53,7 @@
     }
   }
 }
+
 
 @import "nav-dropdown";
 

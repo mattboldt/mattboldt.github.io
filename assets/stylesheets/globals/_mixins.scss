@@ -13,10 +13,10 @@
   border-bottom-right-radius: $bottom;
 }
 
-@mixin box-shadow($color, $top, $left, $blur, $inset:""){
-  -webkit-box-shadow:$color $top $left $blur #{$inset};
-  -moz-box-shadow:$color $top $left $blur #{$inset};
-  box-shadow:$color $top $left $blur #{$inset};
+@mixin box-shadow($properties...){
+  -webkit-box-shadow:$properties;
+  -moz-box-shadow:$properties;
+  box-shadow:$properties;
 }
 
 @mixin absolute-center($vertical:false){

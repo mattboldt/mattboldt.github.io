@@ -4,26 +4,63 @@ title: Web Development & Design by Matt Boldt
 desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
 ---
 
-<div class="header grid grid-align-middle">
+<div class="grid home-grid header">
     <div class="col">
-        <div class="wrap">
+        <div class="wrap wrap-narrow">
             <div class="head-text">
                 <h1 class="tagline">I'm <span id="typed"></span><span id="typed-cursor">|</span></h1>
                 <h4 class="sub-tagline">web developer / designer / geek</h4>
             </div>
 
             {% include nav.html %}
-            <div class="badge">
+            <!-- <div class="badge">
                 <a href="/">
                     <img src="/assets/images/avatar.jpg" width="100px" height="100px" />
                 </a>
-            </div>
+            </div> -->
         </div>
-
     </div>
 </div>
 
-<div class="wrap">
+<div class="grid home-grid">
+    <div class="col section__typedjs">
+        <div class="grid grid-align-middle wrap">
+            <div class="col">
+                <img src="/assets/images/typed-logo.svg" width="100%"  alt="">
+            </div>
+            <div class="col">
+                <h2><a href="/demos/typed-js/">Typed.js</a></h2>
+                <p>A nifty little jQuery plugin that animates type.</p>
+                <a href="/demos/typed-js/" class="btn">View Demo</a>
+                <a href="http://github.com/mattboldt/typed.js" class="btn">GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid home-grid">
+    <div class="col section__devkit">
+        <div class="grid grid-align-middle wrap">
+            <div class="col">
+                <img src="/assets/images/devkit-logo.svg" width="100%" alt="">
+            </div>
+            <div class="col">
+                <p>Code snippets, tools, &amp; more for web developers.</p>
+                <a href="#" class="btn">View Site</a>
+                <a href="https://github.com/mattboldt/devkit" class="btn">GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="col home-grid-separator">
+        <h1 class="page-title">Ramblings &amp; Code</h1>
+    </div>
+</div>
+
+
+<div class="wrap wrap-narrow">
 
     {% for post in site.posts %}
     <div class="entry">
@@ -34,7 +71,6 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
     </div>
     {% endfor %}
 
-    <h1 class="page-title">Latest Demos</h1>
     <ul class="latest">
         <li>
             <a href="/demos/social-buttons/">CSS &amp; SVG Social Buttons</a>
@@ -66,7 +102,7 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
 
 
 <div class="about">
-    <div class="wrap body-wrap dark-bg">
+    <div class="wrap wrap-narrow body-wrap dark-bg">
         <h1 class="h1 txt-ctr dark-bg">Who Am I</h1>
         <div class="block">
             <div class="media foot-avatar">
@@ -82,5 +118,5 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
 
 
 <script>
-  // new Typed("#typed", null, "true");
+  new Typed("#typed", null, "true");
 </script>
