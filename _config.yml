@@ -1,4 +1,4 @@
-name: Your New Jekyll Site
+name: mattboldt.com
 markdown: redcarpet
 pygments: true
 permalink: /:title
