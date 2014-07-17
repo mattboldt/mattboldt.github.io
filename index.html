@@ -16,8 +16,8 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
     </div>
 </div>
 <div class="badge">
-    <a href="{{ site.url }}/">
-        <img src="{{ site.url }}/assets/img/avatar.jpg" width="100%" height="100%" />
+    <a href="/">
+        <img src="/assets/img/avatar.jpg" width="100%" height="100%" />
     </a>
 </div>
 
@@ -25,15 +25,15 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
     <h1 class="page-title">Latest Demos</h1>
     <ul class="latest">
         <li>
-            <a href="{{ site.url }}/demos/social-buttons/">CSS &amp; SVG Social Buttons</a>
+            <a href="/demos/social-buttons/">CSS &amp; SVG Social Buttons</a>
             <p>Beautiful social buttons in pure CSS &amp; SVG.</p>
         </li>
         <li>
-            <a href="{{ site.url }}/demos/css-apple-nav/">Apple.com's Nav History</a>
+            <a href="/demos/css-apple-nav/">Apple.com's Nav History</a>
             <p>The history of Apple.com's nav bar in CSS.</p>
         </li>
         <li>
-            <a href="{{ site.url }}/demos/typed-js/">Typed.js</a>
+            <a href="/demos/typed-js/">Typed.js</a>
             <p>A jQuery plugin that animates typing.</p>
         </li>
     </ul>
@@ -43,10 +43,10 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
     {% for post in site.posts %}
     <div class="entry">
         <article>
-        	<h1 class="h2"><a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a></h1>
+        	<h1 class="h2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
             <span class="entry-info">{{ post.date | date_to_string }}</span>
             <p>{{ post.desc }}</p>
-            <p><a href="{{ site.url }}/{{ post.url }}">Read More</a><p>
+            <p><a href="{{ post.url }}">Read More</a><p>
         </article>
     </div>
     {% endfor %}
@@ -58,7 +58,7 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
         <div class="g-plusone" data-size="tall" data-annotation="none"></div>
     </div>
 
-    <a href="{{ site.url }}/posts/">View More Entries</a>
+    <a href="/posts/">View More Entries</a>
 </div>
 
 
@@ -74,7 +74,7 @@ desc: CSS, HTML, JavaScript, and Ruby on Rails tutorials, demos, and articles.
             </div>
             <div class="media-desc">
                 <h3 class="h3">I'm Matt Boldt</h3>
-                <p>A web developer &amp; designer from Texas. I enjoy building things from scratch, writing pretty code, black coffee, and the oxford comma. Learn more <a href="{{ site.url }}/me/">about me</a>.</p>
+                <p>A web developer &amp; designer from Texas. I enjoy building things from scratch, writing pretty code, black coffee, and the oxford comma. Learn more <a href="/me/">about me</a>.</p>
             </div>
         </div>
     </div>
