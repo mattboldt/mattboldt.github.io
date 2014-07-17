@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~>1.1'
+gem 'rspec', :require => 'spec'
+
+gem 'jekyll-asset-pipeline'
+gem 'coffee-script'
+gem 'sass'
+gem 'yui-compressor'
+gem 'redcarpet'
