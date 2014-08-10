@@ -143,7 +143,7 @@ pre {
   border-radius: 10px;
   overflow: auto; }
 
-#typed-cursor {
+.typed-cursor {
   opacity: 1;
   font-weight: 100;
   -webkit-animation: blink 0.7s infinite;
@@ -161,7 +161,6 @@ pre {
 
   100% {
     opacity: 1; } }
-
 @-webkit-keyframes blink {
   0% {
     opacity: 1; }
@@ -171,7 +170,6 @@ pre {
 
   100% {
     opacity: 1; } }
-
 @-moz-keyframes blink {
   0% {
     opacity: 1; }
@@ -181,7 +179,6 @@ pre {
 
   100% {
     opacity: 1; } }
-
 @-ms-keyframes blink {
   0% {
     opacity: 1; }
@@ -191,7 +188,6 @@ pre {
 
   100% {
     opacity: 1; } }
-
 @-o-keyframes blink {
   0% {
     opacity: 1; }
@@ -201,7 +197,6 @@ pre {
 
   100% {
     opacity: 1; } }
-
 .btn-wrap {
   display: block;
   margin: 0 auto 1em;
