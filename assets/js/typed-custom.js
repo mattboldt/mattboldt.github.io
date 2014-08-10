@@ -107,18 +107,6 @@
                 var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
                 var self = this;
 
-                // ------------- optional ------------- //
-                // backpaces a certain string faster
-                // ------------------------------------ //
-                if (self.arrayPos == 1){
-                    self.stopNum = 3;
-                    self.backDelay = 10;
-                }
-                //every other time, delete the whole typed string
-                else{
-                    self.stopNum = 0;
-                    self.backDelay = self.options.backDelay;
-                }
 
                 // contain typing function in a timeout humanize'd delay
                 self.timeout = setTimeout(function() {
@@ -201,13 +189,13 @@
                     // on the first string, only delete one word
                     // the stopNum actually represents the amount of chars to
                     // keep in the current string. In my case it's 14.
-                    // if (self.arrayPos == 1){
-                    //  self.stopNum = 14;
-                    // }
-                    //every other time, delete the whole typed string
-                    // else{
-                    //  self.stopNum = 0;
-                    // }
+                    if (self.arrayPos == 0){
+                        self.stopNum = 5;
+                    }
+                    // every other time, delete the whole typed string
+                    else{
+                        self.stopNum = 0;
+                    }
 
                     // ----- continue important stuff ----- //
                     // replace text with current text + typed characters

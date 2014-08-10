@@ -85,7 +85,7 @@
 
 // Blinking cursor animation
 // Using an ID? whaaaaat?
-#typed-cursor{
+.typed-cursor{
 	font-weight: 100;
 	padding:0 2px;
 	-webkit-animation: blink 1s infinite;

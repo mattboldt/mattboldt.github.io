@@ -1,6 +1,6 @@
 name: mattboldt.com
 markdown: redcarpet
-pygments: true
+highlighter: jekyll
 permalink: /:title
 year: 2014
 description: Matt Boldt
