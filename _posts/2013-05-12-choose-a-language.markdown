@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Choose a Language Already
-desc: There are a lot of web programming languages. <a href="http://rogchap.com/2011/09/06/top-40-website-programming-languages/">Here's</a> a quick reference of the most popular ones. A question I keep asking myself, is what should I be learning right now? What language is most valuable for me to know? Are the current languages I know dying out, or are the others that have recently gained popularity just a fad?
+desc: How to choose a language best suited for your project and preferences. 
 date: 2013-05-12 19:30:00
 categories: web development
 ---
