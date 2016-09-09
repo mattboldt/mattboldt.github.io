@@ -166,6 +166,8 @@ h6, .h6 {
   color: #f0ebd5;
   border-radius: .25em;
   position: relative;
+  text-shadow: none;
+  font-size: 13px;
   /* Comment */
   /* Error */
   /* Keyword */
