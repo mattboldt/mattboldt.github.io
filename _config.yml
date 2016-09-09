@@ -1,7 +1,7 @@
 name: mattboldt.com
 markdown: redcarpet
 highlighter: jekyll
-permalink: /:title
+permalink: /:title/
 year: 2014
 description: Matt Boldt
 url: http://www.mattboldt.com
