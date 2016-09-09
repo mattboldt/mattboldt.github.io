@@ -1,4 +1,5 @@
 name: mattboldt.com
+highlighter: jekyll
 permalink: /:title/
 year: 2014
 description: Matt Boldt
