@@ -32,7 +32,7 @@ Open up the freshly created `Berksfile` and `metadata.rb` in a text editor. We'r
 # Berksfile
 source 'https://supermarket.chef.io'
 
-cookbook 'opsworks_ruby', '1.3.0'
+cookbook 'opsworks_ruby', '1.4.0'
 cookbook 'packages', '~> 1.0.0'
 metadata
 ```
@@ -41,7 +41,7 @@ metadata
 # metadata.rb
 # -- ommitted metadata properties --
 
-depends 'opsworks_ruby', '1.3.0'
+depends 'opsworks_ruby', '1.4.0'
 depends 'packages', '~> 1.0.0'
 
 ```
