@@ -6,9 +6,7 @@ date: 2017-03-11 17:00:00
 categories: aws, opsworks, chef 12, linux, ubuntu, rails
 ---
 
-
 [AWS OpsWorks is a configuration management service that uses Chef](https://aws.amazon.com/opsworks/) to automate server configurations. OpsWorks previously used Chef v11 and came with built-in cookbooks to deploy apps such as Rails, Node, and more. However, the [latest OpsWorks Linux Chef v12](http://docs.aws.amazon.com/opsworks/latest/userguide/chef-12-linux.html) does not come with _any_ built-in cookbooks. While this adds some more complexity to setting things up, it also comes with the added benefit of using [community sourced cookbooks](https://github.com/chef-cookbooks) instead of ones developed by Amazon.
-
 
 ### Our To-do List
 
