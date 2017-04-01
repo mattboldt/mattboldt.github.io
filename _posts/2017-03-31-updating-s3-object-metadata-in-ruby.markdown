@@ -35,12 +35,12 @@ This copy request is illegal because it is trying to copy an object to itself wi
 ```ruby
 # the WRONG way
 bucket.objects.each do |object_summary|
-	location = "#{bucket.name}/#{object_summary.key}"
-	options = {
-		cache_control: 'public, max-age=60',
-		metadata_directive: 'REPLACE' # options: 'COPY' or 'REPLACE'
-	}
-	object_summary.copy_to(location, options)
+  location = "#{bucket.name}/#{object_summary.key}"
+  options = {
+    cache_control: 'public, max-age=60',
+    metadata_directive: 'REPLACE' # options: 'COPY' or 'REPLACE'
+  }
+  object_summary.copy_to(location, options)
 end
 ```
 
