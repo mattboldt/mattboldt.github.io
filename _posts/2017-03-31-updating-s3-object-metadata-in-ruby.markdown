@@ -10,7 +10,7 @@ Today I brought down a website by playing with fire and AWS S3. I did research, 
 
 ## S3 is not a database
 
-It is not possible to simply "update" an object in S3 -- it simply does not have an update method. This is true for both the Ruby SDK and the AWS CLI. If, like me, you're looking to update an entire bucket of objects with some new metadata (like `Cache-Control` headers, for instance), you'll need to use the [copy_to method](http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Object.html#copy_to-instance_method).
+It is not possible to "update" an object in S3 -- it simply does not have an update method. This is true for both the Ruby SDK and the AWS CLI. If, like me, you're looking to update an entire bucket of objects with some new metadata (like `Cache-Control` headers, for instance), you'll need to use the [copy_to method](http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Object.html#copy_to-instance_method).
 
 Let's start by authenticating and grabbing our bucket. 
 
