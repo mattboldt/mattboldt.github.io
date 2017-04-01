@@ -62,7 +62,7 @@ gem install berkshelf
 berks install
 berks package cookbooks.tar.gz
 ```
-You should now find `cookbooks.tar.gz` in your local directory; this archive contains all dependencies you're included in your `metadata.rb` file, as well as all your _dependencies'_ dependencies. You'll need to upload this file to an S3 bucket in your AWS account.
+You should now find `cookbooks.tar.gz` in your local directory; this archive contains all dependencies you've included in your `metadata.rb` file, as well as all your _dependencies'_ dependencies. You'll need to upload this file to an S3 bucket in your AWS account.
 
 
 ## Creating a New OpsWorks Stack
