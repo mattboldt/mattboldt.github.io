@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Updating S3 Object Metadata With the AWS Ruby SDK
-desc: "Updating S3 object metadata for a whole bucket using the AWS Ruby sdk"
+title: Updating S3 Object Metadata With the AWS Ruby SDK v2
+desc: "Updating S3 object metadata for an entire bucket using the AWS Ruby SDK v2"
 date: 2017-03-31 17:00:00
 categories: aws, s3, ruby, rails
 ---
