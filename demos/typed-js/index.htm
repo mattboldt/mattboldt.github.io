@@ -79,41 +79,23 @@
 
 <h2 class="h2">Installation</h2>
 <pre>
-&lt;script src="typed.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-  document.addEventListener('DOMContentLoaded', function(){
-      Typed.new('.element', {
-        strings: ["First sentence.", "Second sentence."],
-        typeSpeed: 0
-      });
-  });
-&lt;/script&gt;
-...
 
-&lt;div class="element"&gt;&lt;/div&gt;
+var typed = new Typed('.element', {
+  strings: ["First sentence.", "Second sentence."],
+  typeSpeed: 0
+});
+
 </pre>
 <p>Add this for the animated blinking cursor.</p>
 <pre>
 .typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
 }
 @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 </pre>
 
