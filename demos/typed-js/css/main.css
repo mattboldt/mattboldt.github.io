@@ -132,13 +132,13 @@ hr {
   border-bottom: #fff 1px solid;
   border-top: #f0f0f0 1px solid; }
 
-pre {
+code {
   margin: 0 auto 20px;
-  padding: 20px;
+  padding: 10px 20px !important;
   color: #444;
   font-family: "Consolas", "Courier New", "Courier";
   font-weight: 500;
-  background: #fff;
+  background: #fff !important;
   border: #EEE 1px solid;
   border-radius: 10px;
   overflow: auto; }
@@ -152,49 +152,39 @@ pre {
   -o-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
 
-@-keyframes blink {
+@keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-webkit-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-moz-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-ms-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-o-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 .btn-wrap {
@@ -238,3 +228,5 @@ pre {
       color: #333; }
       .btn p a:hover {
         color: #CCC; }
+
+/*# sourceMappingURL=main.css.map */

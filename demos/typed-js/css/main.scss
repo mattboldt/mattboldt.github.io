@@ -102,13 +102,13 @@ hr{
 	border-top:#f0f0f0 1px solid;
 }
 
-pre{
+code{
 	margin:0 auto 20px;
-	padding:20px;
+	padding:10px 20px !important;
 	color:#444;
 	font-family: "Consolas", "Courier New", "Courier";
 	font-weight: 500;
-	background:#fff;
+	background:#fff !important;
 	border:#EEE 1px solid;
 	border-radius:10px;
 	overflow: auto;
@@ -124,7 +124,7 @@ pre{
 	animation: blink 0.7s infinite;
 }
 
-@-keyframes blink{
+@keyframes blink{
 	0% { opacity:1; }
 	50% { opacity:0; }
 	100% { opacity:1; }
