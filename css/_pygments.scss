@@ -1,13 +1,13 @@
 
 .highlight{
   background: #181818;
-  padding: 15px;
   color:#f0ebd5;
   border-radius:.25em;
   position: relative;
   text-shadow: none;
   font-size: 13px;
   overflow: auto;
+  margin-bottom: 10px;
   * { font-family: Consolas, Monaco,"Lucida Console"; }
 
   // Custom link hover override
@@ -21,7 +21,6 @@
       padding: 20px;
       font-size: 14px;
       line-height: 18px;
-      margin-bottom: 30px;
       white-space: pre;
       overflow-x: auto;
       word-break: inherit;
