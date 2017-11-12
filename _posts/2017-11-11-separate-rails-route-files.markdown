@@ -6,7 +6,7 @@ date: 2017-11-11 17:00:00
 categories: ruby, rails
 ---
 
-Routes can quickly get out of hand in large apps. In a [reverted commit to rails 4](https://github.com/rails/rails/commit/5e7d6bba79393de0279917f93b82f3b7b176f4b5), a feature was removed to fix this, citing [concerns about separate files becoming less clear](https://github.com/rails/rails/commit/5e7d6bba79393de0279917f93b82f3b7b176f4b5#commitcomment-5846694). I agree that going buck wild creating new files probably won't help make things simpler, but if your app is big enough, it may be becoming difficult to add new routes in the right places.
+Routes can quickly get out of hand in large apps. In a [reverted commit to rails 4](https://github.com/rails/rails/commit/5e7d6bba79393de0279917f93b82f3b7b176f4b5), a feature was removed to fix this, citing [concerns about separate files becoming less clear](https://github.com/rails/rails/commit/5e7d6bba79393de0279917f93b82f3b7b176f4b5#commitcomment-5846694). I agree that going buck wild creating new files probably won't help make things simpler, but if your app is big enough, it may become difficult to find, edit, or add new routes in the right places.
 
 ### Things we need
 
