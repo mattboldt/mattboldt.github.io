@@ -1,6 +1,15 @@
 name: mattboldt.com
 highlighter: rouge
 permalink: /:title/
-year: 2016
+year: 2017
 description: Matt Boldt
 url: http://www.mattboldt.com
+github: [metadata]
+encoding: UTF-8
+kramdown:
+  input: GFM
+  hard_wrap: false
+future: true
+jailed: false
+theme: jekyll-theme-primer
+gfm_quirks: paragraph_end
