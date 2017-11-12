@@ -22,20 +22,23 @@ pagination:
         <p>{{ post.desc }}</p>
       </article>
     {% endfor %}
+    <p>
+      {% if paginator.previous_page %}
+        <a href="{{paginator.previous_page_path}}">
+          <i class="fa fa-chevron-circle-left"></i> Newer
+        </a>
+        &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="{{paginator.next_page_path}}">
+          Older <i class="fa fa-chevron-circle-right"></i>
+        </a>
+        &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+      {% endif %}
+      <a href="{{ '/feed.xml' }}">RSS</a>
+    </p>
   </div>
 </div>
-
-{% if paginator.previous_page %}
-<a class="prev" href="{{paginator.previous_page_path}}">
-  &lt;
-</a>
-{% endif %} &nbsp;&nbsp;&nbsp;&nbsp; {% if paginator.next_page %}
-<a class="next" href="{{paginator.next_page_path}}">
-  &gt;
-</a>
-{% endif %}
-
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 <div class="share-button">
   <a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
