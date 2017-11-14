@@ -1,32 +1,44 @@
-<img src="/assets/img/avatar.jpg" alt="Matt Boldt Avatar" width="120" class="avatar">
-
-<p>
-  Ruby developer from Texas. I like Rails, React, and EmberJS. I make beats and synth patches, and sometimes I build furniture.
-</p>
-
-<ul class="side-nav">
-  <li>
-    <a href="/demos/">
-      <i class="fa fa-cog"></i>
-      Demos
-    </a>
-  </li>
-  <li>
-    <a href="http://www.twitter.com/atmattb">
-      <i class="fa fa-twitter"></i>
-      Twitter
-    </a>
-  </li>
-  <li>
-    <a href="http://www.github.com/mattboldt/">
-      <i class="fa fa-github"></i>
-      GitHub
-    </a>
-  </li>
-</ul>
-
 <!-- <script>
   new Typed('#typed', {
     strings: ["I'm Matt"]
   });
 </script> -->
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          <img src="/assets/img/avatar.jpg" alt="Matt Boldt Avatar" width="120" class="avatar" />
+        </a>
+      </h1>
+      <h3>I'm Matt</h3>
+      <p class="lead">
+        Ruby developer from Texas. I like Rails, React, and EmberJS. I make beats and synth patches, and sometimes I build furniture.
+      </p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="http://www.twitter.com/atmattb">
+        <i class="fa fa-twitter"></i>
+        Twitter
+      </a>
+      <a class="sidebar-nav-item" href="{{ site.github_url }}">
+        <i class="fa fa-github"></i>
+        GitHub
+      </a>
+      <a class="sidebar-nav-item" href="/demos/">
+        <i class="fa fa-cog"></i>
+        Demos
+      </a>
+      <a class="sidebar-nav-item" href="/me/">
+        <i class="fa fa-book"></i>
+        About
+      </a>
+    </nav>
+
+    <p class="copyright">
+      &copy; copyright and stuff, mattboldt.com {{ site.time | date: '%Y' }}
+    </p>
+  </div>
+</div>

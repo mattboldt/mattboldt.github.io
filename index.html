@@ -4,43 +4,33 @@ title: Matt Boldt Writes Ruby
 desc: Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles.
 pagination: 
   enabled: true
+redirect_from: "/posts"
 ---
 
-<div class="row">
-  <div class="three columns sidenav-wrapper">
-    {% include nav.html %}
+<div class="posts index">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <p class="post-date"><small >{{ post.desc }}</small></p>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
   </div>
-  <div class="nine columns content-wrapper">
-    {% for post in paginator.posts %}
-      <article class="article-block">
-        <h3 class="article-title">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <span class="article-date">
-          {{ post.date | date_to_string }}
-        </span>
-        <p>{{ post.desc }}</p>
-      </article>
-    {% endfor %}
-    <p>
-      {% if paginator.previous_page %}
-        <a href="{{paginator.previous_page_path}}">
-          <i class="fa fa-chevron-circle-left"></i> Newer
-        </a>
-        &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
-      {% endif %}
-      {% if paginator.next_page %}
-        <a href="{{paginator.next_page_path}}">
-          Older <i class="fa fa-chevron-circle-right"></i>
-        </a>
-        &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
-      {% endif %}
-      <a href="{{ '/feed.xml' }}">RSS</a>
-    </p>
-  </div>
+  {% endfor %}
 </div>
 
-<div class="share-button">
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
+<div class="pagination">
+  {% if paginator.next_page %}
+  <a class="pagination-item older" href="{{ site.baseurl }}page/{{paginator.next_page}}">Older</a>
+  {% else %}
+  <span class="pagination-item older">Older</span>
+  {% endif %} {% if paginator.previous_page %} {% if paginator.page == 2 %}
+  <a class="pagination-item newer" href="/">Newer</a>
+  {% else %}
+  <a class="pagination-item newer" href="{{ site.baseurl }}page/{{paginator.previous_page}}">Newer</a>
+  {% endif %} {% else %}
+  <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
-<a href="/posts/">View More</a>

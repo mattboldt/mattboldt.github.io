@@ -1,11 +1,15 @@
 name: mattboldt.com
 github_username: mattboldt
+github_url: http://github.com/mattboldt
 highlighter: rouge
 permalink: /:title/
 year: 2017
 description: Matt Boldt
-url: http://www.mattboldt.com
+url: http://mattboldt.com
 encoding: UTF-8
+
+plugins:
+  - jekyll-redirect-from
 
 
 kramdown:
@@ -17,5 +21,5 @@ gfm_quirks: paragraph_end
 sass:
   sass_dir: ./assets/css
 
-paginate: 7
+paginate: 10
 paginate_path: /page/:num/

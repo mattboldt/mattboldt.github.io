@@ -1,61 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
 body {
-	background: #21252B;
-	color: #A5B3C6;
+	// background: #21252B;
+	// color: #A5B3C6;
+	// color: #21252B;
+	font-family: 'Open Sans', sans-serif;
 }
 
-a {
-	color: #fff;
-	text-decoration: none;
-	border-color: #999;
-	border-width: 0 0 2px 0;
-	border-style: dotted;
-	padding: 3px 0px 2px 0px;
-	&:hover {
-		color: #fff;
-		background: rgb(61, 69, 82);
-	}
-}
-
-.sidenav-wrapper {
-	padding: 100px 0 0 20px;
-}
-
-.content-wrapper {
-	padding: 100px 40px 40px 40px;
-	background: #282C34;
-
+.sidebar {
+	background-color: #ac4142;
 	h3 {
-		font-size: 24px;
+		color: #fff;
+	}
+}
+@media (max-width: 48em) {
+	.sidebar .avatar {
+		margin: auto;
+	}
+}
+.content a,
+.related-posts li a:hover {
+  color: #ac4142;
+}
+
+
+.index {
+	h2 {
+		font-size: 1.25rem;
+	}
+	.post {
+		margin-bottom: 2.5em;
 	}
 }
 
-.side-nav {
-	list-style: none;
-	i.fa {
-		width: 18px;
-	}
-	a {
-		display: inline-block;
-		padding: 10px;
-		width: 100%;
-		border: 0;
-		border-radius: 3px;
-	}
+.sidebar-about .lead {
+	font-size: 1rem;
 }
+
+pre {
+	overflow-x: auto;
+}
+code {
+	border: 0;
+	white-space: pre;
+}
+
+// a {
+// 	color: #fff;
+// 	text-decoration: none;
+// 	border-color: #999;
+// 	border-width: 0 0 2px 0;
+// 	border-style: dotted;
+// 	padding: 3px 0px 2px 0px;
+// 	&:hover {
+// 		color: #fff;
+// 		background: rgb(61, 69, 82);
+// 		text-decoration: none;
+// 	}
+// }
 
 .avatar {
 	margin-bottom: 10px;
 	border-radius: 5px;
 }
 
-.article-title {
-	display: inline-block;
+.copyright {
+	font-size: .75rem;
 }
-.article-date {
-	display: inline-block;
-	margin-left: 10px;
+
+.demo-frame {
+	width: 100%;
+	height: 400px;
 }
-.article-block {
-	display: block;
-	padding-bottom: 20px;
+
+.typed-cursor{
+	opacity: 1;
+	animation: typedjsBlink 0.7s infinite;
+	-webkit-animation: typedjsBlink 0.7s infinite;
+					animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+	50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+	0% { opacity: 1; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1; }
 }
