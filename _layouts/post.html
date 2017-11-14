@@ -1,43 +1,18 @@
-{% include header.html %}
-<style>._nav-posts a{color:#333;background:#fff;}</style>
+---
+layout: default
+---
 
-<div class="module">
-    <div class="module-head">
-        <div class="badge"><a href="/"><img src="/assets/img/avatar.jpg" width="100%" height="100%" style="max-width:500px"/></a></div>
-		{% include nav.html %}
-	</div>
+<div class="post">
+	<h1 class="post-title">{{ page.title }}</h1>
+	<span class="post-date">{{ page.date | date_to_string }}</span>
+	{{ content }}
 </div>
 
-<div class="module-body">
-	<div class="module-inner-wrap post">
-
-        <article>
-	        <h1 class="h1 page-title">
-				{{ page.title }}
-	        </h1>
-    		<div class="share-button">
-    			<a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
-    		</div>
-			<div class="share-button">
-				<div class="g-plusone" data-size="tall" data-annotation="none"></div>
-			</div>
-
-       		<p class="entry-info">
-	        	{{ page.date | date_to_string }}
-	        </p>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br />
 
 
-			<div class="post">
-			{{ content }}
-			</div>
-        </article>
-
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="atMattb" data-count="none">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br />
-
-
-
-		<div id="disqus_thread"></div>
+<div id="disqus_thread"></div>
 <script type="text/javascript">
 var disqus_shortname = 'mattboldt';
 (function() {
@@ -57,7 +32,3 @@ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
 </script>
-{% include footer.html %}
-
-</div>
-</div>

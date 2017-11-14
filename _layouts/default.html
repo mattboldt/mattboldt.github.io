@@ -1,5 +1,10 @@
-{% include header.html %}
-
-    {{ content }}
-
-{% include footer.html %}
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include header.html %}
+  <body>
+    {% include nav.html %}
+    <div class="content container">
+      {{ content }}
+    </div>
+  </body>
+</html>

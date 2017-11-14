@@ -1,15 +1,25 @@
 name: mattboldt.com
+github_username: mattboldt
+github_url: http://github.com/mattboldt
 highlighter: rouge
 permalink: /:title/
 year: 2017
 description: Matt Boldt
-url: http://www.mattboldt.com
-github: [metadata]
+url: http://mattboldt.com
 encoding: UTF-8
+
+plugins:
+  - jekyll-redirect-from
+
+
 kramdown:
   input: GFM
   hard_wrap: false
 future: true
 jailed: false
-theme: jekyll-theme-primer
 gfm_quirks: paragraph_end
+sass:
+  sass_dir: ./assets/css
+
+paginate: 6
+paginate_path: /page/:num/

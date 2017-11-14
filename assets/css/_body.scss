@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+body {
+	// background: #21252B;
+	// color: #A5B3C6;
+	// color: #21252B;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar {
+	background-color: #ac4142;
+	h3 {
+		color: #fff;
+	}
+}
+@media (max-width: 48em) {
+	.sidebar .avatar {
+		margin: auto;
+	}
+}
+.content a,
+.related-posts li a:hover {
+  color: #ac4142;
+}
+
+
+.index {
+	h2 {
+		font-size: 1.25rem;
+		a {
+			color: #000;
+			&:hover {
+				color: #ac4142;
+				text-decoration: none;
+			}
+		}
+	}
+	.post {
+		margin-bottom: 2.5em;
+	}
+}
+
+.sidebar-about .lead {
+	font-size: 1rem;
+}
+
+pre {
+	overflow-x: auto;
+}
+code {
+	border: 0;
+	white-space: pre;
+}
+
+// a {
+// 	color: #fff;
+// 	text-decoration: none;
+// 	border-color: #999;
+// 	border-width: 0 0 2px 0;
+// 	border-style: dotted;
+// 	padding: 3px 0px 2px 0px;
+// 	&:hover {
+// 		color: #fff;
+// 		background: rgb(61, 69, 82);
+// 		text-decoration: none;
+// 	}
+// }
+
+.avatar {
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.copyright {
+	font-size: .65rem;
+}
+
+.demo-frame {
+	width: 100%;
+	height: 400px;
+}
+
+.typed-cursor{
+	opacity: 1;
+	animation: typedjsBlink 0.7s infinite;
+	-webkit-animation: typedjsBlink 0.7s infinite;
+					animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+	50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+	0% { opacity: 1; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1; }
+}

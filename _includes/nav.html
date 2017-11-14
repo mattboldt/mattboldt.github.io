@@ -1,44 +1,60 @@
-<ul class="main-nav">
-      <li class="_nav-demos">
-          <a href="/demos/">
-              <span class="icon" aria-hidden="true" data-icon="&#xe001;"></span>
-              <span class="label">Demos</span>
-          </a>
-      </li>
+<!-- <script>
+  new Typed('#typed', {
+    strings: ["I'm Matt"]
+  });
+</script> -->
 
-      <li class="_nav-posts">
-          <a href="/posts/">
-              <span class="icon" aria-hidden="true" data-icon="&#xe005;"></span>
-              <span class="label">Posts</span>
-          </a>
-      </li>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          <img src="/assets/img/avatar.jpg" alt="Matt Boldt Avatar" width="120" class="avatar" />
+        </a>
+      </h1>
+      <h3>
+        <span id="matt"></span>
+      </h3>
+      <p class="lead">
+        Ruby developer from Texas. I like Rails, React, and EmberJS.
+        I make beats, synth patches, and coffee tables.
+      </p>
+    </div>
 
-      <li class="_nav-me">
-          <a href="/me/">
-              <span class="icon" aria-hidden="true" data-icon="&#xe002;"></span>
-              <span class="label">Me</span>
-          </a>
-      </li>
-  </ul>
-  <div class="divider"></div>
-  <ul class="main-nav sub-nav">
-      <li>
-          <a href="http://www.twitter.com/atmattb">
-              <span class="icon" aria-hidden="true" data-icon="&#xe000;"></span>
-              <span class="label">Twitter</span>
-          </a>
-      </li>
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="http://www.twitter.com/atmattb">
+        <i class="fa fa-twitter"></i>
+        Twitter
+      </a>
+      <a class="sidebar-nav-item" href="{{ site.github_url }}">
+        <i class="fa fa-github"></i>
+        GitHub
+      </a>
+      <a class="sidebar-nav-item" href="/demos/">
+        <i class="fa fa-cog"></i>
+        Demos
+      </a>
+      <a class="sidebar-nav-item" href="/me/">
+        <i class="fa fa-book"></i>
+        About
+      </a>
+    </nav>
 
-      <li>
-          <a href="http://www.github.com/mattboldt/">
-              <span class="icon" aria-hidden="true" data-icon="&#xe003;"></span>
-              <span class="label">Github</span>
-          </a>
-      </li>
-      <li>
-          <a href="http://www.codepen.io/mattboldt/">
-              <span class="icon" aria-hidden="true" data-icon="&#xe006;"></span>
-              <span class="label">Codepen</span>
-          </a>
-      </li>
-  </ul>
+    <p class="copyright">
+      &copy; copyright and stuff {{ site.time | date: '%Y' }}
+    </p>
+  </div>
+</div>
+
+<script>
+  new Typed('#matt', {
+    strings: ["I'm Matt"],
+    typeSpeed: 80,
+    onComplete: function() {
+      var cursor = document.getElementsByClassName('typed-cursor')[0];
+      setTimeout(function() {
+        cursor.style.animationIterationCount = 0;
+      }, 2000);
+    }
+  })
+</script>
