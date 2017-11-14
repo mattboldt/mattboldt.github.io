@@ -27,6 +27,13 @@ body {
 .index {
 	h2 {
 		font-size: 1.25rem;
+		a {
+			color: #000;
+			&:hover {
+				color: #ac4142;
+				text-decoration: none;
+			}
+		}
 	}
 	.post {
 		margin-bottom: 2.5em;
@@ -65,7 +72,7 @@ code {
 }
 
 .copyright {
-	font-size: .75rem;
+	font-size: .65rem;
 }
 
 .demo-frame {

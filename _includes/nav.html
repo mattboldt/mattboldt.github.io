@@ -12,9 +12,12 @@
           <img src="/assets/img/avatar.jpg" alt="Matt Boldt Avatar" width="120" class="avatar" />
         </a>
       </h1>
-      <h3>I'm Matt</h3>
+      <h3>
+        <span id="typed"></span>
+      </h3>
       <p class="lead">
-        Ruby developer from Texas. I like Rails, React, and EmberJS. I make beats and synth patches, and sometimes I build furniture.
+        Ruby developer from Texas. I like Rails, React, and EmberJS.
+        I make beats, synth patches, and coffee tables.
       </p>
     </div>
 
@@ -38,7 +41,20 @@
     </nav>
 
     <p class="copyright">
-      &copy; copyright and stuff, mattboldt.com {{ site.time | date: '%Y' }}
+      &copy; copyright and stuff {{ site.time | date: '%Y' }}
     </p>
   </div>
 </div>
+
+<script>
+  new Typed('#typed', {
+    strings: ["I'm Matt"],
+    typeSpeed: 80,
+    onComplete: function() {
+      var cursor = document.getElementsByClassName('typed-cursor')[0];
+      setTimeout(function() {
+        cursor.style.animationIterationCount = 0;
+      }, 2000);
+    }
+  })
+</script>
