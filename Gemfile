@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'nokogiri'
-gem 'rack', '~>1.1'
+gem 'rack'
 gem 'rspec', require: 'spec'
 
 gem 'coffee-script'
