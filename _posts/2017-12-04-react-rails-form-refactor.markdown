@@ -230,7 +230,7 @@ Afterwards, when we click the `submit` button, the original Rails form is posted
 
 -----
 
-### Viola!
+### Voila!
 
 Our new form submits just as the old rails one did, but with about 5x the amount of code! _JavaScript is the future!_
 
