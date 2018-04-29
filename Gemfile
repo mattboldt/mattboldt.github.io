@@ -6,7 +6,7 @@ gem 'rspec', require: 'spec'
 gem 'coffee-script'
 
 group :jekyll_plugins do
-  gem 'github-pages'
+  gem 'github-pages', '~>183'
 end
 
 gem 'redcarpet'
