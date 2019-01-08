@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title:  Using Git for Websites
 desc: Let me start off by saying <strong>Git is awesome</strong>. I'm not a native app developer, nor am I part of a large dev team. I'm a web developer, who builds both dynamic and static websites, usually on my own. When I was first introduced to Git, it was in mostly in the context of app development for iOS, Mac, Windows, etc. Upon digging deeper, I found that the use of a version control system benefits <strong>just about every other kind of development / content creation project</strong>.
 date:   2013-03-30 19:30:00

@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Introduction to React-Rails Components
 desc: "Refactoring a Rails form view into a React component"
 date: 2017-12-04 23:00:00

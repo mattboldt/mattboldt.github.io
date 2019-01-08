@@ -7,6 +7,7 @@ gem 'coffee-script'
 
 group :jekyll_plugins do
   gem 'github-pages', '~>183'
+  gem 'jekyll-sitemap'
 end
 
 gem 'redcarpet'

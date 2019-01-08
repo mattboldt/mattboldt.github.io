@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Building Great Nav Bars With display:table
 desc: In my opinion, website nav & toolbars should have somewhat of a native feel to them. Not necessarily native to your OS of choice, but built in such a way the user can hardly tell the app is a web app. A great example of this is Google Drive's text editor nav, and really most of Google's controls. Each time I use it there's a sense of solidity & responsive power that you just don't get from a lot of web apps.
 date: 2014-03-29 13:00:00

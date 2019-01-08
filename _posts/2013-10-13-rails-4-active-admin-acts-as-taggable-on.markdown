@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: "Rails 4, ActiveAdmin, and acts_as_taggable_on"
 desc: Rails 4 has done away with using attr_accessible and others like it. The new standard is to use strong parameters, and it definitely seems like a more secure system. But, for legacy apps upgrading to Rails 4, there is a gem called "protected_attributes" that gives you back what Rails 3 and before let you do -- which is the ability to use attr_accessible :attr1, :attr2, etc to mass assign attributes in your model. This, however, does not come without issues.
 date: 2013-10-13 17:00:00

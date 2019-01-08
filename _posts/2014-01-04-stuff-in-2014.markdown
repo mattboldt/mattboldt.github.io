@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Stuff I Might Do In 2014
 desc: I don't usually make new years resolutions like "join a gym" or "go to Iceland and find where Bj&#246;rk lives" but I figured I could set some simple goals and maybe have a list to mark out as the year continues.
 date: 2014-01-04 13:00:00

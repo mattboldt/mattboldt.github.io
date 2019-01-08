@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Kicking Ass with display:table
 desc: "Building lean layouts & components using display:table"
 date: 2014-05-05 22:00:00

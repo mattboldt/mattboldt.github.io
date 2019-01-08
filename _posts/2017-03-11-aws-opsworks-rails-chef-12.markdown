@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Deploying a Rails App to AWS OpsWorks using Chef 12
 desc: "Configuring and deploying a Rails app to AWS OpsWorks using Linux Chef 12"
 date: 2017-03-11 17:00:00

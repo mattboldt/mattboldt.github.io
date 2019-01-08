@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Importing Massive CSV Data Into Rails
 desc: "Importing data and associating records using ActiveRecord.import and other ActiveRecord tools"
 date: 2017-01-21 22:00:00

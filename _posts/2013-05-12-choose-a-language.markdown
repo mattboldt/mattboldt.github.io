@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Choose a Language Already
 desc: How to choose a language best suited for your project and preferences. 
 date: 2013-05-12 19:30:00

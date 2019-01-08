@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Updating S3 Object Metadata With the AWS Ruby SDK v2
 desc: "Updating S3 object metadata for an entire bucket using the AWS Ruby SDK v2"
 date: 2017-03-31 17:00:00

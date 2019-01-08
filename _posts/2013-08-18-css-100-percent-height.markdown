@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title:  Using 100% Height in CSS
 desc: A cool effect I've been seeing on sites lately involves the use of percentage based heights & absolute positioning. Puzzled by how it worked, I set out to break the code down and do it myself.
 date: 2013-08-18 17:00:00

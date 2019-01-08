@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Organizing CSS & Sass in Rails
 desc: Rails comes equipped with Sass by default. When you build a new app, an application.css stylesheet is created for you. This isn't just a normal stylesheet -- rather, it stands as a master stylesheet in the Rails Asset Pipeline.
 date: 2014-02-09 13:00:00

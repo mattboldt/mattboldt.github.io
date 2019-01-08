@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Arguing with Sass
 desc: "I'm going to keep this short &amp; sweet: <em><strong>keep your Sass mixins simple</strong></em>."
 date: 2014-04-22 17:00:00

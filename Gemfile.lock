@@ -263,6 +263,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   github-pages (~> 183)
+  jekyll-sitemap
   nokogiri
   rack
   redcarpet
@@ -271,4 +272,4 @@ DEPENDENCIES
   yui-compressor
 
 BUNDLED WITH
-   1.16.1
+   1.17.1

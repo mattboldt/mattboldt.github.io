@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Separating Rails Routes
 desc: "Cleaning up routes.rb by separating routes into individual files"
 date: 2017-11-11 17:00:00

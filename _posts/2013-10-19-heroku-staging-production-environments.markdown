@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title: Heroku Staging & Production Environments
 desc: Heroku is super powerful and I suggest if you're new to Rails, or any other framework they support (which is a lot), to give them a try. Manual setup for a lot of these languages and frameworks can be really tedious, but Heroku gets it all done for you. This is especially helpful when you first learn [Insert bleeding edge technology here] and it's either not supported by your web host, or a pain in the ass to set up. Of course, down the road, learning how to do it all manually is also helpful.
 date: 2013-10-19 13:00:00

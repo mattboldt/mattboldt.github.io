@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: /:title/
 title:  Stifled Creativity
 desc: Nearly everything's been done already. And everything that requires doing has thousands of people who do it very, very well. They specialize in that thing they do. They went to school, or spent hours teaching themselves how to do what they do. Who am I to step in and think I can just try to learn and apply a skill while so many have already done so?
 date:   2013-06-24 23:00:00

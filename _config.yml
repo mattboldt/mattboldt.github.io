@@ -2,7 +2,7 @@ title: mattboldt.com
 github_username: mattboldt
 github_url: http://github.com/mattboldt
 highlighter: rouge
-permalink: /:title/
+permalink: /:year/:month/:day/:title/
 year: 2017
 description: Matt Boldt
 url: http://mattboldt.com
@@ -10,7 +10,7 @@ encoding: UTF-8
 
 plugins:
   - jekyll-redirect-from
-
+  - jekyll-sitemap
 
 kramdown:
   input: GFM
