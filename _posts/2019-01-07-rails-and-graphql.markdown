@@ -2,7 +2,7 @@
 layout: post
 title: Rails & GraphQL
 desc: "Building a Rails API with GraphQL Ruby"
-date: 2019-01-06 19:00:00
+date: 2019-01-07 23:00:00
 categories: rails, graphql, ruby, REST
 ---
 
