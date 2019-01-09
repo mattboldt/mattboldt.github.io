@@ -1,3 +1,5 @@
+const tailwind = require('tailwindcss');
+
 module.exports = {
   siteMetadata: {
     title: `mattboldt.com`,
@@ -6,6 +8,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [tailwind('./tailwind.js')],
+        precision: 5, // SASS default: 5
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,8 +33,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        display: `minimal-ui`
       },
     },
     {
