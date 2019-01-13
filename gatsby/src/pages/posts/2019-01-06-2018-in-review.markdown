@@ -1,0 +1,115 @@
+---
+layout: post
+permalink: /:title/
+title: 2018 in Review
+desc: "Looking back at 2018"
+date: 2019-01-06 19:00:00
+categories: 2018, year in review, personal
+---
+
+[Inspired by this tweet](https://twitter.com/Una/status/1081271649410969603), I decided to review my accomplishments in 2018. It's January 6th, 2019 at the time of writing this, but better late than never. Looking back on the year, I realized I had done a lot more than I gave myself credit for. It's very easy for me to feel like I _could have been more productive_ or I _should have worked harder_, etc, and with each complete task I move forward feeling like I need to get the next thing done. So I decided to catalog my progress during 2018 and give myself a well deserved pat on the back. Let's get to it!
+
+![my face](../assets/img/2018-in-review/wed.jpg)
+
+------
+
+
+## Development Work
+
+![github contributions](../assets/img/2018-in-review/contributions.png)
+
+#### 1 year at my new job
+
+May of 2018 marked 1 year working as a senior developer at Kalkomey. We've made tons of progress, built some really cool stuff, all while having a terrific work environment and work/life balance. After working at the same company for 5+ years, I decided I needed a change, and I'm very grateful I was able to find a new gig and continue to work on what I'm passionate about. Apparently I'm doing something right because they aren't sick of me yet.
+
+#### Career progress
+
+At my job I've been able to learn from some brilliant developers from all kinds of backgrounds. As much as I try to soak up new information, I've also worked on adopting good habits; I make it a priority of mine to leave anything I work on better than I found it, easier to understand, easier to work on, and overall more flexible. I've had the ability to pass on information to others and put quality patterns in place for the team to follow moving forward. I still screw up all the time, but we as a team aren't quick to place blame and are instead focused on moving forward and learning from mistakes.
+
+Another exciting role I've dipped my toes in is that of a teacher. It's no formal title, but I do enjoy helping out those joining the team; some using the technology for the first time. I find that teaching is a perfect way to put meaning behind the things I do instead of doing things out of habit, or based on some code I saw once. I feel like I've become a better developer just by practicing empathy and understanding where others are coming from; be it programming, collaboration, or processes.
+
+#### First ruby gem, `guac`
+
+I wrote and released my first gem! And it's a utility I use every single day. It's very gratifying to build something out of your own personal needs and release it to the world to expand upon. I might be the only user now, but I plan to continue working on it and maybe one day it'll catch on 😁. [Guac on Github](https://github.com/mattboldt/guac)
+
+#### Typed.js is at over 7,000 stars 🎉
+
+I'm amazed at how popular this project became. It started as a small library I wanted for my personal blog and it grew into a tool with ~5,000 weekly npm downloads. Many people have opened issues, submitted requests, and helped fix bugs. I really need to spend more time on it, and I hope to make progress in 2019. [Typed.js on Github](https://github.com/mattboldt/typed.js/)
+
+![typed.js](../assets/img/2018-in-review/typed.png)
+
+#### Wikiouch
+
+I built this ridiculous website mashing up Wikihow articles into one Frankenstein article. I find it hilarious, but [you can see for yourself](https://wikiouch.com/). It presented lots of interesting tech challenges and I'm very proud of the code, even if it is stupid.
+
+![wikiouch](../assets/img/2018-in-review/wikiouch.png)
+
+#### Michael Scott Gifs
+
+[I built a Michael Scott themed gif search tool](https://michaelscottgifs.com/). Another ridiculous project, but it allowed me to dig further into EmberJS after having not used it for some time. It was very fun to build, and involved some serious over engineering (like a slug generator based on words Michael Scott said in The Office, sorted by how profane they may be).
+
+![michael scott gifs](../assets/img/2018-in-review/michaelscott.png)
+
+#### cryptocompare-crystal
+
+This was at the very end of 2017, so it counts. I ported a Ruby gem over to Crystal, which is a statically typed, compiled language that mimics Ruby. It's incredibly fast, and I think has a lot of potential. [cryptocompare-crystal on Github](https://github.com/mattboldt/cryptocompare-crystal)
+
+#### Developer Twitter
+
+I went on a following frenzy in 2018 of some brilliant developers. And not just for the sake of programming, but for learning all kinds of new perspectives on the industry, diversity, equality, and inclusivity. When I began programming, I saw it as this mysterious, gatekept community; people hunched over, coding at all hours of the day, neglecting personal hygiene, and hurling insults at anyone they deemed lesser. Things like empathy, collaboration, and politeness weren't as much of a priority. I think my introversion lent itself well to some parts of this, as I didn't crave a lot of interaction with others. But as I went from loner to collaborator, I was pleasantly surprised at how many devs were leaving behind the dated "RTFM" mentality and adopting more sustainable attitude. The community I know today is kind, welcoming, helpful, and progressive. I'd list my favorites here but honestly there would be too many! 
+
+#### Rails screencasts
+
+At the very end of 2018, and beginning of 2019, I began work on tutorial screencasts. It's my first venture into educating others outside of simple blog posts, and I'm excited to see where it goes. I hope to collaborate with [Gorails](https://gorails.com/) and publish some quality content on their platform, and I may go off on my own in the future. I've always wanted to build up some form of passive income, create content with independence, and take a project from beginning to end myself. We'll see what 2019 has in store.
+
+![screencast](../assets/img/2018-in-review/screencast.jpg)
+
+------
+
+## Personal Life
+
+#### I got married!
+
+After months of planning, and a very long engagement period (tip: plan your wedding as close as you possibly can after getting engaged), I got married to my best friend and confidant, Cortnie. We've acted like a married couple for some time now, but September 30th, 2018 we had a hell of a party and started saying "husband" and "wife". It still feels weird to say "wife" but I cope by doing it in Borat's voice. After our wedding we spent a week in Playa del Carmen, Mexico, which was a much needed vacation.
+
+![married](../assets/img/2018-in-review/married.jpg)
+
+#### Started kickboxing, lost 25 pounds
+
+I started exercising to cut down on wedding costs by reducing the amount of fabric my suit would require. As it turns out, punching stuff is a ton of fun and you burn a lot of calories doing it. This year also marks over a year of being _mostly_ pescatarian. One would think that's very difficult in Texas since we have the best BBQ in the country, but it's been great and I feel great.
+
+#### First time voter
+
+The 2018 midterms were the first time I was registered to vote. While the outcome wasn't what I had wanted, it felt good to let go of the apathy and actually get behind someone worthwhile. I hope that the work we put in during that election cycle will bear fruit in the coming years.
+
+#### First new car
+
+I bought what I thought was a way to get from point A to point B, but it turned out to be a very fun, fulfilling, and expensive hobby. But hey, adults get to have toys too.
+
+![new car](../assets/img/2018-in-review/gti.jpg)
+
+------
+
+
+## Misc.
+
+#### Online privacy
+
+2018 was a year full of revelations about abusive tech companies leeching your data. I've made it a point to be aware of this, stay updated on where companies stand on privacy, and patronize businesses who value privacy and consent. It's scary out there, and we developers have the advantage of understanding how these technologies work to abuse their users. It's up to us to be vigilant and inform others.
+
+#### Music
+
+I didn't finish any one project, or any one song for that matter, but I got some pretty cool ideas out there. You can check out a few demos [here](https://soundcloud.com/joy_camp/milk-man-demo), [here](https://soundcloud.com/joy_camp/full-stop-demo), and [here](https://soundcloud.com/in-clouds/off-grid-demo).
+
+----
+
+
+## 2019 Goals
+
+- Publish at least one blog post per month, ideally one every two weeks.
+- Record more screencasts and work towards publishing those regularly.
+- Read more books (programming related and not).
+- Maintain & improve my current projects.
+- Contribute to open source. I have an idea for an addition to [the audited gem](https://github.com/collectiveidea/audited) that I've been playing with, and I need to get that out there.
+- Structure my at-home work to be regular, recurring, and sustainable.
+- Get back into a regular boxing gym schedule; start eating healthy-ish again.
