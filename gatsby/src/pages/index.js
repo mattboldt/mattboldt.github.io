@@ -32,7 +32,9 @@ const IndexPage = ({ data, pageContext }) => {
 
       <ul>
         {posts.map((post, i) => {
-          return <li key={i}><a href={post.node.fields.slug}>{post.node.frontmatter.title}</a></li>
+          return <li key={i}>
+            <Link to={post.node.fields.slug}>{post.node.frontmatter.title} ({post.node.frontmatter.date})</Link>
+          </li>
         })}
       </ul>
     </Layout>
