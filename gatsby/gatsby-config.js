@@ -5,6 +5,7 @@ module.exports = {
     title: `mattboldt.com`,
     description: `Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles.`,
     author: `@martbolft`,
+    siteUrl: `https://mattboldt.com`,
   },
   plugins: [
     {
@@ -81,6 +82,7 @@ module.exports = {
         cookieDomain: "mattboldt.com",
       }
     },
+    `gatsby-plugin-sitemap`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
