@@ -13,7 +13,7 @@ export default ({ data, pageContext }) => {
           {post.frontmatter.title}{' '}
         </h1>
         <span className="f6 moon-gray">
-          {post.frontmatter.categories.join(', ')}
+          {post.frontmatter.categories}
         </span>
         <hr className="mv4 bb b--black-10" />
       </header>
@@ -27,14 +27,14 @@ export default ({ data, pageContext }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
+        categories
       }
     }
   }

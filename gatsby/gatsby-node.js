@@ -1,6 +1,7 @@
 // const _ = require(`lodash`)
 const path = require(`path`)
 const slash = require(`slash`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // const LodashModuleReplacementPlugin = require(`lodash-webpack-plugin`)
 
@@ -12,17 +13,14 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allMarkdownRemark(
-          limit: 1000
-          filter: { frontmatter: { draft: { ne: true } } }
-        ) {
+        allMarkdownRemark {
           edges {
             node {
               fields {
                 slug
               }
               frontmatter {
-                tags
+                categories
               }
             }
           }
@@ -71,7 +69,6 @@ exports.createPages = ({ graphql, actions }) => {
 // Add custom url pathname for blog posts.
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-
   if (node.internal.type === `File`) {
     const parsedFilePath = path.parse(node.absolutePath)
     const slug = `/${parsedFilePath.dir.split(`---`)[1]}/`
@@ -80,11 +77,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.internal.type === `MarkdownRemark` &&
     typeof node.slug === `undefined`
   ) {
-    const fileNode = getNode(node.parent)
+    const slug = createFilePath({ node, getNode, basePath: `pages/posts` });
+    const [, date, title] = slug.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/);
+
+    let value = ``;
+    // if post is using the old url structure
+    if (node.frontmatter.permalink === '/:title/') {
+      value = `/${title}/`;
+    } else {
+      value = `/${date.split('-').join('/')}/${title}/`;
+    }
+
     createNodeField({
       node,
       name: `slug`,
-      value: fileNode.fields.slug,
+      value: value,
     })
 
     if (node.frontmatter.tags) {
