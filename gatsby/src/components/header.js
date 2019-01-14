@@ -4,11 +4,11 @@ import React from 'react'
 
 const Header = ({ siteTitle }) => (
   <div>
-    <h1 className="fw3 mt4 mb1">
-      <Link to="/">
-        {siteTitle}
-      </Link>
-    </h1>
+    <ul className="list-reset flex">
+      <li className="mr-6">
+        <Link to="/" className="text-blue hover:text-blue-darker">Home</Link>
+      </li>
+    </ul>
   </div>
 )
 

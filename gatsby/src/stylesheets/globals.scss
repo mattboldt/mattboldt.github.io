@@ -1,14 +1,12 @@
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
+@import "prism-onedark";
+@import "blog-post";
 
 %drop-shadow {
   border: black 1px solid;
-  box-shadow: rgb(31, 31, 31) -3px 3px 0 0;
-}
-
-.image-url {
-  text-transform: none;
+  box-shadow: rgb(0, 0, 0) -3px 3px 0 0;
 }
 
 *::selection {
@@ -20,12 +18,35 @@ body {
   font-family: 'PT Serif', serif;
 }
 
-video {
-  display: block;
-  margin: auto;
-  max-width: 550px;
-  width: 100%;
+img {
   @extend %drop-shadow;
+}
+
+.gatsby-highlight {
+  pre[class*="language-"] {
+    @extend %drop-shadow;
+  }
+  pre[class*="language-"], code[class*="language-"] {
+    border-radius: 0;
+    line-height: 1.25;
+
+    *::selection {
+      background: rgb(58, 64, 76);
+      color: inherit;
+    }
+  }
+}
+
+:not(pre) > code[class*="language-"] {
+  border-radius: 0;
+  border: 0;
+  padding: 5px;
+  font-size: 0.85em;
+  @extend %drop-shadow;
+}
+
+.image-url {
+  text-transform: none;
 }
 
 input, button {
@@ -51,17 +72,4 @@ button {
 
 button:focus, input:focus {
   outline: rgb(160, 160, 255) 2px solid;
-}
-
-.image-tag {
-  padding: 5px 10px;
-  margin: 0 0 10px;
-  background: rgb(157, 157, 255);
-  color: #fff;
-  text-shadow: -1px 1px rgba(0, 0, 0, 0.4);
-  @extend %drop-shadow;
-}
-
-small {
-  font-size: 12px;
 }

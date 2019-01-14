@@ -1,36 +1,64 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Header from '../components/header'
 import SEO from '../components/seo'
+import { DiscussionEmbed } from 'disqus-react';
 
 class BlogPost extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
+    const { previous, next } = this.props.pathContext;
+    const disqusShortname = "yourdisqusshortname";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
 
     return (
       <Layout location={this.props.location}>
+        <Header />
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.desc}
           keywords={post.frontmatter.categories} />
         <article>
           <header>
-            <span className="fw3 gray f5">{post.frontmatter.date}</span>
-            <h1 className="f3 fw3 f2-m fw2-m f1-l fw2-l mv1 db title-gradient">
-              {post.frontmatter.title}{' '}
-            </h1>
-            <span className="f6 moon-gray">
+            <span>{post.frontmatter.date}</span>
+            <h1>{post.frontmatter.title}</h1>
+            <span>
               {post.frontmatter.categories}
             </span>
-            <hr className="mv4 bb b--black-10" />
+            <hr />
           </header>
           <section>
             <div
-              className="leading-loose text-lg"
+              className="leading-normal text-lg"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </section>
         </article>
+
+        <ul className="list-reset flex">
+          <li className="flex-1 mr-2">
+            {previous && <Link
+              to={previous.fields.slug}
+              rel="previous"
+              className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+              &larr; {previous.frontmatter.title}
+            </Link>}
+          </li>
+          <li className="flex-1 mr-2">
+            {next && <Link
+              to={next.fields.slug}
+              rel="next"
+              className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+              {next.frontmatter.title} &rarr;
+            </Link>}
+          </li>
+        </ul>
+
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
   }
