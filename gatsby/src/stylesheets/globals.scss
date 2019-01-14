@@ -1,3 +1,67 @@
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
+
+%drop-shadow {
+  border: black 1px solid;
+  box-shadow: rgb(31, 31, 31) -3px 3px 0 0;
+}
+
+.image-url {
+  text-transform: none;
+}
+
+*::selection {
+  background: rgb(128, 128, 228);
+  color: #fff;
+}
+
+body {
+  font-family: 'PT Serif', serif;
+}
+
+video {
+  display: block;
+  margin: auto;
+  max-width: 550px;
+  width: 100%;
+  @extend %drop-shadow;
+}
+
+input, button {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  font-family: 'Courier';
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background: transparent;
+  @extend %drop-shadow;
+}
+
+button {
+  background: rgb(128, 128, 228);
+  color: #fff;
+  cursor: pointer;
+  text-shadow: -1px 1px rgb(31, 31, 31);
+}
+
+button:focus, input:focus {
+  outline: rgb(160, 160, 255) 2px solid;
+}
+
+.image-tag {
+  padding: 5px 10px;
+  margin: 0 0 10px;
+  background: rgb(157, 157, 255);
+  color: #fff;
+  text-shadow: -1px 1px rgba(0, 0, 0, 0.4);
+  @extend %drop-shadow;
+}
+
+small {
+  font-size: 12px;
+}

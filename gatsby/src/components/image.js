@@ -31,7 +31,7 @@ const Image = () => (
     render={data =>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        className="rounded-full border-4 border-grey-dark" />
+        className="border-4 border-grey-dark image-tag" />
     }
   />
 )

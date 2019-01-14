@@ -26,7 +26,7 @@ class BlogPost extends React.Component {
           </header>
           <section>
             <div
-              className="post__body"
+              className="leading-loose text-lg"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </section>
