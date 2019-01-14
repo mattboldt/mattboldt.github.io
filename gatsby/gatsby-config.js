@@ -4,10 +4,22 @@ module.exports = {
   siteMetadata: {
     title: `mattboldt.com`,
     description: `Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles.`,
-    author: `@gatsbyjs`,
+    author: `@martbolft`,
   },
   plugins: [
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -62,7 +74,8 @@ module.exports = {
         siteSpeedSampleRate: 10,
         cookieDomain: "mattboldt.com",
       }
-    }
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

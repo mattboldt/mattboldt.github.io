@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
@@ -10,7 +10,10 @@ const IndexPage = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Matt Boldt Writes Ruby"
+        description="Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles."
+        keywords="rails, ruby, javascript, react, tutorials"/>
 
       <div className="flex items-center">
         <div className="w-2/3">
