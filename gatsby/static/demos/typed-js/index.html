@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Animated Typing with Typed.js | by Matt Boldt</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/typed.custom.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+	<script>
+	$(function(){
+
+		$("#typed").typed({
+			strings: ["Typed.js is a JavaScript library.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
+			typeSpeed: 30,
+      callback: function(){
+        shift();
+      }
+		});
+
+	});
+  function shift(){
+      $(".head-wrap").addClass("shift-text");
+      terminalHeight();
+  }
+
+  function terminalHeight(){
+      var termHeight = $(".terminal-height");
+      var value = termHeight.text();
+      value = parseInt(value);
+      setTimeout(function(){
+          if (value > 10){
+              value = value-1;
+              this.txtValue = value.toString();
+              termHeight.text(this.txtValue);
+              self.terminalHeight();
+          }
+          else{
+              clearTimeout();
+          }
+      }, 10);
+  }
+	</script>
+	<link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="header">
+	<div class="head-wrap">
+		<h1 class="h1">Typed.js</h1>
+		<div class="text-editor-wrap">
+			<div class="title-bar"><span class="title">typed.js &mdash; bash &mdash; 80x<span class="terminal-height">25</span></span></div>
+			<div class="text-body">
+				$ <span id="typed"></span>
+			</div>
+		</div>
+		<span class="tagline">Type your heart out, with Typed.js</span>
+	</div>
+  <div class="wrap">
+    <div class="btn-wrap">
+      <iframe src="http://ghbtns.com/github-btn.html?user=mattboldt&repo=typed.js&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="50"></iframe>
+      <iframe src="http://ghbtns.com/github-btn.html?user=mattboldt&repo=typed.js&type=follow&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="50"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+	<div class="btn-wrap">
+		<div class="btn">
+			<a href="https://github.com/mattboldt/typed.js/archive/master.zip"><i class="fa fa-file-zip-o"></i> Download Zip</a>
+		</div>
+		<div class="btn">
+			<a href="https://github.com/mattboldt/typed.js/"><i class="fa fa-github"></i> View on GitHub</a>
+		</div>
+	</div>
+
+	<p class="note">Another demo made with love by <a href="http://www.mattboldt.com/">Matt Boldt</a>.</p>
+
+
+<h2 class="h2">Installation</h2>
+<pre>
+<code>
+# With NPM
+npm install typed.js
+
+# With Yarn
+yarn add typed.js
+
+# With Bower
+bower install typed.js
+
+</code>
+</pre>
+
+<h2 class="h2">Setup</h2>
+<pre>
+<code class="javascript">
+var typed = new Typed('.element', {
+  strings: ["First sentence.", "Second sentence."],
+  typeSpeed: 30
+});
+
+</code>
+</pre>
+
+<hr />
+
+<h2 class="h2">All the cool kids use Typed.js</h2>
+
+<p>
+  <a href="https://slack.com/" target="_blank">https://slack.com</a><br />
+  <a href="https://envato.com/" target="_blank">https://envato.com</a><br />
+  <a href="https://productmap.co/" target="_blank">https://productmap.co/</a><br />
+  <a href="https://www.typed.com/" target="_blank">https://www.typed.com/</a><br />
+  <a href="https://apeiron.io/" target="_blank">https://apeiron.io/</a><br />
+  <a href="https://git.market/" target="_blank">https://git.market/</a><br />
+  <a href="http://allison.house/404" target="_blank">http://allison.house/404</a><br />
+  <a href="http://www.maxcdn.com/" target="_blank">http://www.maxcdn.com/</a><br />
+  <a href="https://commando.io/" target="_blank">https://commando.io/</a><br />
+  <a href="http://testdouble.com/agency.html" target="_blank">http://testdouble.com/agency.html</a><br />
+  <a href="http://www.stephanemartinw.com/" target="_blank">http://www.stephanemartinw.com/</a><br />
+  <a href="http://www.trelab.fi/en/" target="_blank">http://www.trelab.fi/en/</a><br />
+  <a href="http://jessejohnson.github.io/" target="_blank">http://jessejohnson.github.io/</a><br />
+</p>
+
+<hr />
+
+<h2 class="h2">Are you not entertained?!</h2>
+
+<p>
+  The <a href="https://github.com/mattboldt/typed.js/blob/master/README.md">README on GitHub</a> is going to be very helpful for any other questions, features, or use cases.
+</p>
+
+<hr />
+
+<h2 class="h2">end</h2>
+
+<p>
+
+If you're using this, let me know! I'd love to see it.<br />
+
+It would also be great if you mentioned me or my website somewhere. <a href="http://www.mattboldt.com">www.mattboldt.com</a></p><br />
+</p>
+
+</div>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11539016-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

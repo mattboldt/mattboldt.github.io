@@ -158,6 +158,6 @@ ul{
 <iframe width="100%" height="200" src="http://jsfiddle.net/mattboldt/Mz6Fw/8/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
 
 <p>
-<a href="http://caniuse.com/#search=display%3Atable">Browser support for display:table</a> is actually quite good, and is honestly a joy to work with compared to using floats or inline-block. What do you think? Leave comments below or ping me on <a href="http://www.twitter.com/atmattb">Twitter</a> for questions & insults!
+<a href="http://caniuse.com/#search=display%3Atable">Browser support for display:table</a> is actually quite good, and is honestly a joy to work with compared to using floats or inline-block. What do you think? Leave comments below or ping me on <a href="http://www.twitter.com/martbolft">Twitter</a> for questions & insults!
 </p>
 <p>-Matt</p>

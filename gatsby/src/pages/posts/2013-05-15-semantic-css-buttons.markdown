@@ -166,6 +166,6 @@ But, this method has some issues. Using transparent white and black means the bu
 <h2>Summing Up</h2>
 <p>
 
-After recently employing this method on the sites I build at work, I realized the buttons become very versatile and receptive to change in surrounding layout. I had to re-design a page header incorporating these buttons, and after swapping a few class names I had them laid out exactly how I needed them without redoing any CSS. While obviously the design will always change, I believe this code structure is very helpful. Please, share your thoughts with me on <a href="http://www.twitter.com/atmattb/">Twitter</a>.
+After recently employing this method on the sites I build at work, I realized the buttons become very versatile and receptive to change in surrounding layout. I had to re-design a page header incorporating these buttons, and after swapping a few class names I had them laid out exactly how I needed them without redoing any CSS. While obviously the design will always change, I believe this code structure is very helpful. Please, share your thoughts with me on <a href="http://www.twitter.com/martbolft/">Twitter</a>.
 
 </p>

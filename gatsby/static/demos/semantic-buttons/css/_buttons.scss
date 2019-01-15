@@ -1,0 +1,164 @@
+// ---------------------------------------------------- //
+// ------------------- SEMANTIC BUTTONS --------------- //
+// ---------------------------------------------------- //
+
+
+// ------ BUTTON WRAPPER FOR POSITIONING CONTROL ------ //
+.btn-wrap{
+	display: block;
+	margin:0 auto 1em;
+	clear:both;
+}
+	
+	// ------ BASE BUTTON CLASS ------ //
+	.btn{
+		display: inline-block;
+		position: relative;
+		margin:0 10px;
+		text-align: left;
+		vertical-align: top;
+
+		// spreads button 100% of container
+		@media screen and (max-width:500px){
+			display:block;
+		}
+
+		& > a{
+			display: block;
+			position: relative;
+			padding:0.8em 1.75em 0.7em;
+			color:#fff;
+			font-size: 1.5em;
+			font-weight: 600;
+			line-height: 1em;
+			text-align: center;
+			text-shadow:rgba(0,0,0,0.5) 0px 1px 2px;
+			$basecolor: #CCC;
+			background-color:$basecolor;
+			@include btn-gradient(top, $basecolor, 10%, 10%);
+			border-radius:4px;
+			box-shadow:
+				inset rgba(255,255,255,0.6) 0px 1px 0px,
+				inset rgba(0,0,0,0.2) 0px -1px 0px,
+				rgba(0,0,0,0.5) 0px 1px 5px,
+				rgba(0,0,0,0.5) 0px 0px 0px 1px;
+			&:hover{
+				@include btn-gradient(top, $basecolor, 15%, 10%);
+			}
+			&:active{
+				text-shadow:rgba(0,0,0,0.3) 0px 0px 2px;
+				box-shadow:
+					inset rgba(0,0,0,0.5) 0px 1px 4px;
+				@include btn-gradient(top, $basecolor, 5%, 10%);
+			}
+			z-index:0;
+		}
+
+
+		p{
+			line-height: 1em;
+			a{
+				color:$link;
+				&:hover{
+					color:$linkhover;
+				}
+			}
+		}
+	}
+	
+	// ------ BUTTON STYLE VARIATIONS ------- //
+	.btn-blue{
+		a{ $basecolor:#34A2FF; @include btn-gradient(top, $basecolor, 10%, 10%);
+			&:hover{ @include btn-gradient(top, $basecolor, 15%, 10%); }
+			&:active{ @include btn-gradient(top, $basecolor, 5%, 10%); }
+		}
+	}
+	.btn-green{
+		a{ $basecolor:#33BF39; @include btn-gradient(top, $basecolor, 10%, 10%);
+			&:hover{ @include btn-gradient(top, $basecolor, 15%, 10%); }
+			&:active{ @include btn-gradient(top, $basecolor, 5%, 10%); }
+		}
+	}
+	.btn-orange{
+		a{ $basecolor:#FF7700; @include btn-gradient(top, $basecolor, 10%, 10%);
+			&:hover{ @include btn-gradient(top, $basecolor, 15%, 10%); }
+			&:active{ @include btn-gradient(top, $basecolor, 5%, 10%); }
+		}
+	}
+
+	.btn-block{
+		display: block;
+		margin:0;
+	}
+	.btn-center{
+		text-align: center;
+	}
+
+	// for button descriptions
+	.txt-center{
+		text-align: center;
+		p, span{
+			text-align: center;
+		}
+	}
+	.txt-right{
+		text-align: right;
+		p, span{
+			text-align: right;
+		}
+	}
+
+
+// ------- TOOLTIP STYLES ------- //
+.btn-tooltip{
+	a {
+		z-index:9999;
+	}
+
+	.tooltip{
+		display: block;
+		position: absolute;
+		margin:auto;
+		width:100%;
+		top:0px;
+		padding:20px 0;
+		opacity:0;
+		background-color:#333;
+		background-image:-webkit-linear-gradient(top, #333, #222);
+		box-shadow:rgba(0,0,0,0.2) 0px 1px 15px, inset rgba(255,255,255,0.3) 0px 1px 0px;
+		border:rgb(0,0,0) 1px solid;
+		border-radius:5px;
+		color:#fff;
+		text-align: center;
+		text-shadow:#000 0px -1px 0px;
+		z-index:0;
+		-webkit-transition:all 0.1s ease-in-out;
+		-moz-transition:all 0.1s ease-in-out;
+		-ms-transition:all 0.1s ease-in-out;
+		transition:all 0.1s ease-in-out;
+
+		&:before, &:after{
+			content: "";
+			position: absolute;
+			bottom:-10px;
+			left:50%;
+			margin-left:-10px;
+			display: block;
+			border-left:transparent 10px solid;
+			border-right:transparent 10px solid;
+			border-top: #222 10px solid;
+		}
+		&:before{
+			border-top: rgb(0,0,0) 10px solid;
+			bottom:-11px;
+		}
+	}
+
+	// ADD INITIALIZE TOOLTIP W/ JQUERY
+		.init-btn-tooltip{
+			top:-75px;
+			opacity:1;
+			z-index:999;
+		}
+	}
+		

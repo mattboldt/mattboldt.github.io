@@ -74,4 +74,4 @@ app/assets/stylesheets/main.scss
 
 <p>I usually avoid writing any regular Sass code in my main stylesheet, as well as in <span class="inline-code">application.css</span>. If I write styles that affect the website globally, they will go in <span class="inline-code">globals.scss</span>. If I edit how my posts are laid out, or how my user home page looks, I will put the styles in their respective stylesheets. This tackles CSS in a more object oriented way, as well as keeps your assets clean and very easy for a team to go in and edit.</p>
 
-<p>Leave your thoughts below, or ping me on <a href="http://www.twitter.com/atmattb">Twitter</a>. I plan to make a quick gem to set this all up for you in the future, so be on the lookout!</p>
+<p>Leave your thoughts below, or ping me on <a href="http://www.twitter.com/martbolft">Twitter</a>. I plan to make a quick gem to set this all up for you in the future, so be on the lookout!</p>
