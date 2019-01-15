@@ -6,7 +6,7 @@
 
 %drop-shadow {
   border: black 1px solid;
-  box-shadow: rgb(0, 0, 0) -3px 3px 0 0;
+  box-shadow: rgb(0, 0, 0) -4px 4px 0 0;
 }
 
 *::selection {
@@ -25,6 +25,7 @@ img, .image-tag {
 .gatsby-highlight {
   pre[class*="language-"] {
     @extend %drop-shadow;
+    margin-bottom: 15px;
   }
   pre[class*="language-"], code[class*="language-"] {
     border-radius: 0;
