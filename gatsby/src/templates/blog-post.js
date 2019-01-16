@@ -22,43 +22,44 @@ class BlogPost extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.desc}
           keywords={post.frontmatter.categories} />
-        <article>
-          <header>
-            <span>{post.frontmatter.date}</span>
-            <h1>{post.frontmatter.title}</h1>
-            <span>
-              {post.frontmatter.categories}
-            </span>
-            <hr />
-          </header>
-          <section>
-            <div
-              className="leading-normal text-lg"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </section>
-        </article>
 
-        <ul className="list-reset flex">
-          <li className="flex-1 mr-2">
-            {previous && <Link
-              to={previous.fields.slug}
-              rel="previous"
-              className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
-              &larr; {previous.frontmatter.title}
-            </Link>}
-          </li>
-          <li className="flex-1 mr-2">
-            {next && <Link
-              to={next.fields.slug}
-              rel="next"
-              className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
-              {next.frontmatter.title} &rarr;
-            </Link>}
-          </li>
-        </ul>
+            <article>
+              <header className="post-heading container mx-auto max-w-xl">
+                <h1>{post.frontmatter.title}</h1>
+              </header>
+              <section className="container mx-auto px-4 py-4 max-w-lg">
 
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+                <div className="mw8 center ph3-ns leading-normal text-lg">
+                  <div className="post-details">
+                    <p className="text-base">{post.frontmatter.date}</p>
+                    <p className="text-sm">{post.frontmatter.categories}</p>
+                  </div>
+                  <hr/>
+                  <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
+                </div>
+              </section>
+            </article>
+
+            <ul className="list-reset flex">
+              <li className="flex-1 mr-2">
+                {previous && <Link
+                  to={previous.fields.slug}
+                  rel="previous"
+                  className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+                  &larr; {previous.frontmatter.title}
+                </Link>}
+              </li>
+              <li className="flex-1 mr-2">
+                {next && <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+                  {next.frontmatter.title} &rarr;
+                </Link>}
+              </li>
+            </ul>
+
+            <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
   }

@@ -1,16 +1,25 @@
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
-@import "prism-onedark";
-@import "blog-post";
+
+$purple: rgb(128, 128, 228);
 
 %drop-shadow {
   border: black 1px solid;
-  box-shadow: rgb(0, 0, 0) -4px 4px 0 0;
+  box-shadow: rgb(0, 0, 0) 4px 4px 0 0;
 }
 
+%negative-margins {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+@import "prism-onedark";
+@import "blog-post";
+@import "code";
+
 *::selection {
-  background: rgb(128, 128, 228);
+  background: $purple;
   color: #fff;
 }
 
@@ -22,55 +31,24 @@ img, .image-tag {
   @extend %drop-shadow;
 }
 
-.gatsby-highlight {
-  pre[class*="language-"] {
-    @extend %drop-shadow;
-    margin-bottom: 15px;
-  }
-  pre[class*="language-"], code[class*="language-"] {
-    border-radius: 0;
-    line-height: 1.25;
-
-    *::selection {
-      background: rgb(58, 64, 76);
-      color: inherit;
-    }
-  }
-}
-
-:not(pre) > code[class*="language-"] {
-  border-radius: 0;
+hr {
+  position: relative;
+  margin: 1em 0;
   border: 0;
-  padding: 5px;
-  font-size: 0.85em;
-  @extend %drop-shadow;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
 }
 
-.image-url {
-  text-transform: none;
+a {
+  color: darken($purple, 30%);
+  text-decoration: none;
+
+  &:hover {
+    color: $purple;
+  }
 }
 
-input, button {
-  width: 100%;
-  padding: 20px;
-  background: #fff;
-  font-family: 'Courier';
-  /* Remove First */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  background: transparent;
-  @extend %drop-shadow;
-}
-
-button {
-  background: rgb(128, 128, 228);
-  color: #fff;
-  cursor: pointer;
-  text-shadow: -1px 1px rgb(31, 31, 31);
-}
-
-button:focus, input:focus {
-  outline: rgb(160, 160, 255) 2px solid;
+.base-list {
+  list-style: none;
+  padding: 0;
 }

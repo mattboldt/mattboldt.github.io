@@ -1,0 +1,42 @@
+.gatsby-highlight {
+  @extend %negative-margins;
+  margin-bottom: 1.5em;
+
+  @media all and (max-width: 800px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  pre[class*="language-"] {
+    @extend %drop-shadow;
+    margin-bottom: 15px;
+    padding: 1em;
+  }
+
+  pre[class*="language-"], code[class*="language-"] {
+    font-size: 0.9em;
+    border-radius: 0;
+    line-height: 1.25;
+
+    ::selection {
+      background: rgb(58, 64, 76);
+      color: inherit;
+    }
+  }
+}
+
+:not(pre) > code[class*="language-"] {
+  border-radius: 0;
+  border: 0;
+  padding: 2px 4px;
+  font-size: 0.85em;
+  border: black 1px solid;
+  color: #fff;
+  box-shadow: none;
+  background: $purple;
+
+  &::selection {
+    background: #fff;
+    color: #000;
+  }
+}

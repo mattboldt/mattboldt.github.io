@@ -1,11 +1,48 @@
 article {
-  h1 {
-    font-size: 3em;
+  .post-heading {
+    padding: 1.5em;
+    font-size: 4vw;
+    text-align: center;
+    word-break: break-word;
+
+    @media all and (min-width: 1001px) {
+      font-size: 2.2vw;
+    }
+
+    @media all and (max-width: 699px) and (min-width: 520px) {
+      font-size: 3vw;
+    }
+
+    @media all and (max-width: 1000px) and (min-width: 700px) {
+      font-size: 3vw;
+    }
   }
-  h2 {
-    font-size: 1.75em;
+
+  .post-details {
+    text-transform: uppercase;
+    color: lighten(#000, 50%);
   }
-  h3 {
-    font-size: 1.5em;
+  .post-body {
+    hr {
+      margin: 2em 0 1.5em;
+    }
+    p {
+      padding-bottom: 1em;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    h2 {
+      font-size: 1.75em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0.5em;
+    }
+    ul, ol {
+      margin-bottom: 0.5em;
+    }
   }
 }
