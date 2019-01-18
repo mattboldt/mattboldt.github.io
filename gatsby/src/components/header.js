@@ -6,7 +6,7 @@ const Header = ({ siteTitle }) => (
   <div>
     <ul className="list-reset flex">
       <li className="mr-6">
-        <Link to="/" className="text-blue hover:text-blue-darker">Home</Link>
+        <Link to="/">Home</Link>
       </li>
     </ul>
   </div>

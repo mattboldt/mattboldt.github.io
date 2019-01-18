@@ -1,11 +1,5 @@
 .gatsby-highlight {
-  @extend %negative-margins;
   margin-bottom: 1.5em;
-
-  @media all and (max-width: 800px) {
-    margin-left: 0;
-    margin-right: 0;
-  }
 
   pre[class*="language-"] {
     @extend %drop-shadow;
@@ -26,17 +20,8 @@
 }
 
 :not(pre) > code[class*="language-"] {
-  border-radius: 0;
-  border: 0;
+  border-radius: 2px;
   padding: 2px 4px;
   font-size: 0.85em;
   border: black 1px solid;
-  color: #fff;
-  box-shadow: none;
-  background: $purple;
-
-  &::selection {
-    background: #fff;
-    color: #000;
-  }
 }

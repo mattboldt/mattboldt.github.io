@@ -55,7 +55,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 keywords.length > 0
                   ? {
                       name: `keywords`,
-                      content: keywords,
+                      content: keywords.join(', '),
                     }
                   : []
               )

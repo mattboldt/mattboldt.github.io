@@ -1,20 +1,19 @@
 article {
+  line-height: 1.75;
+
   .post-heading {
     padding: 1.5em;
-    font-size: 4vw;
+    font-size: 5vw;
     text-align: center;
     word-break: break-word;
+    line-height: 1;
 
     @media all and (min-width: 1001px) {
-      font-size: 2.2vw;
+      font-size: 2.4vw;
     }
 
-    @media all and (max-width: 699px) and (min-width: 520px) {
-      font-size: 3vw;
-    }
-
-    @media all and (max-width: 1000px) and (min-width: 700px) {
-      font-size: 3vw;
+    @media all and (max-width: 1000px) and (min-width: 520px) {
+      font-size: 3.5vw;
     }
   }
 

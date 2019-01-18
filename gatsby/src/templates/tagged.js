@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import SEO from '../components/seo'
 
-class BlogPost extends React.Component {
+class Tagged extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const { previous, next } = this.props.pathContext;
@@ -15,28 +15,7 @@ class BlogPost extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.desc}
-          keywords={post.fields.categories} />
-
-        <article>
-          <header className="post-heading container mx-auto max-w-xl">
-            <h1>{post.frontmatter.title}</h1>
-          </header>
-          <section className="container mx-auto px-4 py-4 max-w-lg">
-
-            <div className="mw8 center ph3-ns text-lg">
-              <div className="post-details">
-                <p className="text-base">{post.frontmatter.date}</p>
-                <p className="text-sm">
-                  {post.fields.categories.map((cat) =>
-                    <Link key={`cat-${cat}`} to={`categories/${cat}`}>{cat}</Link>
-                  )}
-                </p>
-              </div>
-              <hr/>
-              <div className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} />
-            </div>
-          </section>
-        </article>
+          keywords={post.frontmatter.categories} />
 
         <ul className="list-reset flex">
           <li className="flex-1 mr-2">
@@ -61,18 +40,16 @@ class BlogPost extends React.Component {
   }
 }
 
-export default BlogPost;
+export default Tagged;
 
 export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      fields {
-        categories
-      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        categories
         desc
       }
     }

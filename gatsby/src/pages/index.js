@@ -13,7 +13,7 @@ const IndexPage = ({ data, pageContext }) => {
       <SEO
         title="Matt Boldt Writes Ruby"
         description="Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles."
-        keywords="rails, ruby, javascript, react, tutorials"/>
+        keywords={['rails', 'ruby', 'javascript', 'react', 'tutorials']}/>
 
       <header className="container mx-auto max-w-xl py-6">
         <div className="flex items-center">

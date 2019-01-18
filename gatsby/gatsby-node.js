@@ -1,15 +1,14 @@
-// const _ = require(`lodash`)
+const _ = require(`lodash`)
+const LodashModuleReplacementPlugin = require(`lodash-webpack-plugin`)
 const path = require(`path`)
 const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
-// const LodashModuleReplacementPlugin = require(`lodash-webpack-plugin`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
-  // const tagPagesTemplate = path.resolve(`src/templates/template-tag-page.js`)
+  const catPagesTemplate = path.resolve(`src/templates/tagged.js`)
   return graphql(
     `
       {
@@ -21,9 +20,9 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               fields {
                 slug
+                categories
               }
               frontmatter {
-                categories
                 title
               }
             }
@@ -49,30 +48,26 @@ exports.createPages = ({ graphql, actions }) => {
           slug: node.fields.slug,
           previous: previous,
           next: next,
-          highlight: node.frontmatter.highlight,
-          shadow: node.frontmatter.shadow,
         },
       })
     })
 
     // Create tag pages.
-    // let tags = []
-    // result.data.allMarkdownRemark.edges.forEach(edge => {
-    //   if (_.get(edge, `node.frontmatter.tags`)) {
-    //     tags = tags.concat(edge.node.frontmatter.tags)
-    //   }
-    // })
-    // tags = _.uniq(tags)
-    // tags.forEach(tag => {
-    //   const tagPath = `/tags/${_.kebabCase(tag)}/`
-    //   createPage({
-    //     path: tagPath,
-    //     component: tagPagesTemplate,
-    //     context: {
-    //       tag,
-    //     },
-    //   })
-    // })
+    let categories = []
+    posts.forEach(edge => {
+      if (_.get(edge, `node.fields.categories`)) {
+        categories = categories.concat(edge.node.fields.categories)
+      }
+    })
+
+    _.uniq(categories).forEach((cat) => {
+      const catPath = `/categories/${_.kebabCase(tag)}/`
+      createPage({
+        path: catPath,
+        component: catPagesTemplate,
+        context: { cat },
+      });
+    })
   })
 }
 
@@ -90,35 +85,34 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const slug = createFilePath({ node, getNode, basePath: `pages/posts` });
     const [, date, title] = slug.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/);
 
-    let value = ``;
+    let newSlug = ``;
     // if post is using the old url structure
     if (node.frontmatter.permalink === '/:title/') {
-      value = `/${title}/`;
+      newSlug = `/${title}/`;
     } else {
-      value = `/${date.split('-').join('/')}/${title}/`;
+      newSlug = `/${date.split('-').join('/')}/${title}/`;
     }
 
-    createNodeField({
-      node,
-      name: `slug`,
-      value: value,
-    })
+    createNodeField({ node, name: `slug`, value: newSlug });
 
-    if (node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(
-        tag => `/tags/${_.kebabCase(tag)}/`
-      )
-      createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
-    }
+    const categories = node.frontmatter.categories.split(',').map((s) => s.trim());
+    createNodeField({ node, name: `categories`, value: categories });
+
+    // if (categories) {
+    //   const tagSlugs = categories.map(
+    //     tag => `/tags/${_.kebabCase(tag)}/`
+    //   )
+    //   createNodeField({ node, name: `tagSlugs`, value: tagSlugs })
+    // }
   }
 }
 
 // Sass and Lodash.
-// exports.onCreateWebpackConfig = ({ stage, actions }) => {
-//   switch (stage) {
-//     case `build-javascript`:
-//       actions.setWebpackConfig({
-//         plugins: [new LodashModuleReplacementPlugin()],
-//       })
-//   }
-// }
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  switch (stage) {
+    case `build-javascript`:
+      actions.setWebpackConfig({
+        plugins: [new LodashModuleReplacementPlugin()],
+      })
+  }
+}
