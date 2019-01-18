@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     _.uniq(categories).forEach((cat) => {
-      const catPath = `/categories/${_.kebabCase(tag)}/`
+      const catPath = `/categories/${_.kebabCase(cat)}/`
       createPage({
         path: catPath,
         component: catPagesTemplate,
