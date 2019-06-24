@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Rails & GraphQL
-desc: "Building a Rails API with GraphQL Ruby"
-date: 2019-01-07 23:00:00
-categories: rails, graphql, ruby, REST
+title: Rails, React, & GraphQL (Part 2)
+desc: "Building a React & Apollo Frontend With a Graphql Rails API Backend"
+date: 2019-06-23 21:00:00
+categories: rails, graphql, react, apollo, react-apollo
 ---
-
-# Rails, React, & GraphQL (Part 2)
 
 ![rails and graphql](/assets/img/rails-and-graphql/rails_and_graphql.png)
 
