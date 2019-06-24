@@ -7,7 +7,10 @@ import SEO from '../components/seo'
 
 const IndexPage = ({ data, pageContext }) => {
   console.log(pageContext)
-  const posts = data.allMarkdownRemark.edges
+  const { group, index, first, last, pageCount } = pageContext;
+  const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
+  const nextUrl = (index + 1).toString();
+
   return (
     <Layout>
       <SEO
@@ -31,41 +34,38 @@ const IndexPage = ({ data, pageContext }) => {
       </header>
 
       <div className="post-heading container mx-auto max-w-lg py-6">
-        <ul class="base-list">
-          {posts.map((post, i) => {
-            return <li key={i} className="px-2 py-4">
-              <Link to={post.node.fields.slug}>
-                <strong>{post.node.frontmatter.title} ({post.node.frontmatter.date})</strong>
+        <ul className="base-list">
+          {group.map(({ node }, i) => (
+            <li key={i} className="px-2 py-4">
+              <Link to={node.fields.slug}>
+                <strong>{node.frontmatter.title} ({node.frontmatter.date})</strong>
               </Link>
-              <p>{post.node.frontmatter.desc}</p>
+              <p dangerouslySetInnerHTML={{__html: node.frontmatter.desc}} />
             </li>
-          })}
+          ))}
         </ul>
       </div>
+
+      <ul className="list-reset flex">
+        <li className="flex-1 mr-2">
+          {first && <Link
+            to={previousUrl}
+            rel="previous"
+            className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+            &larr; Previous Page
+          </Link>}
+        </li>
+        <li className="flex-1 mr-2">
+          {last && <Link
+            to={nextUrl}
+            rel="next"
+            className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+            Next Page &rarr;
+          </Link>}
+        </li>
+      </ul>
     </Layout>
   )
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            desc
-          }
-        }
-      }
-    }
-  }
-`

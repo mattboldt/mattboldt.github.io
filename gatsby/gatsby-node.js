@@ -3,6 +3,7 @@ const LodashModuleReplacementPlugin = require(`lodash-webpack-plugin`)
 const path = require(`path`)
 const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const createPaginatedPages = require("gatsby-paginate")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -13,7 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         allMarkdownRemark(
-          sort: { order: ASC, fields: [frontmatter___date] }
+          sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
           edges {
@@ -24,6 +25,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                date(formatString: "MMMM DD, YYYY")
+                desc
               }
             }
           }
@@ -50,6 +53,14 @@ exports.createPages = ({ graphql, actions }) => {
           next: next,
         },
       })
+    })
+
+    createPaginatedPages({
+      edges: posts,
+      createPage: createPage,
+      pageTemplate: `src/templates/index.js`,
+      pageLength: 8, // This is optional and defaults to 10 if not used
+      context: {} // This is optional and defaults to an empty object if not used
     })
 
     // Create tag pages.
