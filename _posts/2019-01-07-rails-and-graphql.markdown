@@ -296,6 +296,6 @@ mutation {
 Success! We just created our first model via GraphQL; no extra routes, controllers, or serializers needed. What's more, we only returned exactly the data we needed from the newly created model.
 
 
-## Coming Soon: The Frontend
+## The Frontend
 
-The next tutorial in the GraphQL series will feature a React & Apollo frontend app that connects to our Rails API. Stay tuned!
+[Click here for Part 2, which features a React & Apollo frontend app that connects to our Rails API.](https://mattboldt.com/2019/06/23/rails-graphql-react-apollo-part-two/)
