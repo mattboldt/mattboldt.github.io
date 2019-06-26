@@ -32,6 +32,8 @@ config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
+_Note: you'll want to replace `*` with your domain if you're in a production environment!_
+
 [View commit](https://github.com/mattboldt/rails_graphql_demo/commit/693f5f40dae3aecdc7d7c16f3632aeb153b2f83d)
 
 ##### Extra Seed Data
