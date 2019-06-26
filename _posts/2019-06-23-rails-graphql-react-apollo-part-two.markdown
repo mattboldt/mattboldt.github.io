@@ -237,7 +237,7 @@ export default App;
 
 [View commit](https://github.com/mattboldt/rails_graphql_demo/commit/063463a3158e22f76511b5233088c6869a72aaf0)
 
-![react user's index](./images/react_users_index.png)
+![react user's index](/assets/img/rails-and-graphql/react_users_index.png)
 
 ### User Profile & Books View
 
@@ -528,7 +528,7 @@ class Users extends Component {
 
 ```
 
-![create user component](./images/react_create_user.png)
+![create user component](/assets/img/rails-and-graphql/react_create_user.png)
 
 [View commit](https://github.com/mattboldt/rails_graphql_demo/commit/eb69aa41478a221a1d0beed0151ebb18fa2df2c7)
 
