@@ -74,7 +74,7 @@ We'll call these models `List` and `Item`, where `List has_many :items`
 items = []
 CSV.foreach('link/to/file.csv', headers: true) do |row|
   list = List.find_by(name: row[:name])
-  items << { list: list, title: row[:title]) }
+  items << { list: list, title: row[:title] }
 end
 Item.import(items)
 
@@ -92,7 +92,7 @@ lists_hash = List.pluck(:name, :id).to_h
 items = []
 CSV.foreach('link/to/file.csv', headers: true) do |row|
   list_id = lists_hash[row[:name]]
-  items << { list_id: list_id, title: row[:title]) }
+  items << { list_id: list_id, title: row[:title] }
 end
 Item.import(items)
 
