@@ -3,81 +3,83 @@ const LodashModuleReplacementPlugin = require(`lodash-webpack-plugin`)
 const path = require(`path`)
 const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const createPaginatedPages = require("gatsby-paginate")
+const query = `
+  {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            categories
+          }
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            desc
+          }
+        }
+      }
+    }
+  }
+`
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
-  const catPagesTemplate = path.resolve(`src/templates/tagged.js`)
-  return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-                categories
-              }
-              frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
-                desc
-              }
-            }
-          }
-        }
-      }
-    `
-  ).then(result => {
+  return graphql(query).then(result => {
     if (result.errors) {
-      throw result.errors;
+      throw result.errors
     }
-    const posts = result.data.allMarkdownRemark.edges;
+    const posts = result.data.allMarkdownRemark.edges
 
     // Create blog posts pages.
     posts.forEach(({ node }, index) => {
-      const previous = index === 0 ? false : posts[index - 1].node;
-      const next = index === posts.length - 1 ? false : posts[index + 1].node;
+      const previous = index === 0 ? false : posts[index - 1].node
+      const next = index === posts.length - 1 ? false : posts[index + 1].node
 
       createPage({
         path: node.fields.slug, // required
-        component: slash(blogPostTemplate),
+        component: slash(path.resolve(`src/templates/blog-post.js`)),
         context: {
           slug: node.fields.slug,
           previous: previous,
-          next: next,
-        },
+          next: next
+        }
       })
     })
 
-    createPaginatedPages({
-      edges: posts,
-      createPage: createPage,
-      pageTemplate: `src/templates/index.js`,
-      pageLength: 8, // This is optional and defaults to 10 if not used
-      context: {} // This is optional and defaults to an empty object if not used
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/` : `/page/${i + 1}`,
+        component: path.resolve(`src/templates/index.js`),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1
+        }
+      })
     })
 
     // Create tag pages.
     let categories = []
     posts.forEach(edge => {
       if (_.get(edge, `node.fields.categories`)) {
-        categories = categories.concat(edge.node.fields.categories)
+        categories = categories.concat(edge.node.fields.categories.split(','))
       }
     })
 
-    _.uniq(categories).forEach((cat) => {
-      const catPath = `/categories/${_.kebabCase(cat)}/`
+    _.uniq(categories).forEach(category => {
       createPage({
-        path: catPath,
-        component: catPagesTemplate,
-        context: { cat },
-      });
+        path: `/categories/${_.kebabCase(category)}/`,
+        component: path.resolve(`src/templates/tagged.js`),
+        context: { category: RegExp(`/${category}/g`) }
+      })
     })
   })
 }
@@ -93,21 +95,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.internal.type === `MarkdownRemark` &&
     typeof node.slug === `undefined`
   ) {
-    const slug = createFilePath({ node, getNode, basePath: `pages/posts` });
-    const [, date, title] = slug.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/);
+    const slug = createFilePath({ node, getNode, basePath: `pages/posts` })
+    const [, date, title] = slug.match(
+      /^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/
+    )
 
-    let newSlug = ``;
+    let newSlug = ``
     // if post is using the old url structure
     if (node.frontmatter.permalink === '/:title/') {
-      newSlug = `/${title}/`;
+      newSlug = `/${title}/`
     } else {
-      newSlug = `/${date.split('-').join('/')}/${title}/`;
+      newSlug = `/${date.split('-').join('/')}/${title}/`
     }
 
-    createNodeField({ node, name: `slug`, value: newSlug });
+    createNodeField({ node, name: `slug`, value: newSlug })
 
-    const categories = node.frontmatter.categories.split(',').map((s) => s.trim());
-    createNodeField({ node, name: `categories`, value: categories });
+    const categories = node.frontmatter.categories
+      .split(',')
+      .map(s => s.trim())
+      .join(',')
+    createNodeField({ node, name: `categories`, value: categories })
 
     // if (categories) {
     //   const tagSlugs = categories.map(
@@ -123,7 +130,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   switch (stage) {
     case `build-javascript`:
       actions.setWebpackConfig({
-        plugins: [new LodashModuleReplacementPlugin()],
+        plugins: [new LodashModuleReplacementPlugin()]
       })
   }
 }
