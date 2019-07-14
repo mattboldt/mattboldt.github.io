@@ -95,16 +95,16 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  // Static page
-  if (node.internal.type === `File`) {
-    const parsedFilePath = path.parse(node.absolutePath)
-    const slug = `/${parsedFilePath.dir.split(`---`)[1]}/`
+  // // Static page
+  // if (node.internal.type === `File`) {
+  //   const parsedFilePath = path.parse(node.absolutePath)
+  //   const slug = `/${parsedFilePath.dir.split(`---`)[1]}/`
 
-    createNodeField({ node, name: `slug`, value: slug })
-  }
+  //   createNodeField({ node, name: `slug`, value: slug })
+  // }
 
   // Blog post
-  else if (
+  if (
     node.internal.type === `MarkdownRemark` &&
     typeof node.slug === `undefined`
   ) {

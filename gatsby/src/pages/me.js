@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 const Me = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Me" />
 
     <h1 className="h1 page-title">Sup</h1>
 
@@ -59,5 +59,4 @@ const Me = () => (
     </p>
   </Layout>
 )
-
 export default Me
