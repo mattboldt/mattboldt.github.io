@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-$purple: rgb(128, 128, 228);
+$primary: rgb(128, 128, 228);
 
 %drop-shadow {
   border: black 1px solid;
@@ -14,12 +14,12 @@ $purple: rgb(128, 128, 228);
   margin-right: -1em;
 }
 
-@import "prism-onedark";
-@import "blog-post";
-@import "code";
+@import 'prism-onedark';
+@import 'blog-post';
+@import 'code';
 
 *::selection {
-  background: $purple;
+  background: $primary;
   color: #fff;
 }
 
@@ -27,7 +27,8 @@ body {
   font-family: 'PT Serif', serif;
 }
 
-img, .image-tag {
+img,
+.image-tag {
   @extend %drop-shadow;
 }
 
@@ -40,11 +41,11 @@ hr {
 }
 
 a {
-  color: darken($purple, 30%);
+  color: darken($primary, 30%);
   text-decoration: none;
 
   &:hover {
-    color: $purple;
+    color: $primary;
   }
 }
 

@@ -1,16 +1,18 @@
 .gatsby-highlight {
   margin-bottom: 1.5em;
 
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     @extend %drop-shadow;
     margin-bottom: 15px;
     padding: 1em;
   }
 
-  pre[class*="language-"], code[class*="language-"] {
+  pre[class*='language-'],
+  code[class*='language-'] {
     font-size: 0.9em;
     border-radius: 0;
     line-height: 1.25;
+    color: #cbd1db !important;
 
     ::selection {
       background: rgb(58, 64, 76);
@@ -19,7 +21,7 @@
   }
 }
 
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*='language-'] {
   border-radius: 2px;
   padding: 2px 4px;
   font-size: 0.85em;
