@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import SEO from '../components/seo'
+import Disqus from 'disqus-react'
 
 class BlogPost extends React.Component {
   render() {
@@ -68,6 +69,16 @@ class BlogPost extends React.Component {
             )}
           </li>
         </ul>
+
+        <section className="container mx-auto max-w-lg">
+          <Disqus.DiscussionEmbed
+            shortname="mattboldt"
+            config={{
+              url: this.props.location.href,
+              title: post.frontmatter.title
+            }}
+          />
+        </section>
       </Layout>
     )
   }
