@@ -119,7 +119,7 @@ For the `User` and `Book` models, we need to create a series of types so GraphQL
 
 Open up the generated types and add the following fields. Notice each field gets an "object type" and a `null` option of whether or not it needs to be present for the query to succeed (e.g. an `:id` field should never be `nil`, but `:name` might be). This tells graphql what to expect from incoming and outgoing data, and gives us peace of mind in knowing exactly how to parse data on both the front and back end.
 
-Also notice we didn't have to define _functions_ for `:id, :name`, etc; Those are automatically mapped to the Rails model's attributes we created earlier. Then, we added a custom field, `books_count`. This method doesn't exist on the Rails model, so we define it below the list of fields. These custom methods are in the model's scope, so `self` refers to the model and we can call `self.books.size` directly.
+Also notice we didn't have to define _functions_ for `:id, :name`, etc; Those are automatically mapped to the Rails model's attributes we created earlier. Then, we added a custom field, `books_count`. This method doesn't exist on the Rails model, so we define it below the list of fields. In these methods `object` refers to the Rails model, so we must call `object.books.size`.
 
 ```ruby
 # app/graphql/types/user_type.rb
@@ -132,7 +132,7 @@ module Types
     field :books_count, Integer, null: true
 
     def books_count
-      books.size
+      object.books.size
     end
   end
 end
@@ -296,6 +296,6 @@ mutation {
 Success! We just created our first model via GraphQL; no extra routes, controllers, or serializers needed. What's more, we only returned exactly the data we needed from the newly created model.
 
 
-## Coming Soon: The Frontend
+## The Frontend
 
-The next tutorial in the GraphQL series will feature a React & Apollo frontend app that connects to our Rails API. Stay tuned!
+[Click here for Part 2, which features a React & Apollo frontend app that connects to our Rails API.](https://mattboldt.com/2019/06/23/rails-graphql-react-apollo-part-two/)
