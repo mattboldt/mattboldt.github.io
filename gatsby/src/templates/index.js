@@ -14,7 +14,7 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO
-        title="Matt Boldt Writes Ruby"
+        title="Home"
         description="Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles."
         keywords={'rails, ruby, javascript, react, tutorials'}
       />
