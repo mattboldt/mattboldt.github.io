@@ -12,6 +12,10 @@ article {
       font-size: 2.4vw;
     }
 
+    @media all and (min-width: 2000px) {
+      font-size: 1.5vw;
+    }
+
     @media all and (max-width: 1000px) and (min-width: 520px) {
       font-size: 3.5vw;
     }
@@ -37,10 +41,16 @@ article {
     h3 {
       font-size: 1.5em;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin-bottom: 0.5em;
     }
-    ul, ol {
+    ul,
+    ol {
       margin-bottom: 0.5em;
     }
   }

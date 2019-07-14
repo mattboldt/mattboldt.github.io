@@ -5,10 +5,11 @@ import Header from '../components/header'
 import SEO from '../components/seo'
 
 const Tagged = ({ data, pageContext }) => {
+  console.log(pageContext)
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={this.props.location}>
+    <Layout>
       <Header />
       <SEO
         title={`Category: ${pageContext.category}`}
@@ -37,9 +38,10 @@ const Tagged = ({ data, pageContext }) => {
 export default Tagged
 
 export const pageQuery = graphql`
-  query taggedQuery($category: String!) {
+  query taggedQuery($categoryRegExp: String!) {
     allMarkdownRemark(
-      filter: { frontmatter: { categories: { regex: $category } } }
+      filter: { frontmatter: { categories: { regex: $categoryRegExp } } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {

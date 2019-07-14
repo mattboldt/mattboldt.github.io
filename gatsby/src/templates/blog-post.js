@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 class BlogPost extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const { previous, next } = this.props.pathContext
+    const { previous, next, categories } = this.props.pageContext
 
     return (
       <Layout location={this.props.location}>
@@ -27,12 +27,12 @@ class BlogPost extends React.Component {
               <div className="post-details">
                 <p className="text-base">{post.frontmatter.date}</p>
                 <p className="text-sm">
-                  {post.fields.categories.map(cat => (
+                  {categories.map(cat => (
                     <Link
                       className="pr-2"
-                      key={`cat-${cat}`}
-                      to={`categories/${cat}`}>
-                      {cat}
+                      key={`cat-${cat.name}`}
+                      to={`categories/${cat.slug}`}>
+                      {cat.name}
                     </Link>
                   ))}
                 </p>
