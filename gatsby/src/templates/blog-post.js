@@ -4,6 +4,12 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import SEO from '../components/seo'
 import Disqus from 'disqus-react'
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  EmailShareButton,
+  EmailIcon
+} from 'react-share'
 
 class BlogPost extends React.Component {
   render() {
@@ -25,18 +31,34 @@ class BlogPost extends React.Component {
           </header>
           <section className="container mx-auto px-4 py-4 max-w-lg">
             <div className="mw8 center ph3-ns text-lg">
-              <div className="post-details">
-                <p className="text-base">{post.frontmatter.date}</p>
-                <p className="text-sm">
-                  {categories.map(cat => (
-                    <Link
-                      className="pr-2"
-                      key={`cat-${cat.name}`}
-                      to={`categories/${cat.slug}`}>
-                      {cat.name}
-                    </Link>
-                  ))}
-                </p>
+              <div className="post-details flex mb-4">
+                <div className="w-2/3">
+                  <p className="text-base">{post.frontmatter.date}</p>
+                  <p className="text-sm">
+                    {categories.map(cat => (
+                      <Link
+                        className="pr-2"
+                        key={`cat-${cat.name}`}
+                        to={`/categories/${cat.slug}`}>
+                        {cat.name}
+                      </Link>
+                    ))}
+                  </p>
+                </div>
+                <div className="w-1/3">
+                  <TwitterShareButton
+                    className="float-right pl-1"
+                    url={this.props.location.href}
+                    title={post.frontmatter.title}
+                    via="atmattb">
+                    <TwitterIcon size={32} round={true} />
+                  </TwitterShareButton>
+                  <EmailShareButton
+                    className="float-right pl-1"
+                    url={this.props.location.href}>
+                    <EmailIcon size={32} round={true} />
+                  </EmailShareButton>
+                </div>
               </div>
               <hr />
               <div
@@ -47,7 +69,7 @@ class BlogPost extends React.Component {
           </section>
         </article>
 
-        <ul className="list-reset flex">
+        <ul className="container mx-auto max-w-lg list-reset flex">
           <li className="flex-1 mr-2">
             {previous && (
               <Link
@@ -70,7 +92,7 @@ class BlogPost extends React.Component {
           </li>
         </ul>
 
-        <section className="container mx-auto max-w-lg">
+        <section className="container mx-auto max-w-lg mt-6">
           <Disqus.DiscussionEmbed
             shortname="mattboldt"
             config={{
