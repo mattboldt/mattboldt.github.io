@@ -29,6 +29,7 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-share": "^3.0.0",
+    "tailwindcss": "^1.0.5",
     "typeface-pt-serif": "^0.0.54"
   },
   "keywords": [
@@ -44,8 +45,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "prettier": "^1.15.2",
-    "tailwindcss": "^0.7.3"
+    "prettier": "^1.15.2"
   },
   "repository": {
     "type": "git",

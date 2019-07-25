@@ -6,7 +6,7 @@ date: 2019-06-23 21:00:00
 categories: rails, graphql, react, apollo, react-apollo
 ---
 
-![rails and graphql](/assets/img/rails-and-graphql/rails_and_graphql.png)
+<img src="/assets/img/rails-and-graphql/rails_and_graphql.png" alt="rails and graphql logo" width="100%"/>
 
 This is a continuation of [Rails & GraphQL Part 1](https://mattboldt.com/2019/01/07/rails-and-graphql/), where we built the backend of our API in rails. This article will cover integrating React and Apollo (a JavaScript GraphQL framework) into the rails API. If you haven't read part 1 yet, please do so now!
 

@@ -26,18 +26,24 @@ class BlogPost extends React.Component {
         />
 
         <article>
-          <header className="post-heading container mx-auto max-w-xl">
-            <h1>{post.frontmatter.title}</h1>
+          <header className="container text-center mx-auto max-w-5xl">
+            <h1 className="font-bold break-normal mb-1 text-3xl md:text-5xl">
+              {post.frontmatter.title}
+            </h1>
+
+            <p className="text-lg text-gray-600 mt-1 font-bold">
+              {post.frontmatter.date}
+            </p>
           </header>
-          <section className="container mx-auto px-4 py-4 max-w-lg">
-            <div className="mw8 center ph3-ns text-lg">
-              <div className="post-details flex mb-4">
+
+          <section className="container mx-auto px-4 py-4 max-w-3xl">
+            <div className="mw8 center ph3-ns">
+              <div className="flex mb-4">
                 <div className="w-2/3">
-                  <p className="text-base">{post.frontmatter.date}</p>
                   <p className="text-sm">
                     {categories.map(cat => (
                       <Link
-                        className="pr-2"
+                        className="mr-2 uppercase"
                         key={`cat-${cat.name}`}
                         to={`/categories/${cat.slug}`}>
                         {cat.name}
@@ -69,30 +75,24 @@ class BlogPost extends React.Component {
           </section>
         </article>
 
-        <ul className="container mx-auto max-w-lg list-reset flex">
+        <ul className="container mx-auto max-w-lg list-reset flex leading-relaxed">
           <li className="flex-1 mr-2">
             {previous && (
-              <Link
-                to={previous.fields.slug}
-                rel="previous"
-                className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+              <Link to={previous.fields.slug} rel="previous">
                 &larr; {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li className="flex-1 mr-2">
             {next && (
-              <Link
-                to={next.fields.slug}
-                rel="next"
-                className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+              <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} &rarr;
               </Link>
             )}
           </li>
         </ul>
 
-        <section className="container mx-auto max-w-lg mt-6">
+        <section className="container mx-auto max-w-3xl mt-6">
           <Disqus.DiscussionEmbed
             shortname="mattboldt"
             config={{

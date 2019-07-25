@@ -1,57 +1,19 @@
 article {
-  line-height: 1.75;
+  @apply leading-normal;
 
-  .post-heading {
-    padding: 1.5em;
-    font-size: 5vw;
-    text-align: center;
-    word-break: break-word;
-    line-height: 1;
-
-    @media all and (min-width: 1001px) {
-      font-size: 2.4vw;
-    }
-
-    @media all and (min-width: 2000px) {
-      font-size: 1.5vw;
-    }
-
-    @media all and (max-width: 1000px) and (min-width: 520px) {
-      font-size: 3.5vw;
-    }
+  blockquote {
+    @apply border-l-4 border-teal-500 italic my-8 pl-8;
   }
 
-  .post-details {
-    text-transform: uppercase;
-    color: lighten(#000, 50%);
-  }
   .post-body {
+    img {
+      max-width: 100%;
+    }
     hr {
-      margin: 2em 0 1.5em;
+      @apply mt-2 mb-1;
     }
     p {
-      padding-bottom: 1em;
-    }
-    h1 {
-      font-size: 3em;
-    }
-    h2 {
-      font-size: 1.75em;
-    }
-    h3 {
-      font-size: 1.5em;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-bottom: 0.5em;
-    }
-    ul,
-    ol {
-      margin-bottom: 0.5em;
+      @apply text-xl py-5;
     }
   }
 }

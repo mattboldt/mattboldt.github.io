@@ -10,7 +10,6 @@ const pagesQuery = `
   {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 1000
     ) {
       edges {
         node {
@@ -48,6 +47,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
+          index: i,
           numPages,
           currentPage: i + 1
         }

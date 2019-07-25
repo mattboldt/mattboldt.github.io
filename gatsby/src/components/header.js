@@ -4,20 +4,22 @@ import React from 'react'
 
 const Header = ({ siteTitle }) => (
   <div>
-    <ul className="list-reset flex">
-      <li className="mr-6">
-        <Link to="/">Home</Link>
-      </li>
-    </ul>
+    <nav className="p-4 mt-0 mb-5 border-b bg-gray-100">
+      <div className="flex font-extrabold">
+        <Link to="/">
+          <span className="hidden w-0 md:w-auto md:block">mattboldt.com</span>
+        </Link>
+      </div>
+    </nav>
   </div>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Header

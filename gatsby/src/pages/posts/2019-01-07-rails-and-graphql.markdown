@@ -6,7 +6,7 @@ date: 2019-01-07 23:00:00
 categories: rails, graphql, ruby, REST
 ---
 
-![rails and graphql](/assets/img/rails-and-graphql/rails_and_graphql.png)
+<img src="/assets/img/rails-and-graphql/rails_and_graphql.png" alt="rails and graphql logo" width="100%"/>
 
 GraphQL is a query language for APIs, as well as a server side runtime for executing said queries. The query language itself is universal and not tied to any frontend or backend technology. However, the server side implementations come in many flavors; in our case we're going to use the [graphql-ruby gem](http://graphql-ruby.org/) (with rails) to parse incoming queries, make database calls, and respond with JSON. It's a full-on replacement for REST APIs, rails API controllers, and JSON serializers.
 

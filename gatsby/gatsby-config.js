@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [tailwind('./tailwind.js')],
+        postCssPlugins: [tailwind('./tailwind.config.js')],
         precision: 5 // SASS default: 5
       }
     },

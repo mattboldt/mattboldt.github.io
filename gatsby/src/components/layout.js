@@ -11,7 +11,7 @@ const titleQuery = graphql`
       }
     }
   }
-`;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,9 +22,11 @@ const Layout = ({ children }) => (
         <div className="container mx-auto px-4 py-4 max-w-lg">
           <div className="mw8 center ph3-ns">
             <footer>
-              &copy; Copyright &amp; Stuff {new Date().getFullYear()}.
-              Made With ❤️.
-              View on <a href="https://github.com/mattboldt/mattboldt.github.io">GitHub</a>
+              &copy; Copyright &amp; Stuff {new Date().getFullYear()}. Made With
+              ❤️. View on{' '}
+              <a href="https://github.com/mattboldt/mattboldt.github.io">
+                GitHub
+              </a>
             </footer>
           </div>
         </div>
@@ -34,7 +36,7 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

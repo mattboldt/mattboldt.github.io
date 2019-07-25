@@ -97,7 +97,7 @@ If the size of your bucket is large, this will take some time. However, know tha
 
 Here's a gist of the full code:
 
-<script src="https://gist.github.com/mattboldt/6052bac987c16b73563d4d6c56d7509b.js"></script>
+<script src="https://gist.github.com/mattboldt/6052bac987c16b73563d4d6c56d7509b.js" crossorigin="anonymous"></script>
 
 ### Fin
 
