@@ -6,7 +6,7 @@ date: 2019-07-25 15:00:00
 categories: rails, ruby symbols
 ---
 
-Rails comes with some built in model serialziers such as `Array` and `JSON` which transform data from the database into your preferred format. In some cases, you may have a string column that you'd rather interact with via symbols.
+Rails comes with some built in model serializers such as `Array` and `JSON` which transform data from the database into your preferred format. In some cases, you may have a string column that you'd rather interact with via symbols.
 
 Find or create a `lib/serializers` directory, then create `symbol_serializer.rb` and add the following:
 
