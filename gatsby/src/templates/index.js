@@ -53,10 +53,13 @@ const IndexPage = ({ data, pageContext }) => {
                 <Link to={node.fields.slug}>
                   <strong>{node.frontmatter.title}</strong>
                 </Link>
-                <p className="text-gray-500 italic">{node.frontmatter.date}</p>
                 <p
+                  className="pt-1"
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.desc }}
                 />
+                <p className="text-gray-500 text-sm italic">
+                  {node.frontmatter.date}
+                </p>
               </li>
             ))}
           </ul>

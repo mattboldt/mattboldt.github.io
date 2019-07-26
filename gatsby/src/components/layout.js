@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
           <div className="mw8 center ph3-ns">
             <footer>
               &copy; Copyright &amp; Stuff {new Date().getFullYear()}. Made With
-              ❤️. View on{' '}
+              ❤️ | View on{' '}
               <a href="https://github.com/mattboldt/mattboldt.github.io">
                 GitHub
               </a>
