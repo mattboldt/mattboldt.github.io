@@ -21,6 +21,7 @@ const pagesQuery = `
             title
             date(formatString: "MMMM DD, YYYY")
             desc
+            unlisted
           }
         }
       }
@@ -38,8 +39,11 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     // Home page
+    const listedPosts = posts.filter(
+      ({ node }) => node.fields.unlisted !== true
+    )
     const postsPerPage = 6
-    const numPages = Math.ceil(posts.length / postsPerPage)
+    const numPages = Math.ceil(listedPosts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/` : `/page/${i + 1}`,
@@ -47,7 +51,6 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,
-          index: i,
           numPages,
           currentPage: i + 1
         }
@@ -126,6 +129,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       .map(s => s.trim())
       .join(',')
     createNodeField({ node, name: `categories`, value: categories })
+
+    createNodeField({
+      node,
+      name: `unlisted`,
+      value: node.frontmatter.unlisted
+    })
   }
 }
 

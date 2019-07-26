@@ -2,9 +2,10 @@
 layout: post
 permalink: /:title/
 title:  Your Work Sucks
-desc: <p>Let me rephrase; what I meant to say is that nothing is perfect right away. Obvious statement, right? In hindsight, yeah. But not so much after you've sunk hours into a project only to step back and judge what you've got done.</p>
+desc: Let me rephrase; what I meant to say is that nothing is perfect right away.
 date: 2013-07-28 23:00:00
 categories: web development
+unlisted: true
 ---
 
 <p>

@@ -5,6 +5,7 @@ title:  Semantic Buttons
 desc: An obvious common trait of any web app landing page, download page, or any other website offering a product, are the large call-to-action buttons. I usually prefer beginning with a vague idea of a button style, and then code it all (or most) in CSS from the get-go. Button styles will always be subjective, and will need to be custom per website, color scheme, etc. One thing that doesn't change much is the markup and structure used...
 date:   2013-05-15 19:30:00
 categories: html, css
+unlisted: true
 ---
 
 <p>An obvious common trait of any web app landing page, download page, or any other website offering a product, are the large call-to-action buttons. I usually prefer beginning with a vague idea of a button style, and then code it all (or most) in CSS from the get-go. Button styles will always be subjective, and will need to be custom per website, color scheme, etc. One thing that doesn't change much is the markup and structure used.</p>

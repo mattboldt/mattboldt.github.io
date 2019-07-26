@@ -40,7 +40,7 @@ export default Tagged
 export const pageQuery = graphql`
   query taggedQuery($categoryRegExp: String!) {
     allMarkdownRemark(
-      filter: { frontmatter: { categories: { regex: $categoryRegExp } } }
+      filter: { fields: { categories: { regex: $categoryRegExp } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

@@ -5,6 +5,7 @@ title:  Using Git for Websites
 desc: Let me start off by saying <strong>Git is awesome</strong>. I'm not a native app developer, nor am I part of a large dev team. I'm a web developer, who builds both dynamic and static websites, usually on my own. When I was first introduced to Git, it was in mostly in the context of app development for iOS, Mac, Windows, etc. Upon digging deeper, I found that the use of a version control system benefits <strong>just about every other kind of development / content creation project</strong>.
 date:   2013-03-30 19:30:00
 categories: git, web development
+unlisted: true
 ---
 
 <p>Let me start off by saying <strong>Git is awesome</strong>. I'm not a native app developer, nor am I part of a large dev team. I'm a web developer, who builds both dynamic and static websites, usually on my own. When I was first introduced to Git, it was in mostly in the context of app development for iOS, Mac, Windows, etc. Upon digging deeper, I found that the use of a version control system benefits <strong>just about every other kind of development / content creation project</strong>.</p> <p> For some reason, Git just seemed like a native programmer's club. This might be because of the way version control systems and repo hosting providers are marketed. For instance, I understand GitHub <em>now</em>... But at first I had no clue what "social coding" was supposed to accomplish. What did it have to do with building a website? What if I'm the only one working on the project &mdash; do I really need to use Git or SVN? <strong>Yes</strong>.</p>

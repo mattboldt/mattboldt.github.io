@@ -5,6 +5,7 @@ title:  Essential Sublime Text Plugins
 desc: "<h3>Sublime Text is <em>awesome.</em></h3><p>Nearly every day I find something amazing about Sublime Text that completely changes the way I work. At first I was wowed by the find-and-replace alternative: selecting a block of code and pressing &#8984; + D to select each subsequent occurrence. To this day I love watching 20+ lines of code all change at once while I type in the proper code edits.</p><p>Recently, I came across some Sublime Text plugins that left me speechless. Here are a few...</p>"
 date:   2013-04-01 19:30:00
 categories: web development
+unlisted: true
 ---
 
 <h2>Sublime Text is <em>awesome.</em></h2>

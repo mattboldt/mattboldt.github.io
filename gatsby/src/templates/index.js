@@ -7,11 +7,13 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 
 const IndexPage = ({ data, pageContext }) => {
-  const { index, first, last } = pageContext
-  const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
-  const nextUrl = (index + 1).toString()
-  const posts = data.allMarkdownRemark.edges
+  const { currentPage, numPages } = pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`
+  const nextPage = `/page/${currentPage + 1}`
 
+  const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
       <SEO
@@ -67,9 +69,9 @@ const IndexPage = ({ data, pageContext }) => {
 
         <ul className="list-none flex">
           <li className="flex-1 mr-2">
-            {first && (
+            {!isFirst && (
               <Link
-                to={previousUrl}
+                to={prevPage}
                 rel="previous"
                 className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
                 &larr; Previous Page
@@ -77,9 +79,9 @@ const IndexPage = ({ data, pageContext }) => {
             )}
           </li>
           <li className="flex-1 mr-2">
-            {last && (
+            {!isLast && (
               <Link
-                to={nextUrl}
+                to={nextPage}
                 rel="next"
                 className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
                 Next Page &rarr;
@@ -98,6 +100,7 @@ export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { unlisted: { ne: true } } }
       limit: $limit
       skip: $skip
     ) {
@@ -110,6 +113,7 @@ export const pageQuery = graphql`
             title
             desc
             date(formatString: "MMMM DD, YYYY")
+            unlisted
           }
         }
       }
