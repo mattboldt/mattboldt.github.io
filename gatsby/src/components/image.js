@@ -18,21 +18,22 @@ const imageQuery = graphql`
     placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
   }
-`;
+`
 
 const Image = () => (
   <StaticQuery
     query={imageQuery}
-    render={data =>
+    render={data => (
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        className="border-4 border-grey-dark image-tag" />
-    }
+        className="border-4 border-grey-dark image-tag bg-black"
+      />
+    )}
   />
 )
 export default Image
