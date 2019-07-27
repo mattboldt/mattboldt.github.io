@@ -33,8 +33,8 @@ const IndexPage = ({ data, pageContext }) => {
             <div className="w-2/3 pr-3">
               <h1 className="leading-tight text-5xl">Matt Boldt</h1>
               <p className="text-grey-darkest text-lg">
-                Ruby &amp; JavaScript developer from Texas. <br />I make beats,
-                synth patches, and coffee tables.
+                Ruby &amp; JavaScript developer from Texas. <br />I make
+                software, beats, and synth patches.
               </p>
             </div>
             <div className="w-1/3">
