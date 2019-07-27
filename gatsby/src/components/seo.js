@@ -13,47 +13,59 @@ function SEO({ description, lang, meta, keywords, title }) {
         return (
           <Helmet
             htmlAttributes={{
-              lang
+              lang,
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: `og:title`,
-                content: title
+                content: title,
               },
               {
                 property: `og:description`,
-                content: metaDescription
+                content: metaDescription,
               },
               {
                 property: `og:type`,
-                content: `website`
+                content: `website`,
               },
               {
                 name: `twitter:card`,
-                content: `summary`
+                content: `summary`,
+              },
+              {
+                name: 'twitter:site',
+                content: data.site.siteMetadata.author,
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author
+                content: data.site.siteMetadata.author,
               },
               {
                 name: `twitter:title`,
-                content: title
+                content: title,
               },
               {
                 name: `twitter:description`,
-                content: metaDescription
+                content: metaDescription,
+              },
+              {
+                name: `twitter:image`,
+                content: data.placeholderImage.childImageSharp.fluid.src,
+              },
+              {
+                name: `twitter:domain`,
+                content: `mattboldt.com`,
               },
               {
                 name: `keywords`,
-                content: keywords
-              }
+                content: keywords,
+              },
             ].concat(meta)}
           />
         )
@@ -65,7 +77,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: ''
+  keywords: '',
 }
 
 SEO.propTypes = {
@@ -73,7 +85,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 }
 
 export default SEO
@@ -85,6 +97,13 @@ const detailsQuery = graphql`
         title
         description
         author
+      }
+    }
+    placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
