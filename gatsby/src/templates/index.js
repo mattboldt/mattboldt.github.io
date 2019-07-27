@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 import Header from '../components/header'
+import GeoAnimation from '../components/geo-animation'
 
 const IndexPage = ({ data, pageContext }) => {
   const { currentPage, numPages } = pageContext
@@ -22,6 +23,8 @@ const IndexPage = ({ data, pageContext }) => {
         keywords={'rails, ruby, javascript, react, tutorials'}
       />
       <Header />
+
+      <GeoAnimation />
 
       <div className="container mx-auto max-w-2xl px-4">
         <header className="py-6">
@@ -64,7 +67,8 @@ const IndexPage = ({ data, pageContext }) => {
               <Link
                 to={prevPage}
                 rel="previous"
-                className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+                className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4"
+              >
                 &larr; Previous Page
               </Link>
             )}
@@ -74,7 +78,8 @@ const IndexPage = ({ data, pageContext }) => {
               <Link
                 to={nextPage}
                 rel="next"
-                className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4">
+                className="text-center block border border-white rounded hover:border-grey-lighter text-blue hover:bg-grey-lighter py-2 px-4"
+              >
                 Next Page &rarr;
               </Link>
             )}
