@@ -60,10 +60,9 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.ico`,
         icons: [
           {
-            src: `src/images/apple-touch-icon-144x144.png`,
+            src: `public/apple-touch-icon-144x144.png`,
             sizes: `144x144`,
             type: `image/png`,
           },
