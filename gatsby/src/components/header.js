@@ -30,14 +30,14 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li className="ml-4">
-          <Link to="https://www.twitter.com/atmattb">
+          <a href="https://www.twitter.com/atmattb">
             <FontAwesomeIcon icon={['fab', 'twitter']} /> twitter
-          </Link>
+          </a>
         </li>
         <li className="ml-4">
-          <Link to="https://github.com/mattboldt">
+          <a href="https://github.com/mattboldt">
             <FontAwesomeIcon icon={['fab', 'github']} /> github
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>
