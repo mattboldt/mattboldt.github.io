@@ -75,7 +75,7 @@ class BlogPost extends React.Component {
           </section>
         </article>
 
-        <ul className="container mx-auto max-w-lg list-reset flex leading-relaxed">
+        <ul className="container mx-auto max-w-2xl list-none flex text-center">
           <li className="flex-1 mr-2">
             {previous && (
               <Link to={previous.fields.slug} rel="previous">

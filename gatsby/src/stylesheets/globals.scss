@@ -2,14 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+$background: #fff;
 $primary: rgb(128, 128, 228);
-$accent: #c04d4d;
-// $accent: rgb(77, 192, 181);
+// $accent: #c04d4d;
+$accent: rgb(77, 192, 181);
 $text: rgb(45, 55, 72);
+// $text: #fff;
 
 %drop-shadow {
   border: black 1px solid;
-  box-shadow: rgb(0, 0, 0) 4px 4px 0 0;
+  box-shadow: rgb(0, 0, 0) 4px 4px 0 0,
+    inset rgba(255, 255, 255, 0.05) 0 0 0 2px;
 }
 
 %negative-margins {
@@ -25,6 +28,7 @@ body {
   margin: 0;
   font-family: 'Georgia', serif;
   color: $text;
+  background: $background;
 }
 
 img,

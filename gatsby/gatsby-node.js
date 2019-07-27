@@ -16,12 +16,12 @@ const pagesQuery = `
           fields {
             slug
             categories
+            unlisted
           }
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
             desc
-            unlisted
           }
         }
       }
@@ -44,6 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
     const postsPerPage = 6
     const numPages = Math.ceil(listedPosts.length / postsPerPage)
+
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/` : `/page/${i + 1}`,

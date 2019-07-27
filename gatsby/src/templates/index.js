@@ -32,15 +32,6 @@ const IndexPage = ({ data, pageContext }) => {
                 Ruby &amp; JavaScript developer from Texas. <br />I make beats,
                 synth patches, and coffee tables.
               </p>
-              <hr />
-              <p>
-                <Link to="/demos" className="mr-2">
-                  Demos
-                </Link>
-                <Link to="/me" className="mr-2">
-                  About
-                </Link>
-              </p>
             </div>
             <div className="w-full sm:w-1/3">
               <Image />
@@ -113,7 +104,6 @@ export const pageQuery = graphql`
             title
             desc
             date(formatString: "MMMM DD, YYYY")
-            unlisted
           }
         }
       }
