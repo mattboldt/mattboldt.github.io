@@ -2,42 +2,28 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCog, faBook } from '@fortawesome/free-solid-svg-icons'
-library.add(fab)
-
 const Header = ({ siteTitle }) => (
   <div>
-    <nav className="mb-5 clearfix">
-      <ul className="flex list-none float-left">
+    <nav className="mb-5 sm:flex">
+      <ul className="flex list-none w-full sm:w-1/2">
         <li className="mr-4">
           <Link to="/" className="font-extrabold">
             mattboldt.com
           </Link>
         </li>
       </ul>
-      <ul className="flex list-none float-right">
-        <li className="ml-4">
-          <Link to="/demos">
-            <FontAwesomeIcon icon={faCog} /> demos
-          </Link>
+      <ul className="flex list-none w-full sm:w-1/2 sm:justify-end">
+        <li>
+          <Link to="/demos">demos</Link>
         </li>
         <li className="ml-4">
-          <Link to="/me">
-            <FontAwesomeIcon icon={faBook} /> about
-          </Link>
+          <Link to="/me">about</Link>
         </li>
         <li className="ml-4">
-          <a href="https://www.twitter.com/atmattb">
-            <FontAwesomeIcon icon={['fab', 'twitter']} /> twitter
-          </a>
+          <a href="https://www.twitter.com/atmattb">twitter</a>
         </li>
         <li className="ml-4">
-          <a href="https://github.com/mattboldt">
-            <FontAwesomeIcon icon={['fab', 'github']} /> github
-          </a>
+          <a href="https://github.com/mattboldt">github</a>
         </li>
       </ul>
     </nav>
@@ -45,11 +31,11 @@ const Header = ({ siteTitle }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 }
 
 export default Header

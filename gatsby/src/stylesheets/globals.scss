@@ -26,7 +26,7 @@ $text: rgb(45, 55, 72);
 
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'PT Serif', serif;
   color: $text;
   background: $background;
 }
@@ -42,6 +42,11 @@ hr {
   border: 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #fff;
+  @apply mt-2 mb-1;
+}
+
+p {
+  @apply text-xl py-5;
 }
 
 a {

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 import Header from '../components/header'
+import PostList from '../components/post-list'
 import GeoAnimation from '../components/geo-animation'
 
 const IndexPage = ({ data, pageContext }) => {
@@ -26,39 +27,24 @@ const IndexPage = ({ data, pageContext }) => {
 
       <GeoAnimation />
 
-      <div className="container mx-auto max-w-2xl px-4">
+      <div className="container mx-auto max-w-3xl px-4">
         <header className="py-6">
           <div className="flex items-center">
-            <div className="w-full sm:w-2/3 pr-3">
-              <h1 className="leading-tight">Matt Boldt</h1>
+            <div className="w-2/3 pr-3">
+              <h1 className="leading-tight text-5xl">Matt Boldt</h1>
               <p className="text-grey-darkest text-lg">
                 Ruby &amp; JavaScript developer from Texas. <br />I make beats,
                 synth patches, and coffee tables.
               </p>
             </div>
-            <div className="w-full sm:w-1/3">
+            <div className="w-1/3">
               <Image />
             </div>
           </div>
         </header>
 
         <div className="py-6">
-          <ul className="base-list">
-            {posts.map(({ node }, i) => (
-              <li key={i} className="py-4">
-                <Link to={node.fields.slug}>
-                  <strong>{node.frontmatter.title}</strong>
-                </Link>
-                <p
-                  className="pt-1"
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.desc }}
-                />
-                <p className="text-gray-500 text-sm italic">
-                  {node.frontmatter.date}
-                </p>
-              </li>
-            ))}
-          </ul>
+          <PostList posts={posts} />
         </div>
 
         <ul className="list-none flex">

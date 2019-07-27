@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
       <React.Fragment>
         {children}
         <div className="container mx-auto px-4 py-4 max-w-lg">
-          <div className="mw8 center ph3-ns">
+          <div className="mw8 center ph3-ns text-center">
             <footer>
               &copy; Copyright &amp; Stuff {new Date().getFullYear()}. Made With
               ❤️ | View on{' '}
@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
