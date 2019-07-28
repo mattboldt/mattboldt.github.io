@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$background: #fff;
+$primary: rgb(128, 128, 228);
+// $accent: #c04d4d;
+$accent: rgb(77, 192, 181);
+$text: rgb(45, 55, 72);
+// $text: #fff;
+
+%drop-shadow {
+  border: black 1px solid;
+  box-shadow: rgb(0, 0, 0) 4px 4px 0 0,
+    inset rgba(255, 255, 255, 0.05) 0 0 0 2px;
+}
+
+%negative-margins {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+@import 'prism-onedark';
+@import 'blog-post';
+@import 'code';
+
+body {
+  margin: 0;
+  font-family: 'PT Serif', serif;
+  color: $text;
+  background: $background;
+}
+
+img,
+.image-tag {
+  @extend %drop-shadow;
+}
+
+hr {
+  position: relative;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #fff;
+  @apply mt-2 mb-1;
+}
+
+p {
+  @apply text-xl py-5;
+}
+
+a {
+  color: $text;
+  @apply no-underline border-b-2;
+  border-color: $accent;
+  text-decoration: none;
+  border-bottom-style: solid;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.base-list {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-3xl;
+}
+h3 {
+  @apply text-2xl;
+}
+h4 {
+  @apply text-xl;
+}
+h5 {
+  @apply text-lg;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-extrabold;
+}
+ul {
+  @apply text-lg list-disc p-4;
+}
+ol {
+  @apply text-lg;
+}
+strong {
+  @apply font-semibold;
+}

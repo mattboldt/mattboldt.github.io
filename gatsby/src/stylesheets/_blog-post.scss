@@ -1,0 +1,13 @@
+article {
+  @apply leading-normal;
+
+  blockquote {
+    @apply border-l-4 border-teal-500 italic my-8 pl-8;
+  }
+
+  .post-body {
+    img {
+      max-width: 100%;
+    }
+  }
+}
