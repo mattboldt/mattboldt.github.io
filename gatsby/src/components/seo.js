@@ -67,7 +67,9 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: keywords,
               },
             ].concat(meta)}
-          />
+          >
+            <link rel="shortcut icon" href="/favicon.ico" />
+          </Helmet>
         )
       }}
     />
