@@ -42,6 +42,9 @@ exports.createPages = ({ graphql, actions }) => {
     const listedPosts = posts.filter(
       ({ node }) => node.fields.unlisted !== true
     )
+    const unlistedPosts = posts.filter(
+      ({ node }) => node.fields.unlisted === true
+    )
     const postsPerPage = 6
     const numPages = Math.ceil(listedPosts.length / postsPerPage)
 
@@ -61,9 +64,29 @@ exports.createPages = ({ graphql, actions }) => {
     let allCategories = []
 
     // Blog posts
-    posts.forEach(({ node }, index) => {
+    listedPosts.forEach(({ node }, index) => {
       const { previous, next, categories } = pageParser(
-        posts,
+        listedPosts,
+        node,
+        index,
+        allCategories
+      )
+
+      createPage({
+        path: node.fields.slug, // required
+        component: slash(path.resolve(`src/templates/blog-post.js`)),
+        context: {
+          slug: node.fields.slug,
+          previous: previous,
+          next: next,
+          categories: categories
+        }
+      })
+    })
+
+    unlistedPosts.forEach(({ node }, index) => {
+      const { previous, next, categories } = pageParser(
+        unlistedPosts,
         node,
         index,
         allCategories
