@@ -8,7 +8,7 @@ categories: rails, graphql, ruby, REST
 
 <img src="/assets/img/rails-and-graphql/rails_and_graphql.png" alt="rails and graphql logo" width="100%"/>
 
-GraphQL is a query language for APIs, as well as a server side runtime for executing said queries. The query language itself is universal and not tied to any frontend or backend technology. However, the server side implementations come in many flavors; in our case we're going to use the [graphql-ruby gem](http://graphql-ruby.org/) (with rails) to parse incoming queries, make database calls, and respond with JSON. It's a full-on replacement for REST APIs, rails API controllers, and JSON serializers.
+GraphQL is a query language for APIs, as well as a server side runtime for executing said queries. The query language itself is universal and not tied to any frontend or backend technology. However, the server side implementations come in many flavors; in our case we're going to use the [graphql-ruby gem](https://graphql-ruby.org/) (with rails) to parse incoming queries, make database calls, and respond with JSON. It's a full-on replacement for REST APIs, rails API controllers, and JSON serializers.
 
 First, let's define some vocabulary I'll be using through this tutorial. 
 
@@ -105,7 +105,7 @@ end
 
 ### Testing queries with Graphiql
 
-The final step to get `graphiql` running is to uncomment `require "sprockets/railtie"` in `application.rb`. Boot up your rails server with `rails s` and navigate to `http://localhost:3000/graphiql` to see the interface. Here we can run the following query to get a test response from the API.
+The final step to get `graphiql` running is to uncomment `require "sprockets/railtie"` in `application.rb`. Boot up your rails server with `rails s` and navigate to `https://localhost:3000/graphiql` to see the interface. Here we can run the following query to get a test response from the API.
 
 ![users query](/assets/img/rails-and-graphql/graphiql_hello_world.png)
 
@@ -113,7 +113,7 @@ The final step to get `graphiql` running is to uncomment `require "sprockets/rai
 
 ## Types
 
-For the `User` and `Book` models, we need to create a series of types so GraphQL knows what kind of data to send back in the event of a request. Somewhat similar to Rails' [active_model_serializers](https://github.com/rails-api/active_model_serializers) or [JBuilder](https://github.com/rails/jbuilder), these types make up the structure of our models from the API's point of view. Here we'll specifiy what columns, model methods, and more return to the client application. [More info on declaring types can be found here.](http://graphql-ruby.org/getting_started#declare-types)
+For the `User` and `Book` models, we need to create a series of types so GraphQL knows what kind of data to send back in the event of a request. Somewhat similar to Rails' [active_model_serializers](https://github.com/rails-api/active_model_serializers) or [JBuilder](https://github.com/rails/jbuilder), these types make up the structure of our models from the API's point of view. Here we'll specifiy what columns, model methods, and more return to the client application. [More info on declaring types can be found here.](https://graphql-ruby.org/getting_started#declare-types)
 
 ### User and Book Types
 
@@ -158,7 +158,7 @@ class GraphqlApiSchema < GraphQL::Schema
 end
 ```
 
-In our main query type file, we define `:users` and `:user` _fields_, along with `users` and `user` _functions_. The `users` field returns an array of `UserType` objects, and can never be `nil` (but can be empty). The `user` field accepts a required argument `:id` that is of the type `ID`, and returns a single `UserType` object. ([`ID` is a built-in type](http://graphql-ruby.org/api-doc/1.8.11/GraphQL/Types.html) that acts just the same as the above `User` and `Book` type.) 
+In our main query type file, we define `:users` and `:user` _fields_, along with `users` and `user` _functions_. The `users` field returns an array of `UserType` objects, and can never be `nil` (but can be empty). The `user` field accepts a required argument `:id` that is of the type `ID`, and returns a single `UserType` object. ([`ID` is a built-in type](https://graphql-ruby.org/api-doc/1.8.11/GraphQL/Types.html) that acts just the same as the above `User` and `Book` type.) 
 
 ```ruby
 # app/graphql/types/query_type.rb
@@ -185,7 +185,7 @@ end
 
 ### Querying the User Fields
 
-Visit `http://localhost:3000/graphiql` in your browser and paste in the following for the `users` and `user` query fields we added above. Here we specify exactly what we want the API to respond with; in this case, we only want a list of user names, emails, and the number of books they own.
+Visit `https://localhost:3000/graphiql` in your browser and paste in the following for the `users` and `user` query fields we added above. Here we specify exactly what we want the API to respond with; in this case, we only want a list of user names, emails, and the number of books they own.
 
 ```gql
 query {
@@ -215,7 +215,7 @@ query {
 
 ## Mutations
 
-Mutations allow for creating, updating, and destroying data. [More info on them can be found here.](http://graphql-ruby.org/mutations/mutation_classes) Let's set up a base class from which to extend a `CreateUser` mutation.
+Mutations allow for creating, updating, and destroying data. [More info on them can be found here.](https://graphql-ruby.org/mutations/mutation_classes) Let's set up a base class from which to extend a `CreateUser` mutation.
 
 ```ruby
 # app/graphql/mutations/base_mutation.rb
@@ -273,7 +273,7 @@ end
 
 #### Creating a User
 
-To test, open up `http://localhost:3000/graphiql` and paste in the following query. Notice we pass in an `input: {}` object to `createUser`; this maps to the `:create_user` field which accepts a single `input` argument. Learn more about this design [in graphql-ruby's documentation](http://graphql-ruby.org/api-doc/1.8.5/GraphQL/Schema/RelayClassicMutation.html).
+To test, open up `https://localhost:3000/graphiql` and paste in the following query. Notice we pass in an `input: {}` object to `createUser`; this maps to the `:create_user` field which accepts a single `input` argument. Learn more about this design [in graphql-ruby's documentation](https://graphql-ruby.org/api-doc/1.8.5/GraphQL/Schema/RelayClassicMutation.html).
 
 ```gql
 mutation {

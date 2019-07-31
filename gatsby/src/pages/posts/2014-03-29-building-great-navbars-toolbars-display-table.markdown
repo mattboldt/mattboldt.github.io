@@ -39,7 +39,7 @@ categories: sass, css, html
 
 <p>Here's the result of that markup:</p>
 
-<iframe width="100%" height="100" src="http://jsfiddle.net/mattboldt/Mz6Fw/1/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
+<iframe width="100%" height="100" src="https://jsfiddle.net/mattboldt/Mz6Fw/1/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
 
 <p>Incredibly simple, no floats to clear, and no vertical alignment to dial in. It also gives you the ability to size your <span class="inline-code">&lt;li&gt;</span>'s in percents automatically. See the code below:</p>
 
@@ -56,7 +56,7 @@ categories: sass, css, html
 
 <p>Here we just set our <span class="inline-code">&lt;ul&gt;</span>'s width and the <span class="inline-code">&lt;li&gt;</span>'s follow suit perfectly. This makes for a great responsive nav bar that can break down easily at small screen sizes.</p>
 
-<iframe width="100%" height="100" src="http://jsfiddle.net/mattboldt/Mz6Fw/2/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
+<iframe width="100%" height="100" src="https://jsfiddle.net/mattboldt/Mz6Fw/2/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
 
 <h3 id="usingbordercollapseboxsizing">Using <span class="inline-code">border-collapse</span> & <span class="inline-code">box-sizing</span></h3>
 
@@ -78,13 +78,13 @@ categories: sass, css, html
 
 <p>And the result (with some added styling):</p>
 
-<iframe width="100%" height="100" src="http://jsfiddle.net/mattboldt/Mz6Fw/3/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
+<iframe width="100%" height="100" src="https://jsfiddle.net/mattboldt/Mz6Fw/3/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
 
 <h2 id="makingitfeelnative">Making It Feel Native</h2>
 
 <p>Again, not "native" to your operating system, but native to a user's expectation of interacting with web app navigation. When you use it, it has to feel like an extension of your mouse (or finger).</p>
 
-<iframe width="100%" height="200" src="http://jsfiddle.net/mattboldt/Mz6Fw/7/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
+<iframe width="100%" height="200" src="https://jsfiddle.net/mattboldt/Mz6Fw/7/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
 
 <p>There are some special effects in play here. Lets notice the following: rounded corners (on the edges), collapsed borders in-between buttons, a box-shadow emulating a border on the whole <span class="inline-code">&lt;ul&gt;</span>, and the subtle white box-shadow creating an embossed look on the buttons.</p>
 
@@ -155,9 +155,9 @@ ul{
 </ul>
 ~~~
 
-<iframe width="100%" height="200" src="http://jsfiddle.net/mattboldt/Mz6Fw/8/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
+<iframe width="100%" height="200" src="https://jsfiddle.net/mattboldt/Mz6Fw/8/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe><p></p>
 
 <p>
-<a href="http://caniuse.com/#search=display%3Atable">Browser support for display:table</a> is actually quite good, and is honestly a joy to work with compared to using floats or inline-block. What do you think? Leave comments below or ping me on <a href="http://www.twitter.com/atmattb">Twitter</a> for questions & insults!
+<a href="https://caniuse.com/#search=display%3Atable">Browser support for display:table</a> is actually quite good, and is honestly a joy to work with compared to using floats or inline-block. What do you think? Leave comments below or ping me on <a href="https://www.twitter.com/atmattb">Twitter</a> for questions & insults!
 </p>
 <p>-Matt</p>

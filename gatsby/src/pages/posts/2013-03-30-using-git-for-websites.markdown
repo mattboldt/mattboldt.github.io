@@ -32,7 +32,7 @@ This is a bit of an issue with Git. This website is hosted on one of Godaddy's s
 
 <p>
 <strong>3. I have to install Git on my local machine... and it needs to be on a web host, too?</strong><br />
-Git works locally, and on the server side. It's not an app with a user interface, but rather a package on the machine. It's installed by default on Mac, and can be installed easily on Windows. Git manages all of your files in a specified directory, and keeps track of when changes are made to them. It gives you the ability to undo changes you made far down the road when you realize you broke something on the site, among lots of other advantages. And to be clear, I'm just explaining simple usage for web projects &mdash; there are a million and one other features & uses that you can read about more <a href="http://git-scm.com/about">here</a>.
+Git works locally, and on the server side. It's not an app with a user interface, but rather a package on the machine. It's installed by default on Mac, and can be installed easily on Windows. Git manages all of your files in a specified directory, and keeps track of when changes are made to them. It gives you the ability to undo changes you made far down the road when you realize you broke something on the site, among lots of other advantages. And to be clear, I'm just explaining simple usage for web projects &mdash; there are a million and one other features & uses that you can read about more <a href="https://git-scm.com/about">here</a>.
 </p>
 
 
@@ -53,25 +53,25 @@ I know, I know, the Terminal can be scary. I don't know much about Unix, but lea
 <h3>Beanstalk</h3>
 <p>
 One great repo hosting provider is Beanstalk. They host Git, SVN, and Mercurial repos. They also allow you to deploy your repos via SSH, FTP, SFPT and more, to your web host. It's the best of both worlds: you've got your site under version control with a hosted repo, and you're still using your web host like you usually would. The problem? The cheapest Beanstalk plan is $15 a month, and that would be on top of your web hosting bill. If your site brings in money, this would be a great way to go. But for me, it's just too expensive to pay for 2 providers.<br />
-<a href="http://beanstalkapp.com/">Learn More</a>
+<a href="https://beanstalkapp.com/">Learn More</a>
 </p>
 
 <h3>GitHub Pages</h3>
 <p>
 But don't worry, there are other options. Heroku and GitHub both allow you to host a website repo and point your domain to them. The problem I have, though, is this is really not made clear for people who intend to host websites. GitHub has a service called Pages, but when I first looked into it I hadn't the slightest clue how to sign up or use it. What's the bandwidth like? Storage space? Databases? Language support? But I digress, that's a topic for another post.<br />
-<a href="http://pages.github.com/">Learn More</a>
+<a href="https://pages.github.com/">Learn More</a>
 </p>
 
 <h3>Heroku</h3>
 <p>
-Heroku is a bit more user friendly. Still, though, when someone like me comes to their website looking for web hosting, they didn't do a great job of advertising that aspect of their service. Alas, after some reading, I learned they <em>did</em> support PHP, and they allow you to point your domain name to your Heroku repo. Finally. <a href="http://www.coldcoffeephp.com/">ColdCoffee</a>, a front end website template I made, is hosted on Heroku, and the domain is provided by GoDaddy. To learn more about hosting a site with Heroku, check out <a href="https://devcenter.heroku.com/articles/custom-domains">this article</a>.<br />
-<a href="http://www.heroku.com/">Learn More</a>
+Heroku is a bit more user friendly. Still, though, when someone like me comes to their website looking for web hosting, they didn't do a great job of advertising that aspect of their service. Alas, after some reading, I learned they <em>did</em> support PHP, and they allow you to point your domain name to your Heroku repo. Finally. <a href="https://www.coldcoffeephp.com/">ColdCoffee</a>, a front end website template I made, is hosted on Heroku, and the domain is provided by GoDaddy. To learn more about hosting a site with Heroku, check out <a href="https://devcenter.heroku.com/articles/custom-domains">this article</a>.<br />
+<a href="https://www.heroku.com/">Learn More</a>
 </p>
 
 <h3>Hosting with a regular ol' web host</h3>
 <p>
-This differs depending on the host. Like I said before, it's next to impossible to successfully install git on Godaddy. <a href="http://dren.ch/git-on-godaddy/">Here's</a> a post explaining how to, but again it's not easy. As for other hosts, some of the more developer-friendly ones have it installed by default. This is awesome. However, if yours doesn't, you'll have to install it manually. Since it differs with each provider, you're going to have to google around and check the hosts' FAQ and support for any information. If you don't have SSH access, then it's time to switch hosts. If you do, be on the lookout for SSH features your host disables. This is common on shared hosting. A good developer friendly host that supports git is <a href="http://www.a2hosting.com/">A2 Hosting</a>.<br />
-<strong><a href="http://joemaller.com/990/a-web-focused-git-workflow/">Here's</a> a great article explaining how to manually set up a web based git workflow.</strong><br />
+This differs depending on the host. Like I said before, it's next to impossible to successfully install git on Godaddy. <a href="https://dren.ch/git-on-godaddy/">Here's</a> a post explaining how to, but again it's not easy. As for other hosts, some of the more developer-friendly ones have it installed by default. This is awesome. However, if yours doesn't, you'll have to install it manually. Since it differs with each provider, you're going to have to google around and check the hosts' FAQ and support for any information. If you don't have SSH access, then it's time to switch hosts. If you do, be on the lookout for SSH features your host disables. This is common on shared hosting. A good developer friendly host that supports git is <a href="https://www.a2hosting.com/">A2 Hosting</a>.<br />
+<strong><a href="https://joemaller.com/990/a-web-focused-git-workflow/">Here's</a> a great article explaining how to manually set up a web based git workflow.</strong><br />
 </p>
 
 

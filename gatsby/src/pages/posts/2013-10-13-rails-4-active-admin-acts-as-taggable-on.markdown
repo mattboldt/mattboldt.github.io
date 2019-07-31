@@ -60,8 +60,8 @@ params.permit(:blog => [:name, :description])
 
 <p><small>
 Credit to these Stack Overflow & Github threads.<br />
-<a href="http://stackoverflow.com/questions/13091011/how-to-get-activeadmin-to-work-with-strong-parameters">How to get ActiveAdmin to work with Strong Parameters?</a><br />
+<a href="https://stackoverflow.com/questions/13091011/how-to-get-activeadmin-to-work-with-strong-parameters">How to get ActiveAdmin to work with Strong Parameters?</a><br />
 <a href="https://github.com/mbleigh/acts-as-taggable-on/issues/389">Rails 4 protected attributes</a><br />
-<a href="http://stackoverflow.com/questions/8355659/saving-tags-with-acts-as-taggable-and-activeadmin">Saving tags with acts_as_taggable and activeadmin</a>
+<a href="https://stackoverflow.com/questions/8355659/saving-tags-with-acts-as-taggable-and-activeadmin">Saving tags with acts_as_taggable and activeadmin</a>
 </small>
 </p>

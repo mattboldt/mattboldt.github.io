@@ -8,10 +8,10 @@ categories: web development
 unlisted: true
 ---
 
-<p>There are a lot of web programming languages. <a href="http://rogchap.com/2011/09/06/top-40-website-programming-languages/">Here's</a> a quick reference of the most popular ones. A question I keep asking myself, is what should I be learning right now? What language is most valuable for me to know? Are the current languages I know dying out, or are the others that have recently gained popularity just a fad?</p>
+<p>There are a lot of web programming languages. <a href="https://rogchap.com/2011/09/06/top-40-website-programming-languages/">Here's</a> a quick reference of the most popular ones. A question I keep asking myself, is what should I be learning right now? What language is most valuable for me to know? Are the current languages I know dying out, or are the others that have recently gained popularity just a fad?</p>
 
 <p>
-More importantly, what value do other languages <em>add</em> to my current skill set? I'm sure a lot of other developers are wondering the same thing, or maybe they're in their PHP bubble without a care to switch. I recently set out to learn Ruby, and of course, the Ruby on Rails framework. As I'm digging deeper and deeper into the language, I'm noticing the once new and exciting code starts to seem like, well, <em>old</em> code. I see developers make negative remarks about Ruby on Rails' scalability, among other issues. I thought this was the <em>&ldquo;next big thing&rdquo;</em>, the end-all best solution for web development, etc etc. Well, clearly Rails isn't new. It's <a href="http://en.wikipedia.org/wiki/Ruby_on_Rails">been around for a while</a>. But to me it was brand new, and the sudden growth in community backs that theory up. So if Rails isn't the best way to go, should I bother learning it?
+More importantly, what value do other languages <em>add</em> to my current skill set? I'm sure a lot of other developers are wondering the same thing, or maybe they're in their PHP bubble without a care to switch. I recently set out to learn Ruby, and of course, the Ruby on Rails framework. As I'm digging deeper and deeper into the language, I'm noticing the once new and exciting code starts to seem like, well, <em>old</em> code. I see developers make negative remarks about Ruby on Rails' scalability, among other issues. I thought this was the <em>&ldquo;next big thing&rdquo;</em>, the end-all best solution for web development, etc etc. Well, clearly Rails isn't new. It's <a href="https://en.wikipedia.org/wiki/Ruby_on_Rails">been around for a while</a>. But to me it was brand new, and the sudden growth in community backs that theory up. So if Rails isn't the best way to go, should I bother learning it?
 
 </p>
 
@@ -19,7 +19,7 @@ More importantly, what value do other languages <em>add</em> to my current skill
 
 <p>
 
-Ok so I've spoke with some other developers. I find that Twitter, while its front end is RoR, is actually powered by <em>Scala</em>. I learn about the existence of <a href="http://en.wikipedia.org/wiki/Functional_programming#Functional_programming_in_non-functional_languages">functional languages</a>, Scala's relation to Java, and some more opinions about Rails. I had an itch to dig into Scala, but after little research I just felt it wasn't a good fit. It's really easy to fall down the rabbit hole of languages and tools, only to be completely overwhelmed and not able to learn a single skill and apply it to the work you're currently doing.
+Ok so I've spoke with some other developers. I find that Twitter, while its front end is RoR, is actually powered by <em>Scala</em>. I learn about the existence of <a href="https://en.wikipedia.org/wiki/Functional_programming#Functional_programming_in_non-functional_languages">functional languages</a>, Scala's relation to Java, and some more opinions about Rails. I had an itch to dig into Scala, but after little research I just felt it wasn't a good fit. It's really easy to fall down the rabbit hole of languages and tools, only to be completely overwhelmed and not able to learn a single skill and apply it to the work you're currently doing.
 </p>
 
 <p>

@@ -12,8 +12,8 @@ categories: web development
 <h3>1. Learn more Ruby, but don't abandon PHP</h3>
 <p>I've been digging into Rails quite a lot lately and have learned enough to probably get by. I'd like to extend that into "could teach someone else to use Rails" or rather "could build a successful app". But, I also need to learn more PHP, as I really only know the basics. Too much of the internet is run on PHP to totally ignore it in favor of Ruby.</p>
 
-<h3>2. Make <a href="http://www.pdfzen.com">PDFZen.com</a> awesome</h3>
-<p>PDFZen is a product that's been acquired by <a href="http://www.macroplant.com">Macroplant</a> very recently. It's a monster, and I only understand a percentage of what's actually going on. This year will be full of "what's this function do?" for me & PDFZen, and I will work to make the app much more valuable than it is currently.</p>
+<h3>2. Make <a href="https://www.pdfzen.com">PDFZen.com</a> awesome</h3>
+<p>PDFZen is a product that's been acquired by <a href="https://www.macroplant.com">Macroplant</a> very recently. It's a monster, and I only understand a percentage of what's actually going on. This year will be full of "what's this function do?" for me & PDFZen, and I will work to make the app much more valuable than it is currently.</p>
 
 <h3>3. Blog more</h3>
 <p>I hardly ever post anything here, because to be honest I hate writing. And when I start to enjoy the thought of writing, the process kills it. Finding the right things to say in the best way possible sucks the life out of me, but I'll get better at it.</p>
@@ -22,10 +22,10 @@ categories: web development
 <p>I went to a Rails meet up a couple times, but I began to think there was no value in it for me. The particular "meet up" turned into a lecture-style event where novices went to learn basics, and pros went to basically fill space (and answer questions here and there). As a non-beginner, but definitely a non-pro, I didn't really know where I fit. Regardless, there's power in community and I need to be active in them whether or not I feel it's directly valuable to me.</p>
 
 <h3>5. Finish projects</h3>
-<p>I've started way too many projects and basically gave up in the middle. I've got <a href="http://www.devkit.co">devkit.co</a>, which is still in its very early stages. I'm working on a small Git-based blogging platform, I thought of building an open source Sass framework (since there aren't enough), and I am still in the middle of rebuilding this site. I now have to migrate over to a different host since GoDaddy is dropping Ruby support, and I had planned to rewrite this site with Rails.</p>
+<p>I've started way too many projects and basically gave up in the middle. I've got <a href="https://www.devkit.co">devkit.co</a>, which is still in its very early stages. I'm working on a small Git-based blogging platform, I thought of building an open source Sass framework (since there aren't enough), and I am still in the middle of rebuilding this site. I now have to migrate over to a different host since GoDaddy is dropping Ruby support, and I had planned to rewrite this site with Rails.</p>
 
 <h3>6. Get more serious about music</h3>
-<p>If you hop on over to <a href="http://www.soundcloud.com/in-clouds">soundcloud.com/in-clouds</a> you'll see some music I've made. I have literally dozens of songs I've worked on for a day and then totally abandoned. I need to work towards producing some high-quality music, finishing it all, packaging it up, and distributing it. Making electronic music is somewhat of a new dream, but it's something I'm very passionate about.</p>
+<p>If you hop on over to <a href="https://www.soundcloud.com/in-clouds">soundcloud.com/in-clouds</a> you'll see some music I've made. I have literally dozens of songs I've worked on for a day and then totally abandoned. I need to work towards producing some high-quality music, finishing it all, packaging it up, and distributing it. Making electronic music is somewhat of a new dream, but it's something I'm very passionate about.</p>
 
 <h3>7. Find a solid work / life balance</h3>
 <p>I'm "working" all the time, but that's only because I have so many things I could possibly be tinkering with at any given moment. I've got to find a structured "work" time, and a time to relax to avoid totally burning out. Usually I get bored of programming and work on a track, and vice versa. Hopefully I can continue this without hating both.</p>

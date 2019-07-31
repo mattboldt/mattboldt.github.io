@@ -46,13 +46,13 @@ And our markup:
 
 The above will look something like this:
 
-<p><iframe width="100%" height="300" src="http://jsfiddle.net/mattboldt/Zb79e/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+<p><iframe width="100%" height="300" src="https://jsfiddle.net/mattboldt/Zb79e/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
 With that tiny bit of code we've achieved vertical alignment and a semi-responsive 2 column grid.
 
 <h2 id="float-less-grids">Float-less Grids</h2>
 
-There are tons of grid systems out there. One of my favorite to play around with has been the [mdo Table Grid](http://mdo.github.io/table-grid/). This gives you all the features of a `float` or `inline-block` based grid with a fraction of the code. Here's all we need to get a very basic 4 column grid knocked out:
+There are tons of grid systems out there. One of my favorite to play around with has been the [mdo Table Grid](https://mdo.github.io/table-grid/). This gives you all the features of a `float` or `inline-block` based grid with a fraction of the code. Here's all we need to get a very basic 4 column grid knocked out:
 
 ~~~ scss
 * { box-sizing: border-box; }
@@ -85,7 +85,7 @@ The markup:
 
 Notice the lack of extra classes appended to the grid columns. Normally, you have sub classes like `.col-4` or `.col-1-4` to statically set percentage based widths on each column. For full spanning table layouts, all you need are the table cells to get things laid out evenly. Coupled with `box-sizing:border-box`, some added padding & border-spacing, we get the following:
 
-<p><iframe width="100%" height="300" src="http://jsfiddle.net/mattboldt/Zb79e/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+<p><iframe width="100%" height="300" src="https://jsfiddle.net/mattboldt/Zb79e/1/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
 <h2 id="responsively-easy-nav-bars">Responsively Easy Nav Bars</h2>
 
@@ -117,7 +117,7 @@ A rather famous `display:table` nav bar is none other than the Apple.com nav. An
 Simple, eh? The result:
 
 <p>
-<iframe width="100%" height="100" src="http://jsfiddle.net/mattboldt/Mz6Fw/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="100" src="https://jsfiddle.net/mattboldt/Mz6Fw/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </p>
 
 I go much more in-depth about table-based nav bars [here](/building-great-navbars-toolbars-display-table/).
@@ -162,13 +162,13 @@ Tables are always a huge pain. The ability to keep our layout out of the HTML is
 
 As you might expect, we get a nice, fairly responsive table laid out in 100% CSS.
 
-<p><iframe width="100%" height="300" src="http://jsfiddle.net/mattboldt/2qD9t/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+<p><iframe width="100%" height="300" src="https://jsfiddle.net/mattboldt/2qD9t/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
 ## Some Other Rad Features
 
 You can optionally apply percentage based widths on your columns for use like a normal grid system. This gives you the ability to offset columns and the like. I recommend taking a look at [mdo's Table Grid code](https://github.com/mdo/table-grid/blob/gh-pages/table-grid.css) for the percentage settings.
 
-<p><iframe width="100%" height="300" src="http://jsfiddle.net/mattboldt/Zb79e/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
+<p><iframe width="100%" height="300" src="https://jsfiddle.net/mattboldt/Zb79e/2/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe></p>
 
 Another popular effect made easy by `display:table` is combining `vertcal-align: middle` with `height: 100%` on the both the `html, body` selector and a parent element. I go more in depth about that effect [here](/css-100-percent-height/), although I'm not using table layouts.
 

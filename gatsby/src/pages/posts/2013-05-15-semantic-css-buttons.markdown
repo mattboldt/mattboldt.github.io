@@ -13,7 +13,7 @@ unlisted: true
 <img src="/demos/semantic-buttons/img/buttons-semantic.png" alt="Semantic Button Layout" width="100%" class="full-img"/>
 <span class="demo-link">
 <a href="/demos/semantic-buttons/">View Live Demo</a>
-<a href="http://www.github.com/mattboldt/semantic-buttons/">See the Code</a>
+<a href="https://www.github.com/mattboldt/semantic-buttons/">See the Code</a>
 </span>
 
 <h3>Buttons...</h3>
@@ -71,7 +71,7 @@ Another important thing to consider is responsive layout. These buttons can eith
 
 <h2>The Sass</h2>
 
-<p>I used Sass's mixin and variable features to draw customizable CSS background gradients. I also made good use of class nesting and parent selecting, which you'll see more of in a moment. Not using Sass? Take a moment to check it out <a href="http://sass-lang.com/" rel="nofollow">here</a>.</p>
+<p>I used Sass's mixin and variable features to draw customizable CSS background gradients. I also made good use of class nesting and parent selecting, which you'll see more of in a moment. Not using Sass? Take a moment to check it out <a href="https://sass-lang.com/" rel="nofollow">here</a>.</p>
 
 
 <h3>Base Button Class</h3>
@@ -167,6 +167,6 @@ But, this method has some issues. Using transparent white and black means the bu
 <h2>Summing Up</h2>
 <p>
 
-After recently employing this method on the sites I build at work, I realized the buttons become very versatile and receptive to change in surrounding layout. I had to re-design a page header incorporating these buttons, and after swapping a few class names I had them laid out exactly how I needed them without redoing any CSS. While obviously the design will always change, I believe this code structure is very helpful. Please, share your thoughts with me on <a href="http://www.twitter.com/atmattb/">Twitter</a>.
+After recently employing this method on the sites I build at work, I realized the buttons become very versatile and receptive to change in surrounding layout. I had to re-design a page header incorporating these buttons, and after swapping a few class names I had them laid out exactly how I needed them without redoing any CSS. While obviously the design will always change, I believe this code structure is very helpful. Please, share your thoughts with me on <a href="https://www.twitter.com/atmattb/">Twitter</a>.
 
 </p>

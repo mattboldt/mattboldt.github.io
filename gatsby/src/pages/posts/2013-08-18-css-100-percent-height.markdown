@@ -9,7 +9,7 @@ categories: html, css
 
 <p>A cool effect I've been seeing on sites lately involves the use of percentage based heights & absolute positioning. Puzzled by how it worked, I set out to break the code down and do it myself.</p>
 
-<p>Some great examples are the Dropbox (<a href="http://www.dropbox.com">http://www.dropbox.com</a>) and Spotify (<a href="http://www.spotify.com/us/">http://www.spotify.com/us/</a>) home pages. Using this effect, the top section of the page adapts to your entire screen resolution (100% height). It also includes some content that always sits at the very bottom of the initial viewport. Now, when you begin to scroll, the rest of the page content appears *just* after the bottom of the page viewport.</p>
+<p>Some great examples are the Dropbox (<a href="https://www.dropbox.com">https://www.dropbox.com</a>) and Spotify (<a href="https://www.spotify.com/us/">https://www.spotify.com/us/</a>) home pages. Using this effect, the top section of the page adapts to your entire screen resolution (100% height). It also includes some content that always sits at the very bottom of the initial viewport. Now, when you begin to scroll, the rest of the page content appears *just* after the bottom of the page viewport.</p>
 
 ~~~ html
 <div class="top-section">

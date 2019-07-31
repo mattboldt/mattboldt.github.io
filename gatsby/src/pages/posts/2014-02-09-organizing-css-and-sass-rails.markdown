@@ -7,7 +7,7 @@ date: 2014-02-09 13:00:00
 categories: sass, css, rails
 ---
 
-<p>Rails comes equipped with Sass by default. When you build a new app, an <span class="inline-code">application.css</span> stylesheet is created for you. This isn't just a normal stylesheet -- rather, it stands as a master stylesheet in the Rails Asset Pipeline. If you don't know how the Asset Pipeline works, I suggest you <a href="http://guides.rubyonrails.org/asset_pipeline.html">read a little bit about it</a>. In this file, you'll find the following code.</p>
+<p>Rails comes equipped with Sass by default. When you build a new app, an <span class="inline-code">application.css</span> stylesheet is created for you. This isn't just a normal stylesheet -- rather, it stands as a master stylesheet in the Rails Asset Pipeline. If you don't know how the Asset Pipeline works, I suggest you <a href="https://guides.rubyonrails.org/asset_pipeline.html">read a little bit about it</a>. In this file, you'll find the following code.</p>
 
 ~~~ scss
 app/assets/stylesheets/application.css
@@ -74,4 +74,4 @@ app/assets/stylesheets/main.scss
 
 <p>I usually avoid writing any regular Sass code in my main stylesheet, as well as in <span class="inline-code">application.css</span>. If I write styles that affect the website globally, they will go in <span class="inline-code">globals.scss</span>. If I edit how my posts are laid out, or how my user home page looks, I will put the styles in their respective stylesheets. This tackles CSS in a more object oriented way, as well as keeps your assets clean and very easy for a team to go in and edit.</p>
 
-<p>Leave your thoughts below, or ping me on <a href="http://www.twitter.com/atmattb">Twitter</a>. I plan to make a quick gem to set this all up for you in the future, so be on the lookout!</p>
+<p>Leave your thoughts below, or ping me on <a href="https://www.twitter.com/atmattb">Twitter</a>. I plan to make a quick gem to set this all up for you in the future, so be on the lookout!</p>

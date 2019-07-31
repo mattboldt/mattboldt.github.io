@@ -7,12 +7,12 @@ date: 2017-03-11 17:00:00
 categories: aws, opsworks, chef 12, linux, ubuntu, rails
 ---
 
-[AWS OpsWorks is a configuration management service that uses Chef](https://aws.amazon.com/opsworks/) to automate server configurations. OpsWorks previously used Chef v11 and came with built-in cookbooks to deploy apps such as Rails, Node, and more. However, the [latest OpsWorks Linux Chef v12](http://docs.aws.amazon.com/opsworks/latest/userguide/chef-12-linux.html) does not come with _any_ built-in cookbooks. While this adds some more complexity to setting things up, it also comes with the added benefit of using [community sourced cookbooks](https://github.com/chef-cookbooks) instead of ones developed by Amazon.
+[AWS OpsWorks is a configuration management service that uses Chef](https://aws.amazon.com/opsworks/) to automate server configurations. OpsWorks previously used Chef v11 and came with built-in cookbooks to deploy apps such as Rails, Node, and more. However, the [latest OpsWorks Linux Chef v12](https://docs.aws.amazon.com/opsworks/latest/userguide/chef-12-linux.html) does not come with _any_ built-in cookbooks. While this adds some more complexity to setting things up, it also comes with the added benefit of using [community sourced cookbooks](https://github.com/chef-cookbooks) instead of ones developed by Amazon.
 
 ### Our To-do List
 
 - [Download and install the Chef SDK on your local machine](https://downloads.chef.io/chefdk)
-- Create, package, and upload our local cookbooks to S3 (as per the [AWS guides](http://docs.aws.amazon.com/opsworks/latest/userguide/best-practices-packaging-cookbooks-locally.html))
+- Create, package, and upload our local cookbooks to S3 (as per the [AWS guides](https://docs.aws.amazon.com/opsworks/latest/userguide/best-practices-packaging-cookbooks-locally.html))
 - Create a new Chef 12 OpsWorks Stack
 - Deploy our Rails app
 
@@ -76,11 +76,11 @@ You should now find `cookbooks.tar.gz` in your local directory; this archive con
 
 ### Layer Settings
 
-Here we enter our custom JSON generated from [opsworks_ruby's handy configurator](http://opsworks-ruby.rzegocki.pl/configuration-builder). I'm using Unicorn as my app server, an RDS endpoint for my MySQL database, and Ruby version 2.3. I've also configured it to not migrate the database for each deployment, as I'd prefer to do that manually. Additionally, I have `assets_precompile` disabled since I have that command running in a `before_restart.rb` hook instead of running it along with the recipes. For more custom attributes, visit the [opsworks_ruby documentation](http://opsworks-ruby.readthedocs.io/en/latest/attributes.html).
+Here we enter our custom JSON generated from [opsworks_ruby's handy configurator](https://opsworks-ruby.rzegocki.pl/configuration-builder). I'm using Unicorn as my app server, an RDS endpoint for my MySQL database, and Ruby version 2.3. I've also configured it to not migrate the database for each deployment, as I'd prefer to do that manually. Additionally, I have `assets_precompile` disabled since I have that command running in a `before_restart.rb` hook instead of running it along with the recipes. For more custom attributes, visit the [opsworks_ruby documentation](https://opsworks-ruby.readthedocs.io/en/latest/attributes.html).
 
 ![general settings](../assets/img/aws-opsworks/general-settings.png)
 
-### Configure Layer Recipes from the [opsworks_ruby recipes](http://opsworks-ruby.readthedocs.io/en/latest/recipes.html)
+### Configure Layer Recipes from the [opsworks_ruby recipes](https://opsworks-ruby.readthedocs.io/en/latest/recipes.html)
 
 ![create stack](../assets/img/aws-opsworks/create-recipes.png)
 

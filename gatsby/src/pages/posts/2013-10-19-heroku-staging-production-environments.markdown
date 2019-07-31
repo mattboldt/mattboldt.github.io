@@ -124,4 +124,4 @@ DATABASE_URL: postgres://THIS-IS-YOUR-DATABASE-URL
 
 <p>Thanks for reading!</p>
 
-<p>If you run into any problems, please complain to me on <a href="http://www.twitter.com/atmattb">Twitter</a>. I spent most of last night getting this all to work so it's very possible I missed out on some details.</p>
+<p>If you run into any problems, please complain to me on <a href="https://www.twitter.com/atmattb">Twitter</a>. I spent most of last night getting this all to work so it's very possible I missed out on some details.</p>
