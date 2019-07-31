@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+now = Time.now
+date = now.strftime('%Y-%m-%d')
+File.open("./gatsby/src/pages/posts/#{date}-#{ARGV[0]}.markdown", 'w') do |f|
+  f.puts %(---
+layout: post
+title: #{ARGV[0].split('-').map(&:upcase).join(' ')}
+desc: ""
+date: #{date} #{now.strftime('%H:%M:%S')}
+categories: rails, ruby symbols
+---
+)
+end
