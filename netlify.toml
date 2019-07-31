@@ -2,3 +2,9 @@
   base    = "gatsby"
   publish = "gatsby/public"
   command = "yarn build"
+
+[[redirects]]
+  from = "https://www.mattboldt.com/*"
+  to = "https://mattboldt.com/:splat"
+  status = 301
+  force = true
