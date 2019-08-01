@@ -8,3 +8,9 @@
   to = "https://mattboldt.com/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/typed.js/*"
+  to = "https://mattboldt.github.io/typed.js/:splat"
+  status = 301
+  force = true
