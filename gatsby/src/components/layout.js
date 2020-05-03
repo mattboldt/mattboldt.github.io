@@ -15,8 +15,8 @@ const titleQuery = graphql`
 
 const Layout = ({ children }) => (
   <StaticQuery
-    query={titleQuery}
-    render={data => (
+    query={`${titleQuery}`}
+    render={(data) => (
       <React.Fragment>
         {children}
         <div className="container mx-auto px-4 py-4 max-w-lg">

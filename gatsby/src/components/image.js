@@ -27,8 +27,8 @@ const imageQuery = graphql`
 
 const Image = () => (
   <StaticQuery
-    query={imageQuery}
-    render={data => (
+    query={`${imageQuery}`}
+    render={(data) => (
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
         className="border-4 border-grey-dark image-tag bg-black"

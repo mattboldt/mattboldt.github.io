@@ -1,13 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+
+const detailsQuery = graphql`
+  query DefaultSEOQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+      }
+    }
+    placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
-      query={detailsQuery}
-      render={data => {
+      query={`${detailsQuery}`}
+      render={(data) => {
         const metaDescription =
           description || data.site.siteMetadata.description
         return (
@@ -70,8 +89,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 name: `keywords`,
                 content: keywords,
               },
-            ].concat(meta)}
-          >
+            ].concat(meta)}>
             <link rel="shortcut icon" href="/favicon.ico" />
           </Helmet>
         )
@@ -95,22 +113,3 @@ SEO.propTypes = {
 }
 
 export default SEO
-
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
-    placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

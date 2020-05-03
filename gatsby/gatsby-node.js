@@ -32,7 +32,7 @@ const pagesQuery = `
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return graphql(pagesQuery).then(result => {
+  return graphql(pagesQuery).then((result) => {
     if (result.errors) {
       throw result.errors
     }
@@ -56,8 +56,8 @@ exports.createPages = ({ graphql, actions }) => {
           limit: postsPerPage,
           skip: i * postsPerPage,
           numPages,
-          currentPage: i + 1
-        }
+          currentPage: i + 1,
+        },
       })
     })
 
@@ -79,8 +79,8 @@ exports.createPages = ({ graphql, actions }) => {
           slug: node.fields.slug,
           previous: previous,
           next: next,
-          categories: categories
-        }
+          categories: categories,
+        },
       })
     })
 
@@ -99,20 +99,20 @@ exports.createPages = ({ graphql, actions }) => {
           slug: node.fields.slug,
           previous: previous,
           next: next,
-          categories: categories
-        }
+          categories: categories,
+        },
       })
     })
 
     // Category indexes
-    _.uniq(allCategories).forEach(category => {
+    _.uniq(allCategories).forEach((category) => {
       createPage({
         path: `/categories/${slugify(category)}/`,
         component: slash(path.resolve(`src/templates/tagged.js`)),
         context: {
           category: category,
-          categoryRegExp: `/${category}/g`
-        }
+          categoryRegExp: `/${category}/g`,
+        },
       })
     })
   })
@@ -150,14 +150,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     const categories = node.frontmatter.categories
       .split(',')
-      .map(s => s.trim())
+      .map((s) => s.trim())
       .join(',')
     createNodeField({ node, name: `categories`, value: categories })
 
     createNodeField({
       node,
       name: `unlisted`,
-      value: node.frontmatter.unlisted
+      value: node.frontmatter.unlisted,
     })
   }
 }
@@ -167,7 +167,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   switch (stage) {
     case `build-javascript`:
       actions.setWebpackConfig({
-        plugins: [new LodashModuleReplacementPlugin()]
+        plugins: [new LodashModuleReplacementPlugin()],
       })
   }
 }
