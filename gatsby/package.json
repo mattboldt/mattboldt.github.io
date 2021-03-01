@@ -30,7 +30,7 @@
     "react-helmet": "^6.0.0",
     "react-share": "^4.1.0",
     "tailwindcss": "^1.4.4",
-    "three": "^0.116.1",
+    "three": "^0.125.0",
     "typeface-pt-serif": "^0.0.72"
   },
   "keywords": [
