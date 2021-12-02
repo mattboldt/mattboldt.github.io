@@ -47,6 +47,97 @@
   }
 	</script>
 	<link href="css/main.css" rel="stylesheet" />
+  <style>
+    .header {
+      background-position: top right;
+    }
+
+    .carbonads-wrapper {
+      width: 330px;
+      height: 120px;
+    }
+
+    #carbonads * {
+      margin: initial;
+      padding: initial;
+    }
+    #carbonads {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+    }
+    #carbonads {
+      display: flex;
+      max-width: 330px;
+      background-color: hsl(0, 0%, 98%);
+      box-shadow: 0 1px 4px 1px hsla(0, 0%, 0%, 0.1);
+      padding: 5px;
+      z-index: 100;
+    }
+    #carbonads a {
+      color: inherit;
+      text-decoration: none;
+    }
+    #carbonads a:hover {
+      color: inherit;
+    }
+    #carbonads span {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    #carbonads .carbon-wrap {
+      display: flex;
+    }
+    #carbonads .carbon-img {
+      display: block;
+      margin: 0;
+      line-height: 1;
+    }
+    #carbonads .carbon-img img {
+      display: block;
+    }
+    #carbonads .carbon-text {
+      font-size: 13px;
+      padding: 10px;
+      margin-bottom: 16px;
+      line-height: 1.5;
+      text-align: left;
+    }
+    #carbonads .carbon-poweredby {
+      display: block;
+      padding: 6px 8px;
+      background: #f1f1f2;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      font-size: 8px;
+      line-height: 1;
+      border-top-left-radius: 3px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .cta-buttons {
+      min-height: 110px;
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      .cta-buttons {
+        flex-wrap:  wrap;
+      }
+      .cta-buttons .btn {
+        margin-bottom: 20px;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
@@ -71,13 +162,13 @@
 
 <div class="wrap">
 
-	<div class="btn-wrap">
-		<div class="btn">
-			<a href="https://github.com/mattboldt/typed.js/archive/master.zip"><i class="fa fa-file-zip-o"></i> Download Zip</a>
-		</div>
+	<div class="btn-wrap cta-buttons">
 		<div class="btn">
 			<a href="https://github.com/mattboldt/typed.js/"><i class="fa fa-github"></i> View on GitHub</a>
 		</div>
+    <div class="carbonads-wrapper">
+      <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CEBIEK3U&placement=mattboldtcom" id="_carbonads_js"></script>
+    </div>
 	</div>
 
 	<p class="note">Another demo made with love by <a href="http://www.mattboldt.com/">Matt Boldt</a>.</p>
