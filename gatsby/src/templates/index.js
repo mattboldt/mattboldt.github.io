@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
-import SEO from '../components/seo'
+import { Head as HeadComponent } from '../components/head'
 import Header from '../components/header'
 import PostList from '../components/post-list'
 import GeoAnimation from '../components/geo-animation'
@@ -18,11 +18,6 @@ const IndexPage = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout>
-      <SEO
-        title="Home"
-        description="Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles."
-        keywords={'rails, ruby, javascript, react, tutorials'}
-      />
       <Header />
 
       <GeoAnimation />
@@ -101,3 +96,12 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// Export the Head component for Gatsby's Head API
+export const Head = () => (
+  <HeadComponent
+    title="Home"
+    description="Ruby on Rails, JavaScript, and CSS tutorials, demos, and articles."
+    keywords="rails, ruby, javascript, react, tutorials"
+  />
+)

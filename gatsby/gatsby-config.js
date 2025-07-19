@@ -31,10 +31,10 @@ module.exports = {
         postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
         sassOptions: {
           precision: 5, // SASS default: 5
+          silenceDeprecations: ['import', 'legacy-js-api'],
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -92,9 +92,7 @@ export function Head({
   // Gatsby will automatically place these elements in the document head
   return (
     <>
-      <title>
-        {title} | {site.siteMetadata.title}
-      </title>
+      <title>{title} | {site.siteMetadata.title}</title>
       {allMeta.map((metaItem, i) => (
         <meta key={i} {...metaItem} />
       ))}

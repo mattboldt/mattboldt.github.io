@@ -14,7 +14,7 @@ class GeoAnimation extends React.Component {
     this.init()
 
     const animate = () => {
-      setTimeout(function() {
+      setTimeout(function () {
         requestAnimationFrame(animate)
       }, 1000 / 30)
       this.animateShapes()
@@ -112,11 +112,13 @@ class GeoAnimation extends React.Component {
     mesh.position.set(x, y, 0)
 
     if (skew) {
-      for (var i = 0, l = geometry.vertices.length; i < l; i++) {
+      const positions = geometry.attributes.position
+      for (let i = 0; i < positions.count; i++) {
         // we'll move the x & y position of each vertice by a random amount
-        geometry.vertices[i].x += -0.1 + Math.random() * 0.2
-        geometry.vertices[i].y += -0.1 + Math.random() * 0.2
+        positions.setX(i, positions.getX(i) + (-0.1 + Math.random() * 0.2))
+        positions.setY(i, positions.getY(i) + (-0.1 + Math.random() * 0.2))
       }
+      positions.needsUpdate = true
     }
 
     this.scene.add(mesh)

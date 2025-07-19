@@ -9,7 +9,7 @@ const { slugify, convertFilePathToObject, pageParser } = require(`./utils`)
 const pagesQuery = `
   {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {
@@ -163,11 +163,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 
 // Sass and Lodash.
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  switch (stage) {
-    case `build-javascript`:
-      actions.setWebpackConfig({
-        plugins: [new LodashModuleReplacementPlugin()],
-      })
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+  const config = getConfig()
+  if (stage === 'build-javascript' || stage === 'develop') {
+    const miniCssExtractPlugin = config.plugins.find(
+      (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
+    )
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true
+    }
+    actions.replaceWebpackConfig(config)
   }
 }

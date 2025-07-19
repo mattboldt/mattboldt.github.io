@@ -1,13 +1,12 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { Head as HeadComponent } from '../components/head'
 import Header from '../components/header'
 import GeoAnimation from '../components/geo-animation'
 
 const Me = () => (
   <Layout>
-    <SEO title="Me" />
     <Header />
     <GeoAnimation />
 
@@ -52,4 +51,7 @@ const Me = () => (
     </div>
   </Layout>
 )
+
+export const Head = () => <HeadComponent title="Me" />
+
 export default Me
