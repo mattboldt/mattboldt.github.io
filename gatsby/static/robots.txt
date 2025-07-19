@@ -73,4 +73,4 @@ User-agent: YoudaoBot
 Disallow:
 User-agent: *
 Disallow: /
-Sitemap: https://mattboldt.com/sitemap.xml
+Sitemap: https://mattboldt.com/sitemap-index.xml
