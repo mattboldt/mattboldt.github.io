@@ -28,16 +28,14 @@ const Me = () => (
         Have a look at the <a href="/demos/">demos I've built</a>, or check out
         the <a href="/">home page</a> where you'll find my blog posts. If you'd
         like, you can view my profile on{' '}
-        <a href="http://www.github.com/mattboldt/">Github</a>, or{' '}
+        <a href="http://www.github.com/mattboldt">Github</a>, or{' '}
         <a href="http://www.codepen.io/mattboldt">Codepen</a>. By day, I'm a
-        developer at <a href="http://www.kalkomey.com/">Kalkomey</a>.
+        software consultant at <a href="https://testdouble.com">Test Double</a>.
       </p>
 
       <p>
         A good address to contact me at is{' '}
-        <span className="h3">me (at) mattboldt.com</span>
-        <br /> I'm also usually glued to{' '}
-        <a href="http://www.twitter.com/atmattb">Twitter</a>.
+        <code className="language-text">me (at) mattboldt.com</code>
       </p>
 
       <h3 className="h3">Interests</h3>
