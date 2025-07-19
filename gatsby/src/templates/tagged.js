@@ -44,7 +44,7 @@ export const pageQuery = graphql`
           unlisted: { ne: true }
         }
       }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       edges {
         node {

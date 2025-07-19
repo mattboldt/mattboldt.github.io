@@ -81,7 +81,7 @@ export default IndexPage
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fields: { unlisted: { ne: true } } }
       limit: $limit
       skip: $skip
