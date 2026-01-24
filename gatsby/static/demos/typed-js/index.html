@@ -3,42 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Animated Typing with Typed.js | by Matt Boldt</title>
-	<script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-	<script src="js/typed.custom.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	<script>
-	$(function(){
 
-		$("#typed").typed({
-			strings: ["Typed.js is a JavaScript library.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
-			typeSpeed: 30,
-      callback: function(){
+  document.addEventListener("DOMContentLoaded", function(){
+    const typed = new Typed('#typed', {
+      strings: ["Typed.js is a JavaScript library.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
+      typeSpeed: 30,
+      onComplete: function(self) {
         shift();
       }
-		});
+    });
+  });
 
-	});
   function shift(){
-      $(".head-wrap").addClass("shift-text");
-      terminalHeight();
+    document.querySelector(".head-wrap").classList.add("shift-text");
+    terminalHeight();
   }
 
   function terminalHeight(){
-      var termHeight = $(".terminal-height");
-      var value = termHeight.text();
+      var termHeight = document.querySelector(".terminal-height");
+      var value = termHeight.textContent;
       value = parseInt(value);
       setTimeout(function(){
           if (value > 10){
               value = value-1;
               this.txtValue = value.toString();
-              termHeight.text(this.txtValue);
-              self.terminalHeight();
+              termHeight.textContent = this.txtValue;
+              terminalHeight();
           }
           else{
               clearTimeout();
@@ -161,8 +157,27 @@
 </div>
 
 <div class="wrap">
+  <h2>Commercial Licenses</h2>
+	<div class="btn-wrap cta-buttons" style="margin-top: 20px;">
+    <div class="btn">
+      <a href="https://buy.stripe.com/9B6aEW9hvg4Zg2Hh0FgA800" style="margin-bottom: 20px">
+        Limited Commercial License
+      </a>
+      <p>For use on a single commercial project</p>
+      <p><a href="https://github.com/mattboldt/typed.js/blob/main/LIMITED_COMMERCIAL_LICENSE.md">License terms available here</a></p>
+    </div>
+    <div class="btn">
+      <a href="https://buy.stripe.com/cNi4gy51fg4ZbMr25LgA801" style="margin-bottom: 20px">
+        Unlimited Commercial License
+      </a>
+      <p>For use on unlimited commercial projects</p>
+      <p><a href="https://github.com/mattboldt/typed.js/blob/main/UNLIMITED_COMMERCIAL_LICENSE.md">License terms available here</a></p>
+    </div>
+  </div>
+</div>
 
-	<div class="btn-wrap cta-buttons">
+<div class="wrap">
+  <div class="btn-wrap cta-buttons">
 		<div class="btn">
 			<a href="https://github.com/mattboldt/typed.js/"><i class="fa fa-github"></i> View on GitHub</a>
 		</div>
